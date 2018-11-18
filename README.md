@@ -10,20 +10,22 @@
 
 * **[EEP Individual Project Example Name]** IRS-MR-2019-03-13-EEP-IND-SamGuZhan-HDB_BTO_Recommender.zip
 
----
-
-### <<<<<<<<<< Start of Template >>>>>>>>>>
+[README.md markdown file online editor](https://pandao.github.io/editor.md/en.html "pandao")
 
 ---
 
-## SECTION 1 PROJECT TITLE
+### <<<<<<<<<<<<<<<<<<<< Start of Template >>>>>>>>>>>>>>>>>>>>
+
+---
+
+## SECTION 1 : PROJECT TITLE
 ## Singapore Housing & Deveoplment Board - BTO Recommender System
 
 <img src="SystemCode/clips/static/hdb-bto.png"
      style="float: left; margin-right: 0px;" />
 
 ---
-## SECTION 2 EXECUTIVE SUMMARY / PAPER ABSTRACT
+## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
 Singapore ranks amongst countries with the highest population density in the world. In a bid to have firm control over long term urban planning, the Singapore government came up with the “Built to Order” (abbreviated BTO) initiative back in 2001. These are new Housing Development Board (HDB) flats tightly controlled by their eligibility and quantity released every year. In more recent years, the modern BTO scheme in Singapore requires a waiting period of 3-4 years, and is generally targeted at young Singaporean couples looking to purchase their first property and set up a family. Nationality and income ceilings are some of the broad filters that determine one’s eligibility for the highly sought after projects. 
 
 
@@ -36,7 +38,7 @@ Using the techniques imparted to us in lectures, our group first set out to buil
 Our team had an amazing time working on this project, and hope to share our insights with everyone. Despite a focus on BTO flats, we would recommend it for everybody interested in understanding property market trends for residence or investment purposes. There truly are a wide array of factors behind the decision to invest in a property, and we only wish there was more time to work on the scope and scale of the project. 
 
 ---
-## SECTION 3 CREDITS / PROJECT CONTRIBUTION
+## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
 
 | Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
 | :------------ |:---------------:| :-----| :-----|
@@ -47,17 +49,16 @@ Our team had an amazing time working on this project, and hope to share our insi
 | Jeanette Lim | A1234567E | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567E@qq.com |
 
 ---
-## SECTION 4 VIDEO OF SYSTEM MODELLING & USE CASE DEMO
+## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
 Note: It is not mandatory for every project member to appear in video presentation; Presentation by one project member is also acceptable.
 
 [![Sudoku AI Solver](http://img.youtube.com/vi/-AiYLUjP6o8/0.jpg)](https://youtu.be/-AiYLUjP6o8 "Sudoku AI Solver")
 
 ---
-## SECTION 5 USER GUIDE
+## SECTION 5 : USER GUIDE
 
 `<Github File Link>` : <https://github.com/telescopeuser/StartDate-2019-01-01-CourseCode-BatchCode-Group_or_Individual-TeamName_or_PersonName-ProjectName/blob/master/UserGuide/User%20Guide%20HDB-BTO.pdf>
-
 
 ### [ 1 ] To run the system using iss-vm
 
@@ -86,12 +87,12 @@ $ sudo apt-get install python-clips clips build-essential libssl-dev libffi-dev 
 $ pip install pyclips flask flask-socketio eventlet simplejson pandas
 
 ---
-## SECTION 6 PROJECT REPORT / PAPER
+## SECTION 6 : PROJECT REPORT / PAPER
 
 `<Github File Link>` : <https://github.com/telescopeuser/StartDate-2019-01-01-CourseCode-BatchCode-Group_or_Individual-TeamName_or_PersonName-ProjectName/blob/master/ProjectReport/Project%20Report%20HDB-BTO.pdf>
 
 ---
-## SECTION 7 MISCELLANEOUS
+## SECTION 7 : MISCELLANEOUS
 
 ### HDB_BTO_SURVEY.xlsx
 * Results of survey
@@ -99,7 +100,7 @@ $ pip install pyclips flask flask-socketio eventlet simplejson pandas
 
 ---
 
-### <<<<<<<<<< End of Template >>>>>>>>>>
+### <<<<<<<<<<<<<<<<<<<< End of Template >>>>>>>>>>>>>>>>>>>>
 
 ---
 
