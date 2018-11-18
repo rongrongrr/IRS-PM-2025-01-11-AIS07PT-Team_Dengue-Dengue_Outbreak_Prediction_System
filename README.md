@@ -68,11 +68,11 @@ start iss-vm
 
 open terminal in iss-vm
 
-$ git clone https://github.com/telescopeuser/bto-recommender-system.git
+$ git clone https://github.com/telescopeuser/Workshop-Project-Submission-Template.git
 
 $ source activate iss-env-py2
 
-(iss-env-py2) $ cd bto-recommender-system/clips
+(iss-env-py2) $ cd Workshop-Project-Submission-Template/SystemCode/clips
 
 (iss-env-py2) $ python app.py
 
