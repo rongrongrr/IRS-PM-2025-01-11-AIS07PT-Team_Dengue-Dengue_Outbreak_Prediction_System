@@ -58,7 +58,7 @@ Note: It is not mandatory for every project member to appear in video presentati
 ---
 ## SECTION 5 : USER GUIDE
 
-`<Github File Link>` : <https://github.com/telescopeuser/StartDate-2019-01-01-CourseCode-BatchCode-Group_or_Individual-TeamName_or_PersonName-ProjectName/blob/master/UserGuide/User%20Guide%20HDB-BTO.pdf>
+`<Github File Link>` : <https://github.com/telescopeuser/Workshop-Project-Submission-Template/blob/master/UserGuide/User%20Guide%20HDB-BTO.pdf>
 
 ### [ 1 ] To run the system using iss-vm
 
@@ -88,7 +88,7 @@ Note: It is not mandatory for every project member to appear in video presentati
 ---
 ## SECTION 6 : PROJECT REPORT / PAPER
 
-`<Github File Link>` : <https://github.com/telescopeuser/StartDate-2019-01-01-CourseCode-BatchCode-Group_or_Individual-TeamName_or_PersonName-ProjectName/blob/master/ProjectReport/Project%20Report%20HDB-BTO.pdf>
+`<Github File Link>` : <https://github.com/telescopeuser/Workshop-Project-Submission-Template/blob/master/ProjectReport/Project%20Report%20HDB-BTO.pdf>
 
 ---
 ## SECTION 7 : MISCELLANEOUS
