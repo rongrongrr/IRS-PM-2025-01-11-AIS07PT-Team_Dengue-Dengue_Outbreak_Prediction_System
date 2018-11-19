@@ -2,15 +2,15 @@
 
 **[Naming Convenstion]** CourseCode-StartDate-BatchCode-Group_or_Individual-TeamName_or_PersonName-ProjectName.zip
 
-* **[MTech Group Project Example Name]** IRS-MR-2019-01-19-IS1PT-GRP-AwsomeSG-HDB_BTO_Recommender.zip
+* **[MTech Group Project Naming Example]** IRS-MR-2019-01-19-IS1PT-GRP-AwsomeSG-HDB_BTO_Recommender.zip
 
-* **[MTech Individual Project Example Name]** IRS-MR-2019-01-19-IS1PT-IND-SamGuZhan-HDB_BTO_Recommender.zip
+* **[MTech Individual Project Naming Example]** IRS-MR-2019-07-01-IS1FT-IND-SamGuZhan-HDB_BTO_Process.zip
 
-* **[EEP Group Project Example Name]** IRS-MR-2019-03-13-EEP-GRP-AwsomeSG-HDB_BTO_Recommender.zip
+* **[EEP Group Project Example Naming Example]** IRS-MR-2019-03-13-EEP-GRP-AwsomeSG-HDB_BTO_Recommender.zip
 
-* **[EEP Individual Project Example Name]** IRS-MR-2019-03-13-EEP-IND-SamGuZhan-HDB_BTO_Recommender.zip
+* **[EEP Individual Project Example Naming Example]** IRS-MR-2019-08-22-EEP-IND-SamGuZhan-HDB_BTO_Process.zip
 
-[README.md markdown file online editor](https://pandao.github.io/editor.md/en.html "pandao")
+[Online editor for this README.md markdown file](https://pandao.github.io/editor.md/en.html "pandao")
 
 ---
 
@@ -40,7 +40,7 @@ Our team had an amazing time working on this project, and hope to share our insi
 ---
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
 
-| Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
+| Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
 | :------------ |:---------------:| :-----| :-----|
 | Desmond Chua | A1234567A | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567A@nus.edu.sg |
 | Chang Ye Han | A1234567B | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567B@gmail.com |
@@ -51,7 +51,7 @@ Our team had an amazing time working on this project, and hope to share our insi
 ---
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
-Note: It is not mandatory for every project member to appear in video presentation; Presentation by one project member is also acceptable.
+Note: It is not mandatory for every project member to appear in video presentation; Presentation by one project member is acceptable.
 
 [![Sudoku AI Solver](http://img.youtube.com/vi/-AiYLUjP6o8/0.jpg)](https://youtu.be/-AiYLUjP6o8 "Sudoku AI Solver")
 
