@@ -1,4 +1,4 @@
-﻿### Worksop Project: Github Repository & Zip Submission Template
+﻿### Worksop Project Submission Template: Github Repository & Zip File
 
 **[Naming Convenstion]** CourseCode-StartDate-BatchCode-Group_or_Individual-TeamName_or_PersonName-ProjectName.zip
 
@@ -62,29 +62,28 @@ Note: It is not mandatory for every project member to appear in video presentati
 
 ### [ 1 ] To run the system using iss-vm
 
-download pre-built virtual machine from http://bit.ly/iss-vm
+> download pre-built virtual machine from http://bit.ly/iss-vm
 
-start iss-vm
+> start iss-vm
 
-open terminal in iss-vm
+> open terminal in iss-vm
 
-$ git clone https://github.com/telescopeuser/Workshop-Project-Submission-Template.git
+> $ git clone https://github.com/telescopeuser/Workshop-Project-Submission-Template.git
 
-$ source activate iss-env-py2
+> $ source activate iss-env-py2
 
-(iss-env-py2) $ cd Workshop-Project-Submission-Template/SystemCode/clips
+> (iss-env-py2) $ cd Workshop-Project-Submission-Template/SystemCode/clips
 
-(iss-env-py2) $ python app.py
+> (iss-env-py2) $ python app.py
 
-**Go to this URL using web browser**
-http://0.0.0.0:5000 or http://127.0.0.1:5000
+> **Go to URL using web browser** http://0.0.0.0:5000 or http://127.0.0.1:5000
 
 ### [ 2 ] To run the system in other/local machine:
 ### Install additional necessary libraries. This application works in python 2 only.
 
-$ sudo apt-get install python-clips clips build-essential libssl-dev libffi-dev python-dev python-pip
+> $ sudo apt-get install python-clips clips build-essential libssl-dev libffi-dev python-dev python-pip
 
-$ pip install pyclips flask flask-socketio eventlet simplejson pandas
+> $ pip install pyclips flask flask-socketio eventlet simplejson pandas
 
 ---
 ## SECTION 6 : PROJECT REPORT / PAPER
