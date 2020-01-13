@@ -1,14 +1,10 @@
-﻿### Worksop Project Submission Template: Github Repository & Zip File
+﻿### [ Practice Module ] Project Submission Template: Github Repository & Zip File
 
-**[Naming Convention]** CourseCode-StartDate-BatchCode-Group_or_Individual-TeamName_or_PersonName-ProjectName.zip
+**[ Naming Convention ]** CourseCode-StartDate-BatchCode-TeamName-ProjectName.zip
 
-* **[MTech Group Project Naming Example]** IRS-MR-2019-01-19-IS1PT-GRP-AwsomeSG-HDB_BTO_Recommender.zip
+* **[ MTech Thru-Train Group Project Naming Example ]** IRS-PM-2020-01-18-IS02PT-GRP-AwsomeSG-HDB_BTO_Recommender.zip
 
-* **[MTech Individual Project Naming Example]** IRS-MR-2019-07-01-IS1FT-IND-SamGuZhan-HDB_BTO_Process.zip
-
-* **[EEP Group Project Naming Example]** IRS-MR-2019-03-13-EEP-GRP-AwsomeSG-HDB_BTO_Recommender.zip
-
-* **[EEP Individual Project Naming Example]** IRS-MR-2019-08-22-EEP-IND-SamGuZhan-HDB_BTO_Process.zip
+* **[ MTech Stackable Group Project Naming Example ]** IRS-PM-2020-01-18-STK02-GRP-AwsomeSG-HDB_BTO_Recommender.zip
 
 [Online editor for this README.md markdown file](https://pandao.github.io/editor.md/en.html "pandao")
 
@@ -25,6 +21,7 @@
      style="float: left; margin-right: 0px;" />
 
 ---
+
 ## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
 Singapore ranks amongst countries with the highest population density in the world. In a bid to have firm control over long term urban planning, the Singapore government came up with the “Built to Order” (abbreviated BTO) initiative back in 2001. These are new Housing Development Board (HDB) flats tightly controlled by their eligibility and quantity released every year. In more recent years, the modern BTO scheme in Singapore requires a waiting period of 3-4 years, and is generally targeted at young Singaporean couples looking to purchase their first property and set up a family. Nationality and income ceilings are some of the broad filters that determine one’s eligibility for the highly sought after projects. 
 
@@ -38,6 +35,7 @@ Using the techniques imparted to us in lectures, our group first set out to buil
 Our team had an amazing time working on this project, and hope to share our insights with everyone. Despite a focus on BTO flats, we would recommend it for everybody interested in understanding property market trends for residence or investment purposes. There truly are a wide array of factors behind the decision to invest in a property, and we only wish there was more time to work on the scope and scale of the project. 
 
 ---
+
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
 
 | Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
@@ -49,6 +47,7 @@ Our team had an amazing time working on this project, and hope to share our insi
 | Jeanette Lim | A1234567E | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567E@qq.com |
 
 ---
+
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
 [![Sudoku AI Solver](http://img.youtube.com/vi/-AiYLUjP6o8/0.jpg)](https://youtu.be/-AiYLUjP6o8 "Sudoku AI Solver")
@@ -57,9 +56,10 @@ Note: It is not mandatory for every project member to appear in video presentati
 More reference video presentations [here](https://telescopeuser.wordpress.com/2018/03/31/master-of-technology-solution-know-how-video-index-2/ "video presentations")
 
 ---
+
 ## SECTION 5 : USER GUIDE
 
-`<Github File Link>` : <https://github.com/telescopeuser/Workshop-Project-Submission-Template/blob/master/UserGuide/User%20Guide%20HDB-BTO.pdf>
+`Refer to appendix <Installation & User Guide> in project report at Github Folder: ProjectReport`
 
 ### [ 1 ] To run the system using iss-vm
 
@@ -89,22 +89,29 @@ More reference video presentations [here](https://telescopeuser.wordpress.com/20
 ---
 ## SECTION 6 : PROJECT REPORT / PAPER
 
-`<Github File Link>` : <https://github.com/telescopeuser/Workshop-Project-Submission-Template/blob/master/ProjectReport/Project%20Report%20HDB-BTO.pdf>
+`Refer to project report at Github Folder: ProjectReport`
 
 **Recommended Sections for Project Report / Paper:**
 - Executive Summary / Paper Abstract
 - Sponsor Company Introduction (if applicable)
 - Business Problem Background
+- Market Research
 - Project Objectives & Success Measurements
 - Project Solution (To detail domain modelling & system design.)
 - Project Implementation (To detail system development & testing approach.)
 - Project Performance & Validation (To prove project objectives are met.)
 - Project Conclusions: Findings & Recommendation
-- List of Abbreviations (if applicable)
-- References (if applicable)
+- Appendix of report: Project Proposal
+- Appendix of report: Mapped System Functionalities against knowledge, techniques and skills of modular courses: MR, RS, CGS
+- Appendix of report: Installation and User Guide
+- Appendix of report: 1-2 pages individual project report per project member, including: Individual reflection of project journey: (1) personal contribution to group project (2) what learnt is most useful for you (3) how you can apply the knowledge and skills in other situations or your workplaces
+- Appendix of report: List of Abbreviations (if applicable)
+- Appendix of report: References (if applicable)
 
 ---
 ## SECTION 7 : MISCELLANEOUS
+
+`Refer to Github Folder: Miscellaneous`
 
 ### HDB_BTO_SURVEY.xlsx
 * Results of survey
