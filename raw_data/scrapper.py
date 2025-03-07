@@ -7,12 +7,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 base_url = "https://api-open.data.gov.sg/v2/real-time/api/"
 
 year = 2022 #change the year to vary the folder name and date for API calls
-url = base_url+"rainfall" #change this according to the API you are using. very caveman, I know. 
+url = base_url+"rainfall"
+main_folder = "rainfall" #change this according to the API you are using. very caveman, I know. 
 
 def fetch_and_save(date_str):
     
     params = {"date": date_str}
-    folder = str(year)
+    sub_folder = str(year)
     
     try:
         response = requests.get(url, params=params)
@@ -25,13 +26,17 @@ def fetch_and_save(date_str):
         print(f"Exception occurred for {date_str}: {e}")
         return None
 
-    if not os.path.exists(folder):
-        os.makedirs(folder)
-    filename = os.path.join(folder, f"{date_str}.json")
+    # Create the nested directory if it doesn't exist
+    folder_path = os.path.join(main_folder, sub_folder)
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+
+    filename = os.path.join(folder_path, f"{date_str}.json")
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
     print(f"Saved data for {date_str}")
     return date_str
+
 
 def main():
     start_date = datetime.date(year, 1, 1)
