@@ -1,0 +1,2486 @@
+{
+    "code": 0,
+    "data": {
+        "stations": [
+            {
+                "id": "S117",
+                "deviceId": "S117",
+                "name": "Banyan Road",
+                "location": {
+                    "latitude": 1.256,
+                    "longitude": 103.679
+                }
+            },
+            {
+                "id": "S107",
+                "deviceId": "S107",
+                "name": "East Coast Parkway",
+                "location": {
+                    "latitude": 1.3135,
+                    "longitude": 103.9625
+                }
+            },
+            {
+                "id": "S121",
+                "deviceId": "S121",
+                "name": "Old Choa Chu Kang Road",
+                "location": {
+                    "latitude": 1.37288,
+                    "longitude": 103.72244
+                }
+            },
+            {
+                "id": "S60",
+                "deviceId": "S60",
+                "name": "Sentosa",
+                "location": {
+                    "latitude": 1.25,
+                    "longitude": 103.8279
+                }
+            },
+            {
+                "id": "S115",
+                "deviceId": "S115",
+                "name": "Tuas South Avenue 3",
+                "location": {
+                    "latitude": 1.29377,
+                    "longitude": 103.61843
+                }
+            }
+        ],
+        "readings": [
+            {
+                "timestamp": "2024-05-02T23:59:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.1
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 84
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 81.6
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:58:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.3
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.7
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.9
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 81.5
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:57:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.8
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 81.5
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:56:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 81.4
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:55:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 81.3
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:54:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.8
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 81.1
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:53:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.6
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 81.1
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:52:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.9
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.7
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.6
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 81.2
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:51:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.8
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 81.5
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:50:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.1
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 81.9
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:49:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 81.9
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:48:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.2
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.3
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:47:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.2
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.2
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.1
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:46:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.3
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.2
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:45:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.3
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.9
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.3
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:44:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.3
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.8
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.5
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:43:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.4
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.7
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.6
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:42:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.5
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.1
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.7
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:41:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.4
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.8
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:40:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.2
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.1
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:39:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.1
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:38:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.4
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.8
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:37:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.9
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.4
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:36:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.8
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.4
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:35:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.8
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.6
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:34:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.9
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.8
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.7
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.6
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:33:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 84
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.7
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:32:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.1
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.7
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.8
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:31:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:30:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.1
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.7
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:29:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.1
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.7
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.1
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:28:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.1
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.2
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:27:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.2
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.4
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:26:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.1
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.6
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:25:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.9
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.8
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:24:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.8
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.1
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.9
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:23:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 83.1
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.9
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:22:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.3
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 84
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:21:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.1
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.6
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 84
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:20:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 82.9
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.6
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.9
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:19:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 82.7
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.7
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.8
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:18:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 82.9
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:17:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.6
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:16:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.8
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.5
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:15:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.2
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.8
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.4
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:14:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.2
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.3
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:13:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.3
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.3
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:12:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.2
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.2
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:11:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.2
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.2
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:10:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 82.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.9
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.8
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.2
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:09:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.9
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 84
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.1
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:08:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.9
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 84.1
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.1
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:07:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 94.9
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 84.1
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:06:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.7
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 84.1
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:05:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 84.2
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.9
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:04:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.1
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 84.1
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:03:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.1
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.9
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:02:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.3
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.2
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.9
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.8
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:01:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.1
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.2
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T23:00:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.8
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.2
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.6
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:59:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.1
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.3
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.6
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:58:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.3
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 83.1
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.8
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:57:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.8
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.8
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:56:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.8
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:55:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 82.2
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.8
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:54:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.7
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.9
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.9
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:53:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.6
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.7
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:52:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.5
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:51:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:50:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.8
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.4
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.6
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:49:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.9
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.5
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:48:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 80.7
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.9
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.2
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.5
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:47:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 80.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.9
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.1
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:46:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 80.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.9
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:45:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 80.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.9
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.1
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:44:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.3
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 80.7
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.2
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.7
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:43:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.1
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 82.9
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:42:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.3
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 80.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.2
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.2
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:41:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.4
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.3
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:40:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.2
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 80.2
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 83.6
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:39:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.4
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 80.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.8
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.6
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 84
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:38:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 80.7
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 84.4
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:37:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.6
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 84.8
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:36:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.6
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.6
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.1
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:35:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.6
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.2
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:34:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 83.9
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.6
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.3
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:33:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.4
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:32:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.4
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.4
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:31:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.7
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:30:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.6
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.4
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.4
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:29:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.6
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.4
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:28:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.5
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.4
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.7
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.4
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.5
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:27:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.3
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.2
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.6
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.6
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:26:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.2
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.5
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.6
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:25:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.3
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.5
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.6
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.4
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:24:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.3
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.8
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.4
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:23:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.5
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.4
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.4
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:22:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.6
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.8
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.3
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.3
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:21:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 84.8
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.9
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.3
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.4
+                    }
+                ]
+            },
+            {
+                "timestamp": "2024-05-02T22:20:00+08:00",
+                "data": [
+                    {
+                        "stationId": "S117",
+                        "value": 85.1
+                    },
+                    {
+                        "stationId": "S107",
+                        "value": 81.8
+                    },
+                    {
+                        "stationId": "S121",
+                        "value": 95.3
+                    },
+                    {
+                        "stationId": "S60",
+                        "value": 81.3
+                    },
+                    {
+                        "stationId": "S115",
+                        "value": 85.5
+                    }
+                ]
+            }
+        ],
+        "readingType": "RH 1M F",
+        "readingUnit": "percentage",
+        "paginationToken": "b2Zmc2V0PTEwMA=="
+    },
+    "errorMsg": ""
+}
