@@ -1,0 +1,1475 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "311D76FA",
+        "LOCALITY": "Woodlands Road 346",
+        "CASE_SIZE": 2,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Woodlands Road 346",
+        "CASE_SIZE_DESC": "2 cases",
+        "LOCALITY_DESC": "Woodlands Road 346",
+        "DESCRIPTION_DESC": "Dengue cluster in Woodlands Road 346",
+        "CASE_SIZE_DESC_DESC": "2 cases",
+        "LOCALITY_DESC_DESC": "Woodlands Road 346",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 1432591.5464181413,
+        "SHAPE.LEN": 4416.427465692893
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.72863428116214,
+              1.3664375005461058
+            ],
+            [
+              103.73142169046689,
+              1.3648935961226087
+            ],
+            [
+              103.73479661449463,
+              1.360493222803097
+            ],
+            [
+              103.73180943422567,
+              1.3551322622590392
+            ],
+            [
+              103.72719450699361,
+              1.3526426221119232
+            ],
+            [
+              103.72330421644772,
+              1.3560558197922292
+            ],
+            [
+              103.72181862144713,
+              1.3598950728329209
+            ],
+            [
+              103.72436675148339,
+              1.3651020083647758
+            ],
+            [
+              103.72863428116214,
+              1.3664375005461058
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "D27E458E",
+        "LOCALITY": "Sengkang Road 70",
+        "CASE_SIZE": 6,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Sengkang Road 70",
+        "CASE_SIZE_DESC": "6 cases",
+        "LOCALITY_DESC": "Sengkang Road 70",
+        "DESCRIPTION_DESC": "Dengue cluster in Sengkang Road 70",
+        "CASE_SIZE_DESC_DESC": "6 cases",
+        "LOCALITY_DESC_DESC": "Sengkang Road 70",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 154631.24341935472,
+        "SHAPE.LEN": 1480.9736145301251
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.87562542449817,
+              1.4073408866971184
+            ],
+            [
+              103.87771228219955,
+              1.4062539896714694
+            ],
+            [
+              103.87773806992341,
+              1.4034197197299896
+            ],
+            [
+              103.87600972799446,
+              1.4029086499853087
+            ],
+            [
+              103.8738945341127,
+              1.404080260524981
+            ],
+            [
+              103.8743035235104,
+              1.4061726182850265
+            ],
+            [
+              103.87562542449817,
+              1.4073408866971184
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "F6E60DBF",
+        "LOCALITY": "Bedok Lane 590",
+        "CASE_SIZE": 5,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Bedok Lane 590",
+        "CASE_SIZE_DESC": "5 cases",
+        "LOCALITY_DESC": "Bedok Lane 590",
+        "DESCRIPTION_DESC": "Dengue cluster in Bedok Lane 590",
+        "CASE_SIZE_DESC_DESC": "5 cases",
+        "LOCALITY_DESC_DESC": "Bedok Lane 590",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 264102.5661810762,
+        "SHAPE.LEN": 1909.5380596163525
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.82914145493254,
+              1.3399328013505774
+            ],
+            [
+              103.83031519858616,
+              1.3396106399412622
+            ],
+            [
+              103.83119152557713,
+              1.3386776671359784
+            ],
+            [
+              103.83172637393449,
+              1.3368857864237582
+            ],
+            [
+              103.83128421930166,
+              1.3351239268263821
+            ],
+            [
+              103.82998692375645,
+              1.3347048001061657
+            ],
+            [
+              103.82877933002399,
+              1.3340081011512308
+            ],
+            [
+              103.82779543347978,
+              1.3346614360855102
+            ],
+            [
+              103.82630919154018,
+              1.3360051074837465
+            ],
+            [
+              103.82660066365499,
+              1.3368243544915785
+            ],
+            [
+              103.82671033007065,
+              1.3375947962429338
+            ],
+            [
+              103.82800562389144,
+              1.3389917253953492
+            ],
+            [
+              103.82914145493254,
+              1.3399328013505774
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "4FAF57E0",
+        "LOCALITY": "Sengkang Road 295",
+        "CASE_SIZE": 4,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Sengkang Road 295",
+        "CASE_SIZE_DESC": "4 cases",
+        "LOCALITY_DESC": "Sengkang Road 295",
+        "DESCRIPTION_DESC": "Dengue cluster in Sengkang Road 295",
+        "CASE_SIZE_DESC_DESC": "4 cases",
+        "LOCALITY_DESC_DESC": "Sengkang Road 295",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 1543443.2036481004,
+        "SHAPE.LEN": 4548.171782318864
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.8312849690687,
+              1.3723051704904143
+            ],
+            [
+              103.8374639087702,
+              1.3726067602892549
+            ],
+            [
+              103.83940115643848,
+              1.368509010768567
+            ],
+            [
+              103.83901085670281,
+              1.3649402097852947
+            ],
+            [
+              103.83605343296811,
+              1.361030200182335
+            ],
+            [
+              103.83330828682787,
+              1.3598925613203892
+            ],
+            [
+              103.82951222698043,
+              1.360941158790713
+            ],
+            [
+              103.826708577039,
+              1.3654243347046313
+            ],
+            [
+              103.82639108168208,
+              1.367544886971004
+            ],
+            [
+              103.82935208167211,
+              1.371996300256843
+            ],
+            [
+              103.8312849690687,
+              1.3723051704904143
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "66B5FE98",
+        "LOCALITY": "Pasir Ris Lane 734",
+        "CASE_SIZE": 10,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Pasir Ris Lane 734",
+        "CASE_SIZE_DESC": "10 cases",
+        "LOCALITY_DESC": "Pasir Ris Lane 734",
+        "DESCRIPTION_DESC": "Dengue cluster in Pasir Ris Lane 734",
+        "CASE_SIZE_DESC_DESC": "10 cases",
+        "LOCALITY_DESC_DESC": "Pasir Ris Lane 734",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 1984638.374862477,
+        "SHAPE.LEN": 5190.1042755449935
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.71038410453727,
+              1.3085388283448047
+            ],
+            [
+              103.71381966807795,
+              1.3076474039363999
+            ],
+            [
+              103.71706078085496,
+              1.3042644679640647
+            ],
+            [
+              103.71519889347243,
+              1.299151067711935
+            ],
+            [
+              103.71380507551916,
+              1.2959108907465418
+            ],
+            [
+              103.70885951581855,
+              1.2948660618405265
+            ],
+            [
+              103.70519104335489,
+              1.2947628695758702
+            ],
+            [
+              103.70239012919153,
+              1.2995494703664483
+            ],
+            [
+              103.70147812239803,
+              1.303578212115559
+            ],
+            [
+              103.70400377268174,
+              1.3073334314953162
+            ],
+            [
+              103.71038410453727,
+              1.3085388283448047
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "22597727",
+        "LOCALITY": "Hougang Street 655",
+        "CASE_SIZE": 12,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Hougang Street 655",
+        "CASE_SIZE_DESC": "12 cases",
+        "LOCALITY_DESC": "Hougang Street 655",
+        "DESCRIPTION_DESC": "Dengue cluster in Hougang Street 655",
+        "CASE_SIZE_DESC_DESC": "12 cases",
+        "LOCALITY_DESC_DESC": "Hougang Street 655",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 841074.2497585197,
+        "SHAPE.LEN": 3382.9647484089382
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.76270349060565,
+              1.226887141683117
+            ],
+            [
+              103.7651592373128,
+              1.2252224216891026
+            ],
+            [
+              103.76699740798117,
+              1.2215629061753628
+            ],
+            [
+              103.76644482830191,
+              1.2191847761083283
+            ],
+            [
+              103.76255028529246,
+              1.217409000690363
+            ],
+            [
+              103.75885304912886,
+              1.217420987225695
+            ],
+            [
+              103.75697160229565,
+              1.222180536920518
+            ],
+            [
+              103.75901502921177,
+              1.2254008497825566
+            ],
+            [
+              103.76270349060565,
+              1.226887141683117
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "8C84CBFF",
+        "LOCALITY": "Sembawang Avenue 527",
+        "CASE_SIZE": 6,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Sembawang Avenue 527",
+        "CASE_SIZE_DESC": "6 cases",
+        "LOCALITY_DESC": "Sembawang Avenue 527",
+        "DESCRIPTION_DESC": "Dengue cluster in Sembawang Avenue 527",
+        "CASE_SIZE_DESC_DESC": "6 cases",
+        "LOCALITY_DESC_DESC": "Sembawang Avenue 527",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 816004.7718800153,
+        "SHAPE.LEN": 3469.4731251040753
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.78309390932645,
+              1.2954895959417587
+            ],
+            [
+              103.78649572264412,
+              1.295085438777385
+            ],
+            [
+              103.78752723224137,
+              1.289388833726769
+            ],
+            [
+              103.78239202292724,
+              1.285670082664099
+            ],
+            [
+              103.77875375184313,
+              1.2894632385673246
+            ],
+            [
+              103.77759962088942,
+              1.293973842512072
+            ],
+            [
+              103.78309390932645,
+              1.2954895959417587
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "5FF6B73F",
+        "LOCALITY": "Ang Mo Kio Street 799",
+        "CASE_SIZE": 11,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Ang Mo Kio Street 799",
+        "CASE_SIZE_DESC": "11 cases",
+        "LOCALITY_DESC": "Ang Mo Kio Street 799",
+        "DESCRIPTION_DESC": "Dengue cluster in Ang Mo Kio Street 799",
+        "CASE_SIZE_DESC_DESC": "11 cases",
+        "LOCALITY_DESC_DESC": "Ang Mo Kio Street 799",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 1074376.269060902,
+        "SHAPE.LEN": 3964.940947537202
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.62859410718814,
+              1.2938324574062525
+            ],
+            [
+              103.63066583493143,
+              1.2917462411996945
+            ],
+            [
+              103.63308871829099,
+              1.2900043422474776
+            ],
+            [
+              103.63448915203823,
+              1.2872095712209604
+            ],
+            [
+              103.63330398498748,
+              1.2840680283853414
+            ],
+            [
+              103.62961042805377,
+              1.2819794412442456
+            ],
+            [
+              103.62764519001833,
+              1.2826021652235116
+            ],
+            [
+              103.62433425974787,
+              1.283369757502675
+            ],
+            [
+              103.62443536423726,
+              1.2862314519120128
+            ],
+            [
+              103.62301555084365,
+              1.2895359590985298
+            ],
+            [
+              103.62676727811474,
+              1.2922698043677994
+            ],
+            [
+              103.62859410718814,
+              1.2938324574062525
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "E252E5EB",
+        "LOCALITY": "Jurong East Lane 955",
+        "CASE_SIZE": 8,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Jurong East Lane 955",
+        "CASE_SIZE_DESC": "8 cases",
+        "LOCALITY_DESC": "Jurong East Lane 955",
+        "DESCRIPTION_DESC": "Dengue cluster in Jurong East Lane 955",
+        "CASE_SIZE_DESC_DESC": "8 cases",
+        "LOCALITY_DESC_DESC": "Jurong East Lane 955",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 1365893.2073706414,
+        "SHAPE.LEN": 4399.814280921357
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.8469848699297,
+              1.3902489157210944
+            ],
+            [
+              103.85259719557827,
+              1.388044845447145
+            ],
+            [
+              103.85311893067919,
+              1.3844313089909779
+            ],
+            [
+              103.85136446675476,
+              1.3803891539576272
+            ],
+            [
+              103.84740684399885,
+              1.3763610884129671
+            ],
+            [
+              103.84221166095614,
+              1.3797502249836486
+            ],
+            [
+              103.84037891819035,
+              1.3821728803733875
+            ],
+            [
+              103.84304211251015,
+              1.3866588424073543
+            ],
+            [
+              103.8469848699297,
+              1.3902489157210944
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "5B80385E",
+        "LOCALITY": "Jurong West Road 422",
+        "CASE_SIZE": 1,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Jurong West Road 422",
+        "CASE_SIZE_DESC": "1 cases",
+        "LOCALITY_DESC": "Jurong West Road 422",
+        "DESCRIPTION_DESC": "Dengue cluster in Jurong West Road 422",
+        "CASE_SIZE_DESC_DESC": "1 cases",
+        "LOCALITY_DESC_DESC": "Jurong West Road 422",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 180957.5470954467,
+        "SHAPE.LEN": 1592.6501212830697
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.8456612937798,
+              1.373236169781208
+            ],
+            [
+              103.8473019219033,
+              1.3722008446429956
+            ],
+            [
+              103.84784500257264,
+              1.3704916068258086
+            ],
+            [
+              103.84738676981034,
+              1.3685318713060795
+            ],
+            [
+              103.84517555405664,
+              1.3682907133105757
+            ],
+            [
+              103.84361101568057,
+              1.3697373833542008
+            ],
+            [
+              103.84447661046033,
+              1.3722718199603832
+            ],
+            [
+              103.8456612937798,
+              1.373236169781208
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "11EC5F23",
+        "LOCALITY": "Sembawang Street 194",
+        "CASE_SIZE": 9,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Sembawang Street 194",
+        "CASE_SIZE_DESC": "9 cases",
+        "LOCALITY_DESC": "Sembawang Street 194",
+        "DESCRIPTION_DESC": "Dengue cluster in Sembawang Street 194",
+        "CASE_SIZE_DESC_DESC": "9 cases",
+        "LOCALITY_DESC_DESC": "Sembawang Street 194",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 1983462.0377650894,
+        "SHAPE.LEN": 5221.527890852408
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.94561343659092,
+              1.3857238508545775
+            ],
+            [
+              103.94918971645576,
+              1.3839382887857536
+            ],
+            [
+              103.95321624482635,
+              1.381236358647041
+            ],
+            [
+              103.9505433088971,
+              1.3745716780356079
+            ],
+            [
+              103.94687516890657,
+              1.3711190058360943
+            ],
+            [
+              103.94153421470232,
+              1.3722975217596007
+            ],
+            [
+              103.93864243893978,
+              1.3757082650858594
+            ],
+            [
+              103.93662670727801,
+              1.379419128133141
+            ],
+            [
+              103.94046417821342,
+              1.3845300502924027
+            ],
+            [
+              103.94561343659092,
+              1.3857238508545775
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "C7396A37",
+        "LOCALITY": "Toa Payoh Avenue 407",
+        "CASE_SIZE": 2,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Toa Payoh Avenue 407",
+        "CASE_SIZE_DESC": "2 cases",
+        "LOCALITY_DESC": "Toa Payoh Avenue 407",
+        "DESCRIPTION_DESC": "Dengue cluster in Toa Payoh Avenue 407",
+        "CASE_SIZE_DESC_DESC": "2 cases",
+        "LOCALITY_DESC_DESC": "Toa Payoh Avenue 407",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 1200683.5458333213,
+        "SHAPE.LEN": 4099.818898722997
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.86763699673828,
+              1.3917583817836794
+            ],
+            [
+              103.87314469150975,
+              1.3903190170294382
+            ],
+            [
+              103.87321114895029,
+              1.3869666441317192
+            ],
+            [
+              103.87249090773383,
+              1.3816365479194228
+            ],
+            [
+              103.86842697797545,
+              1.380236492046814
+            ],
+            [
+              103.86366658638225,
+              1.381806548500037
+            ],
+            [
+              103.86282232773276,
+              1.3854121202297514
+            ],
+            [
+              103.86461585965687,
+              1.3915138390428794
+            ],
+            [
+              103.86763699673828,
+              1.3917583817836794
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "F580CFF0",
+        "LOCALITY": "Bedok Lane 320",
+        "CASE_SIZE": 8,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Bedok Lane 320",
+        "CASE_SIZE_DESC": "8 cases",
+        "LOCALITY_DESC": "Bedok Lane 320",
+        "DESCRIPTION_DESC": "Dengue cluster in Bedok Lane 320",
+        "CASE_SIZE_DESC_DESC": "8 cases",
+        "LOCALITY_DESC_DESC": "Bedok Lane 320",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 1266383.7374280114,
+        "SHAPE.LEN": 4170.564090005464
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.76870905666203,
+              1.2410129160393741
+            ],
+            [
+              103.77070398307148,
+              1.241561283424524
+            ],
+            [
+              103.77327120944123,
+              1.2397042560431488
+            ],
+            [
+              103.77453647839141,
+              1.2372323605873399
+            ],
+            [
+              103.7731331740043,
+              1.232437030698857
+            ],
+            [
+              103.7711571560605,
+              1.2318883402077727
+            ],
+            [
+              103.7685268724492,
+              1.2310332177712817
+            ],
+            [
+              103.76539879322763,
+              1.2314288827136473
+            ],
+            [
+              103.7632173428464,
+              1.2340091672264286
+            ],
+            [
+              103.76122317507229,
+              1.2369358856758823
+            ],
+            [
+              103.76282456211051,
+              1.2400214183631004
+            ],
+            [
+              103.76579785849687,
+              1.2411322019214779
+            ],
+            [
+              103.76870905666203,
+              1.2410129160393741
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "89773105",
+        "LOCALITY": "Bedok Road 299",
+        "CASE_SIZE": 9,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Bedok Road 299",
+        "CASE_SIZE_DESC": "9 cases",
+        "LOCALITY_DESC": "Bedok Road 299",
+        "DESCRIPTION_DESC": "Dengue cluster in Bedok Road 299",
+        "CASE_SIZE_DESC_DESC": "9 cases",
+        "LOCALITY_DESC_DESC": "Bedok Road 299",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 867513.3687018235,
+        "SHAPE.LEN": 3480.322665776434
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.60898844365248,
+              1.2554717220707334
+            ],
+            [
+              103.61440939079607,
+              1.2528531393084714
+            ],
+            [
+              103.61430838747053,
+              1.248581108196787
+            ],
+            [
+              103.61287960935405,
+              1.2456971885299044
+            ],
+            [
+              103.6070705530188,
+              1.245227722422984
+            ],
+            [
+              103.60513077188199,
+              1.2494518620300579
+            ],
+            [
+              103.60655272946158,
+              1.2529202594341333
+            ],
+            [
+              103.60898844365248,
+              1.2554717220707334
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "D1012A61",
+        "LOCALITY": "Yishun Lane 836",
+        "CASE_SIZE": 9,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Yishun Lane 836",
+        "CASE_SIZE_DESC": "9 cases",
+        "LOCALITY_DESC": "Yishun Lane 836",
+        "DESCRIPTION_DESC": "Dengue cluster in Yishun Lane 836",
+        "CASE_SIZE_DESC_DESC": "9 cases",
+        "LOCALITY_DESC_DESC": "Yishun Lane 836",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 663178.2141027526,
+        "SHAPE.LEN": 3059.9537290685703
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.9761778815851,
+              1.3964878770620313
+            ],
+            [
+              103.97908575826686,
+              1.3959333317574905
+            ],
+            [
+              103.98009717498542,
+              1.3959235378427186
+            ],
+            [
+              103.98085336422598,
+              1.3931933366992986
+            ],
+            [
+              103.98020665185807,
+              1.3903846342840158
+            ],
+            [
+              103.97812233456001,
+              1.3882709748897968
+            ],
+            [
+              103.97562635286324,
+              1.3888987168420104
+            ],
+            [
+              103.9734885754445,
+              1.3892829043841033
+            ],
+            [
+              103.97329743531165,
+              1.3900122999809272
+            ],
+            [
+              103.9722880104495,
+              1.393384778272541
+            ],
+            [
+              103.97192144228292,
+              1.3943732853501765
+            ],
+            [
+              103.97484111626744,
+              1.3959400775621278
+            ],
+            [
+              103.9761778815851,
+              1.3964878770620313
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "A1F660F6",
+        "LOCALITY": "Hougang Lane 952",
+        "CASE_SIZE": 6,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Hougang Lane 952",
+        "CASE_SIZE_DESC": "6 cases",
+        "LOCALITY_DESC": "Hougang Lane 952",
+        "DESCRIPTION_DESC": "Dengue cluster in Hougang Lane 952",
+        "CASE_SIZE_DESC_DESC": "6 cases",
+        "LOCALITY_DESC_DESC": "Hougang Lane 952",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 435536.050241494,
+        "SHAPE.LEN": 2440.4773260636453
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.6473526086324,
+              1.381213304311156
+            ],
+            [
+              103.64959512451838,
+              1.3803302440852303
+            ],
+            [
+              103.65096974234402,
+              1.376442101459336
+            ],
+            [
+              103.6490705522233,
+              1.3739578252082596
+            ],
+            [
+              103.64510218260295,
+              1.3749037874554335
+            ],
+            [
+              103.6440922489215,
+              1.377094085914682
+            ],
+            [
+              103.64479883281712,
+              1.37991023194238
+            ],
+            [
+              103.6473526086324,
+              1.381213304311156
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "427BDDA7",
+        "LOCALITY": "Toa Payoh Road 633",
+        "CASE_SIZE": 3,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Toa Payoh Road 633",
+        "CASE_SIZE_DESC": "3 cases",
+        "LOCALITY_DESC": "Toa Payoh Road 633",
+        "DESCRIPTION_DESC": "Dengue cluster in Toa Payoh Road 633",
+        "CASE_SIZE_DESC_DESC": "3 cases",
+        "LOCALITY_DESC_DESC": "Toa Payoh Road 633",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 962652.5241388382,
+        "SHAPE.LEN": 3720.1054461844556
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.92862225036845,
+              1.2325368654461109
+            ],
+            [
+              103.93203245254927,
+              1.230876064029217
+            ],
+            [
+              103.93313772618097,
+              1.2230562509771887
+            ],
+            [
+              103.9274678339706,
+              1.2221241666065796
+            ],
+            [
+              103.92408082103084,
+              1.2241444021106487
+            ],
+            [
+              103.92298910597394,
+              1.2298273220227638
+            ],
+            [
+              103.92862225036845,
+              1.2325368654461109
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "36A80678",
+        "LOCALITY": "Toa Payoh Drive 649",
+        "CASE_SIZE": 7,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Toa Payoh Drive 649",
+        "CASE_SIZE_DESC": "7 cases",
+        "LOCALITY_DESC": "Toa Payoh Drive 649",
+        "DESCRIPTION_DESC": "Dengue cluster in Toa Payoh Drive 649",
+        "CASE_SIZE_DESC_DESC": "7 cases",
+        "LOCALITY_DESC_DESC": "Toa Payoh Drive 649",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 1425796.5156363184,
+        "SHAPE.LEN": 4493.6867296023165
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.94278329374133,
+              1.2695673597334185
+            ],
+            [
+              103.9464159985416,
+              1.2668979254558324
+            ],
+            [
+              103.94803371788643,
+              1.2592670903090812
+            ],
+            [
+              103.94508673417808,
+              1.2572279996821465
+            ],
+            [
+              103.9383712629416,
+              1.256972416438988
+            ],
+            [
+              103.93475776979194,
+              1.2599767296867352
+            ],
+            [
+              103.93748326240254,
+              1.266153199584067
+            ],
+            [
+              103.94278329374133,
+              1.2695673597334185
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "C7146E41",
+        "LOCALITY": "Queenstown Lane 110",
+        "CASE_SIZE": 6,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Queenstown Lane 110",
+        "CASE_SIZE_DESC": "6 cases",
+        "LOCALITY_DESC": "Queenstown Lane 110",
+        "DESCRIPTION_DESC": "Dengue cluster in Queenstown Lane 110",
+        "CASE_SIZE_DESC_DESC": "6 cases",
+        "LOCALITY_DESC_DESC": "Queenstown Lane 110",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 1794042.7705654467,
+        "SHAPE.LEN": 5049.511668973528
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.83667550085613,
+              1.2334762021226147
+            ],
+            [
+              103.84224304921712,
+              1.2279533076749458
+            ],
+            [
+              103.84185468115214,
+              1.2219537983243092
+            ],
+            [
+              103.835630787393,
+              1.2194451299038058
+            ],
+            [
+              103.82858101282243,
+              1.2208314207645399
+            ],
+            [
+              103.82909768790329,
+              1.2301538471485793
+            ],
+            [
+              103.83667550085613,
+              1.2334762021226147
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "AE1546F3",
+        "LOCALITY": "Bedok Drive 366",
+        "CASE_SIZE": 7,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Bedok Drive 366",
+        "CASE_SIZE_DESC": "7 cases",
+        "LOCALITY_DESC": "Bedok Drive 366",
+        "DESCRIPTION_DESC": "Dengue cluster in Bedok Drive 366",
+        "CASE_SIZE_DESC_DESC": "7 cases",
+        "LOCALITY_DESC_DESC": "Bedok Drive 366",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 1426716.898871342,
+        "SHAPE.LEN": 4393.914931830108
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.63254291852644,
+              1.4186711423841674
+            ],
+            [
+              103.63580839569345,
+              1.417337067620434
+            ],
+            [
+              103.638051302536,
+              1.4159863370470616
+            ],
+            [
+              103.63913337133492,
+              1.4136676190087616
+            ],
+            [
+              103.63813111662304,
+              1.409648693924279
+            ],
+            [
+              103.63494460388655,
+              1.4085285353008294
+            ],
+            [
+              103.63184744307816,
+              1.4072902678167818
+            ],
+            [
+              103.62973304664085,
+              1.407243067789462
+            ],
+            [
+              103.62744451491508,
+              1.4094441338408377
+            ],
+            [
+              103.62569141159528,
+              1.414538769741084
+            ],
+            [
+              103.6272726933254,
+              1.417378703028257
+            ],
+            [
+              103.63031752543553,
+              1.419384340146759
+            ],
+            [
+              103.63254291852644,
+              1.4186711423841674
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "31A4682D",
+        "LOCALITY": "Toa Payoh Road 564",
+        "CASE_SIZE": 6,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Toa Payoh Road 564",
+        "CASE_SIZE_DESC": "6 cases",
+        "LOCALITY_DESC": "Toa Payoh Road 564",
+        "DESCRIPTION_DESC": "Dengue cluster in Toa Payoh Road 564",
+        "CASE_SIZE_DESC_DESC": "6 cases",
+        "LOCALITY_DESC_DESC": "Toa Payoh Road 564",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 659367.885408926,
+        "SHAPE.LEN": 3062.5567159062125
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.67665402052506,
+              1.2437686126688448
+            ],
+            [
+              103.6799942103022,
+              1.2436743979761082
+            ],
+            [
+              103.68092274869433,
+              1.240834799601072
+            ],
+            [
+              103.67936375615426,
+              1.236574897865866
+            ],
+            [
+              103.6776831085149,
+              1.2364882389308558
+            ],
+            [
+              103.67423958083788,
+              1.236284189061359
+            ],
+            [
+              103.67208851497445,
+              1.240374279327311
+            ],
+            [
+              103.6739747390215,
+              1.2441163503337043
+            ],
+            [
+              103.67665402052506,
+              1.2437686126688448
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CLUSTER_ID": "19BA9017",
+        "LOCALITY": "Clementi Road 668",
+        "CASE_SIZE": 3,
+        "FMEL_UPD_D": "20250326000000",
+        "DESCRIPTION": "Dengue cluster in Clementi Road 668",
+        "CASE_SIZE_DESC": "3 cases",
+        "LOCALITY_DESC": "Clementi Road 668",
+        "DESCRIPTION_DESC": "Dengue cluster in Clementi Road 668",
+        "CASE_SIZE_DESC_DESC": "3 cases",
+        "LOCALITY_DESC_DESC": "Clementi Road 668",
+        "NAME": "Dengue_Cluster",
+        "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters",
+        "HOMES": "Flower pot, Pail, Ornamental containers, Bowl, Vase, Watering can, Scupper drain, Turtle tank, Overturned chair, Mop pail, Bin",
+        "PUBLIC_PLACES": "Gully trap",
+        "CONSTRUCTION_SITES": null,
+        "SHAPE.AREA": 1412807.2823481185,
+        "SHAPE.LEN": 4433.135791297142
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.98041223891191,
+              1.3142795089356532
+            ],
+            [
+              103.98633572354147,
+              1.3103435677248645
+            ],
+            [
+              103.9856181236819,
+              1.3039282539582602
+            ],
+            [
+              103.97991578191258,
+              1.301279504983096
+            ],
+            [
+              103.97447428415356,
+              1.3048755017019014
+            ],
+            [
+              103.97393658154063,
+              1.3110720481834435
+            ],
+            [
+              103.98041223891191,
+              1.3142795089356532
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
