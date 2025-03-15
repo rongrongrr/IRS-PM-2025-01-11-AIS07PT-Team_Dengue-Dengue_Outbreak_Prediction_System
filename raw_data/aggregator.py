@@ -9,13 +9,16 @@ YEAR = 2025
 
 # Specify the date range (inclusive) in YYYY-MM-DD format:
 START_DATE_STR = "2025-01-01"
-END_DATE_STR   = "2025-03-14"
+END_DATE_STR   = "2025-03-31"
 
-# Input base folder (assumes folder structure like: BASE_FOLDER/YEAR/2022-01-01.json, etc.)
-BASE_FOLDER = "rainfall"
+# Aggregation type: set to "sum" for rainfall, "avg" for humidity
+AGGREGATION_TYPE = "avg"  # change to "sum" if needed
+
+# Input base folder (e.g., "humidity" or "rainfall")
+BASE_FOLDER = "humidity"
 
 # Output CSV file for aggregated daily data
-OUTPUT_CSV = "daily_rainfall_2025.csv"
+OUTPUT_CSV = "daily_humidity_2025.csv"
 
 # ===== Helper: Date Range Generator =====
 start_date = datetime.strptime(START_DATE_STR, "%Y-%m-%d").date()
@@ -28,17 +31,15 @@ def daterange(start_date, end_date):
         current += timedelta(days=1)
 
 # ===== Aggregation Dictionary =====
-# Key: (file_date, station_id)
-# Value: dictionary with file_date, station_id, station_name, latitude, longitude, and aggregated rainfall_value
+# Key: (day, station_id)
+# Value: dictionary with day, station_id, station_name, latitude, longitude,
+#        total (sum of values) and count (number of measurements, used for average)
 daily_data = {}
 
-# ===== Process Each File =====
-year_folder = os.path.join(BASE_FOLDER, str(YEAR))
-
 for current_date in daterange(start_date, end_date):
-    file_date_str = current_date.isoformat()  # e.g., "2022-01-01"
+    file_date_str = current_date.isoformat()  # e.g., "2023-01-01"
     file_name = file_date_str + ".json"
-    file_path = os.path.join(year_folder, file_name)
+    file_path = os.path.join(BASE_FOLDER, str(YEAR), file_name)
     
     if not os.path.exists(file_path):
         print(f"File {file_path} does not exist, skipping.")
@@ -50,30 +51,41 @@ for current_date in daterange(start_date, end_date):
     except Exception as e:
         print(f"Error loading {file_path}: {e}")
         continue
-    
-    # Extract station info from the first page that contains stations.
+
+    # ===== Merge Station Info from All Pages =====
     station_info = {}
     for page in pages:
         data = page.get("data", {})
         stations = data.get("stations", [])
-        if stations:
-            for station in stations:
-                sid = station.get("id")
-                if sid and sid not in station_info:
+        for station in stations:
+            sid = station.get("id")
+            if sid:
+                # Try to get name and location details
+                name = station.get("name", "")
+                # Some endpoints use "location" and some use "labelLocation"
+                loc = station.get("location") or station.get("labelLocation") or {}
+                latitude = loc.get("latitude", "")
+                longitude = loc.get("longitude", "")
+                # Merge: update only if new info is available
+                if sid in station_info:
+                    if not station_info[sid].get("name") and name:
+                        station_info[sid]["name"] = name
+                    if not station_info[sid].get("latitude") and latitude:
+                        station_info[sid]["latitude"] = latitude
+                    if not station_info[sid].get("longitude") and longitude:
+                        station_info[sid]["longitude"] = longitude
+                else:
                     station_info[sid] = {
-                        "name": station.get("name", ""),
-                        "latitude": station.get("location", {}).get("latitude", ""),
-                        "longitude": station.get("location", {}).get("longitude", "")
+                        "name": name,
+                        "latitude": latitude,
+                        "longitude": longitude
                     }
-            # Use the first available stations list.
-            break
-    
-    # Process each page to accumulate rainfall values.
+
+    # Process each page and aggregate measurements.
     for page in pages:
         data = page.get("data", {})
         readings = data.get("readings", [])
         for reading in readings:
-            # We ignore the specific timestamp since we're summing for the whole day.
             measurements = reading.get("data", [])
             for measure in measurements:
                 station_id = measure.get("stationId")
@@ -82,9 +94,10 @@ for current_date in daterange(start_date, end_date):
                 except (TypeError, ValueError):
                     value = 0.0
                 key = (file_date_str, station_id)
-                
                 if key in daily_data:
-                    daily_data[key]["total_rainfall"] += value
+                    daily_data[key]["total"] += value
+                    if AGGREGATION_TYPE == "avg":
+                        daily_data[key]["count"] += 1
                 else:
                     info = station_info.get(station_id, {"name": "", "latitude": "", "longitude": ""})
                     daily_data[key] = {
@@ -93,21 +106,34 @@ for current_date in daterange(start_date, end_date):
                         "station_name": info.get("name", ""),
                         "latitude": info.get("latitude", ""),
                         "longitude": info.get("longitude", ""),
-                        "total_rainfall": value
+                        "total": value,
+                        "count": 1  # used only for averaging
                     }
-    
     print(f"Processed {file_path}")
 
-# ===== Write Aggregated Data to CSV =====
-# Sort the results by day and station_id
-aggregated_rows = sorted(daily_data.values(), key=lambda x: (x["day"], x["station_id"]))
+# ===== Prepare Final Aggregated Data =====
+final_rows = []
+for key, data_entry in daily_data.items():
+    if AGGREGATION_TYPE == "avg":
+        aggregated_value = data_entry["total"] / data_entry["count"] if data_entry["count"] > 0 else 0
+    else:
+        aggregated_value = data_entry["total"]
+    final_rows.append({
+        "day": data_entry["day"],
+        "station_id": data_entry["station_id"],
+        "station_name": data_entry["station_name"],
+        "latitude": data_entry["latitude"],
+        "longitude": data_entry["longitude"],
+        "aggregated_value": aggregated_value
+    })
 
-fieldnames = ["day", "station_id", "station_name", "latitude", "longitude", "total_rainfall"]
+# ===== Write Aggregated Data to CSV =====
+fieldnames = ["day", "station_id", "station_name", "latitude", "longitude", "aggregated_value"]
 try:
     with open(OUTPUT_CSV, "w", newline="") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
-        writer.writerows(aggregated_rows)
-    print(f"Aggregated data successfully written to {OUTPUT_CSV} with {len(aggregated_rows)} rows.")
+        writer.writerows(final_rows)
+    print(f"Aggregated data successfully written to {OUTPUT_CSV} with {len(final_rows)} rows.")
 except Exception as e:
     print(f"Error writing CSV file: {e}")
