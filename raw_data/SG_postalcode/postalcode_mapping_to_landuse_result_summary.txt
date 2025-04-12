@@ -1,0 +1,8 @@
+1.	Data Processing:
+•	Processed 121,154 postal codes
+•	Checked against 113,212 land use areas
+•	Completed in 26.43 seconds
+2.	Mapping Results:
+•	Successfully mapped all 121,154 postal codes
+•	113,837 postal codes (94%) were found inside a land use polygon
+•	7,317 postal codes (6%) defaulted to their nearest land use area
