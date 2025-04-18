@@ -16,11 +16,30 @@ export default function Sidebar({
         <li>
           <button
             className={`flex items-center p-2 w-full rounded ${
+              activeView === "cluster-prediction"
+                ? "bg-blue-100 text-blue-700"
+                : "hover:bg-gray-100"
+            }`}
+            onClick={() => {
+              setActiveView("cluster-prediction");
+              setActiveDistrict(null); // Reset activeDistrict
+            }}
+          >
+            <Map className="mr-2" size={18} />
+            Cluster Prediction
+          </button>
+        </li>
+        <li>
+          <button
+            className={`flex items-center p-2 w-full rounded ${
               activeView === "clusters"
                 ? "bg-blue-100 text-blue-700"
                 : "hover:bg-gray-100"
             }`}
-            onClick={() => setActiveView("clusters")}
+            onClick={() => {
+              setActiveView("clusters");
+              setActiveDistrict(null); // Reset activeDistrict
+            }}
           >
             <Map className="mr-2" size={18} />
             Cluster Analysis
@@ -33,7 +52,10 @@ export default function Sidebar({
                 ? "bg-blue-100 text-blue-700"
                 : "hover:bg-gray-100"
             }`}
-            onClick={() => setActiveView("trends")}
+            onClick={() => {
+              setActiveView("trends");
+              setActiveDistrict(null); // Reset activeDistrict
+            }}
           >
             <BarChart3 className="mr-2" size={18} />
             Incidence Trends

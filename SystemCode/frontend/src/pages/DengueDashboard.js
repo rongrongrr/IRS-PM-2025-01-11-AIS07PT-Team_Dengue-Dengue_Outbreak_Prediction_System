@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import SummaryCards from "../components/SummaryCards";
 import TrendsView from "../components/TrendsView";
+import ClusterPredictionView from "../components/ClusterPredictionView";
 
 // Sample dengue data - replace with actual data
 const dengueData = [
@@ -77,7 +78,7 @@ const alertColors = {
 
 export default function DengueDashboard() {
   const [activeDistrict, setActiveDistrict] = useState(null);
-  const [activeView, setActiveView] = useState("clusters");
+  const [activeView, setActiveView] = useState("cluster-prediction");
   const [timeFilter, setTimeFilter] = useState("6m");
   const [summaryCardsInfo, setSummaryCardsInfo] = useState({
     totalActiveCases: 123,
@@ -150,7 +151,9 @@ export default function DengueDashboard() {
 
         {/* Main Panel */}
         <div className="flex-1 bg-white rounded-lg shadow">
-          {activeView === "clusters" ? (
+          {activeView === "cluster-prediction" ? (
+            <ClusterPredictionView />
+          ) : activeView === "clusters" ? (
             <ClusterAnalysisView
               dengueData={dengueData}
               activeDistrict={activeDistrict}
