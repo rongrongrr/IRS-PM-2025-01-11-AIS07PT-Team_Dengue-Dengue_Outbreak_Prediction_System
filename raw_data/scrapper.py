@@ -6,7 +6,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 base_url = "https://api-open.data.gov.sg/v2/real-time/api/"
 
-year = 2025 #change the year to vary the folder name and date for API calls
+year = 2017 #change the year to vary the folder name and date for API calls
 url = base_url+"relative-humidity"
 main_folder = "humidity" #change this according to the API you are using. very caveman, I know. 
 
@@ -56,8 +56,8 @@ def fetch_and_save(date_str):
 
 
 def main():
-    start_date = datetime.date(year, 1, 1)
-    end_date = datetime.date(year, 3, 14)
+    start_date = datetime.date(year, 7, 1)
+    end_date = datetime.date(year, 8, 31)
     delta = datetime.timedelta(days=1)
     
     # Generate all date strings for the year
@@ -68,7 +68,7 @@ def main():
         current_date += delta
 
     #ThreadPoolExecutor to run up to 10 threads concurrently
-    max_workers = 20
+    max_workers = 5
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         # Submit all the date tasks
         future_to_date = {executor.submit(fetch_and_save, date): date for date in dates}
