@@ -12,13 +12,13 @@ START_DATE_STR = "2020-01-01"
 END_DATE_STR   = "2020-12-31"
 
 # Aggregation type: set to "sum" for rainfall, "avg" for humidity
-AGGREGATION_TYPE = "avg"  # change to "sum" if needed
+AGGREGATION_TYPE = "sum"  # change to "sum" if needed
 
 # Input base folder (e.g., "humidity" or "rainfall")
-BASE_FOLDER = "humidity"
+BASE_FOLDER = "rainfall"
 
 # Output CSV file for aggregated daily data
-OUTPUT_CSV = "daily_humidity_2020.csv"
+OUTPUT_CSV = "daily_rainfall_2020.csv"
 
 # ===== Helper: Date Range Generator =====
 start_date = datetime.strptime(START_DATE_STR, "%Y-%m-%d").date()
