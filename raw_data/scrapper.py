@@ -6,7 +6,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 base_url = "https://api-open.data.gov.sg/v2/real-time/api/"
 
-year = 2019 #change the year to vary the folder name and date for API calls
+year = 2020 #change the year to vary the folder name and date for API calls
 url = base_url+"relative-humidity"
 main_folder = "humidity" #change this according to the API you are using. very caveman, I know. 
 
