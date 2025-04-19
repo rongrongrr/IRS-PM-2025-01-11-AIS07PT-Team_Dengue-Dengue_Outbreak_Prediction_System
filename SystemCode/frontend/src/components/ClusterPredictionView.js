@@ -3,8 +3,8 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 export default function ClusterPredictionView() {
-  const [postcode, setPostcode] = useState("120000");
-  const [searchedPostcode, setSearchedPostcode] = useState("120000");
+  const [postalCode, setPostalCode] = useState("120000");
+  const [searchedPostalCode, setSearchedPostalCode] = useState("120000");
   const [loading, setLoading] = useState(false);
   const [selectedArea, setSelectedArea] = useState(null);
   const mapRef = useRef(null);
@@ -16,7 +16,7 @@ export default function ClusterPredictionView() {
     {
       id: 1,
       name: "Queenstown",
-      postcode: "120000",
+      postalCode: "120000",
       incidenceRate: 65,
       cases: 35,
       risk: "High",
@@ -25,7 +25,7 @@ export default function ClusterPredictionView() {
     {
       id: 2,
       name: "Commonwealth",
-      postcode: "120001",
+      postalCode: "120001",
       incidenceRate: 25,
       cases: 12,
       risk: "Low",
@@ -34,7 +34,7 @@ export default function ClusterPredictionView() {
     {
       id: 3,
       name: "Buona Vista",
-      postcode: "120002",
+      postalCode: "120002",
       incidenceRate: 45,
       cases: 22,
       risk: "Medium",
@@ -43,7 +43,7 @@ export default function ClusterPredictionView() {
     {
       id: 4,
       name: "Dover",
-      postcode: "120003",
+      postalCode: "120003",
       incidenceRate: 18,
       cases: 8,
       risk: "Low",
@@ -52,7 +52,7 @@ export default function ClusterPredictionView() {
     {
       id: 5,
       name: "Clementi",
-      postcode: "120004",
+      postalCode: "120004",
       incidenceRate: 72,
       cases: 41,
       risk: "Very High",
@@ -64,7 +64,7 @@ export default function ClusterPredictionView() {
   useEffect(() => {
     if (selectedArea === null) {
       setSelectedArea(
-        dummyAreaData.find((area) => area.postcode === postcode) ||
+        dummyAreaData.find((area) => area.postalCode === postalCode) ||
           dummyAreaData[0]
       );
     }
@@ -132,7 +132,7 @@ export default function ClusterPredictionView() {
       // Add popup with info
       marker.bindPopup(`
         <strong>${area.name}</strong><br>
-        Postcode: ${area.postcode}<br>
+        Postal Code: ${area.postalCode}<br>
         Cases: ${area.cases}<br>
         Incidence Rate: ${area.incidenceRate}<br>
         Risk Level: ${area.risk}
@@ -153,8 +153,8 @@ export default function ClusterPredictionView() {
     }
   };
 
-  const handlePostcodeChange = (e) => {
-    setPostcode(e.target.value);
+  const handlePostalCodeChange = (e) => {
+    setPostalCode(e.target.value);
   };
 
   const handleSubmit = (e) => {
@@ -163,10 +163,10 @@ export default function ClusterPredictionView() {
 
     // Simulate API call with slight delay
     setTimeout(() => {
-      setSearchedPostcode(postcode);
+      setSearchedPostalCode(postalCode);
       // Find matching area or default to first one
       const matchingArea =
-        dummyAreaData.find((area) => area.postcode === postcode) ||
+        dummyAreaData.find((area) => area.postalCode === postalCode) ||
         dummyAreaData[0];
       setSelectedArea(matchingArea);
       setLoading(false);
@@ -175,8 +175,8 @@ export default function ClusterPredictionView() {
 
   const selectArea = (area) => {
     setSelectedArea(area);
-    setPostcode(area.postcode);
-    setSearchedPostcode(area.postcode);
+    setPostalCode(area.postalCode);
+    setSearchedPostalCode(area.postalCode);
   };
 
   // Helper function to determine color class based on incidence rate
@@ -213,17 +213,17 @@ export default function ClusterPredictionView() {
           <form onSubmit={handleSubmit} className="mb-4">
             <div className="mb-3">
               <label
-                htmlFor="postcode"
+                htmlFor="postalCode"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Postcode
+                Postal Code
               </label>
               <input
                 type="text"
-                id="postcode"
-                value={postcode}
-                onChange={handlePostcodeChange}
-                placeholder="Enter postcode"
+                id="postalCode"
+                value={postalCode}
+                onChange={handlePostalCodeChange}
+                placeholder="Enter postal code"
                 className="w-full p-2 border rounded focus:ring focus:ring-blue-300"
               />
             </div>
@@ -239,11 +239,11 @@ export default function ClusterPredictionView() {
             </button>
           </form>
 
-          {searchedPostcode && (
+          {searchedPostalCode && (
             <div className="mb-4 p-3 bg-blue-50 rounded border border-blue-100">
               <h3 className="font-medium text-blue-800">Current View</h3>
               <p className="text-sm text-blue-700">
-                Postcode: {searchedPostcode}
+                Postal Code: {searchedPostalCode}
               </p>
               {selectedArea && (
                 <p className="text-sm text-blue-700">
@@ -346,9 +346,9 @@ export default function ClusterPredictionView() {
                       <h4 className="font-medium mb-2">General Information</h4>
                       <div className="space-y-2">
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Postcode:</span>
+                          <span className="text-gray-600">Postal Code:</span>
                           <span className="font-medium">
-                            {selectedArea.postcode}
+                            {selectedArea.postalCode}
                           </span>
                         </div>
                         <div className="flex justify-between">
@@ -414,7 +414,7 @@ export default function ClusterPredictionView() {
                   Area
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Postcode
+                  Postal Code
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Cases
@@ -442,7 +442,7 @@ export default function ClusterPredictionView() {
                     {area.name}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {area.postcode}
+                    {area.postalCode}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {area.cases}
