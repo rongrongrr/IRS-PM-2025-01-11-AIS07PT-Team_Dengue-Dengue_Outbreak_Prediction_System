@@ -2,10 +2,11 @@ import pandas as pd
 
 # List of CSVs
 csv_files = [
-    'daily_humidity_2022.csv',
-    'daily_humidity_2023.csv',
-    'daily_humidity_2024.csv',
-    'daily_humidity_2025.csv'
+    'daily_humidity_2016.csv',
+    'daily_humidity_2017.csv',
+    'daily_humidity_2018.csv',
+    'daily_humidity_2019.csv',
+    'daily_humidity_2020.csv'
 ]
 
 # Initialize tracking
@@ -43,5 +44,5 @@ if total_rows_actual != total_rows_expected:
     raise ValueError("Row count mismatch after combining files!")
 
 # Save combined result
-combined_df.to_csv('overall_humidity_data.csv', index=False)
-print("\nSaved combined CSV to 'combined_humidity_data.csv'")
+combined_df.to_csv('overall_humidity_data_2016_2020.csv', index=False)
+print("\nSaved combined CSV to 'combined_humidity_data_2016_2020.csv'")
