@@ -5,11 +5,11 @@ from datetime import datetime, timedelta
 
 # ===== Editable Parameters =====
 # The year (folder name) to process:
-YEAR = 2025
+YEAR = 2020
 
 # Specify the date range (inclusive) in YYYY-MM-DD format:
-START_DATE_STR = "2025-01-01"
-END_DATE_STR   = "2025-03-31"
+START_DATE_STR = "2020-01-01"
+END_DATE_STR   = "2020-12-31"
 
 # Aggregation type: set to "sum" for rainfall, "avg" for humidity
 AGGREGATION_TYPE = "avg"  # change to "sum" if needed
@@ -18,7 +18,7 @@ AGGREGATION_TYPE = "avg"  # change to "sum" if needed
 BASE_FOLDER = "humidity"
 
 # Output CSV file for aggregated daily data
-OUTPUT_CSV = "daily_humidity_2025.csv"
+OUTPUT_CSV = "daily_humidity_2020.csv"
 
 # ===== Helper: Date Range Generator =====
 start_date = datetime.strptime(START_DATE_STR, "%Y-%m-%d").date()
