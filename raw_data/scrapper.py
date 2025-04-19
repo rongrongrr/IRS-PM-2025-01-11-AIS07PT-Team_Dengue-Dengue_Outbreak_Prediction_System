@@ -56,8 +56,8 @@ def fetch_and_save(date_str):
 
 
 def main():
-    start_date = datetime.date(year, 4, 1)
-    end_date = datetime.date(year, 7, 31)
+    start_date = datetime.date(year, 11, 1)
+    end_date = datetime.date(year, 12, 31)
     delta = datetime.timedelta(days=1)
     
     # Generate all date strings for the year
