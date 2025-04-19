@@ -12,6 +12,7 @@ export default function ClusterAnalysisView({
   const mapRef = useRef(null);
   const mapContainerRef = useRef(null);
   const [legend, setLegend] = useState(false);
+  const [showFilterModal, setShowFilterModal] = useState(false);
 
   // Initialize the map when the component mounts
   useEffect(() => {
@@ -172,6 +173,7 @@ export default function ClusterAnalysisView({
   }, [activeDistrict]);
 
   const toggleLegend = () => {
+    console.log("Toggling legend");
     setLegend((prev) => !prev);
   };
 
@@ -186,7 +188,10 @@ export default function ClusterAnalysisView({
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-semibold">Dengue Cluster Analysis</h2>
         <div className="flex items-center">
-          <button className="flex items-center text-sm text-gray-600 hover:text-blue-700">
+          <button
+            className="flex items-center text-sm text-gray-600 hover:text-blue-700"
+            onClick={() => setShowFilterModal(true)}
+          >
             <Filter size={16} className="mr-1" />
             Filter
           </button>
@@ -206,10 +211,44 @@ export default function ClusterAnalysisView({
           ref={mapContainerRef}
           className="h-64 rounded mb-4 border border-gray-200"
         ></div>
-
+        {/* Filter */}
+        {showFilterModal && (
+          <div
+            style={{
+              zIndex: 999, // Ensure it's above the map
+            }}
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          >
+            <div className="bg-white p-4 rounded shadow-lg max-w-sm w-full">
+              <h3 className="text-lg font-semibold mb-4">Filter Options</h3>
+              <div className="space-y-2">
+                <label className="block">
+                  <span className="text-sm text-gray-700">Alert Level</span>
+                  <select className="block w-full mt-1 border-gray-300 rounded">
+                    <option value="all">All</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                  </select>
+                </label>
+                <button
+                  className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+                  onClick={() => setShowFilterModal(false)}
+                >
+                  Apply Filter
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
         {/* Floating Legend */}
         {legend && (
-          <div className="absolute top-2 right-2 bg-white p-2 rounded shadow-md border border-gray-200 z-10">
+          <div
+            style={{
+              zIndex: 999, // Ensure it's above the map
+            }}
+            className="absolute top-2 right-2 bg-white p-2 rounded shadow-md border border-gray-200"
+          >
             <h4 className="text-sm font-medium mb-1">Alert Levels</h4>
             {legendItems.map((item, index) => (
               <div key={index} className="flex items-center text-xs mb-1">
