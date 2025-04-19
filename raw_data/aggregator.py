@@ -124,11 +124,11 @@ for key, data_entry in daily_data.items():
         "station_name": data_entry["station_name"],
         "latitude": data_entry["latitude"],
         "longitude": data_entry["longitude"],
-        "aggregated_value": aggregated_value
+        "total_rainfall": aggregated_value
     })
 
 # ===== Write Aggregated Data to CSV =====
-fieldnames = ["day", "station_id", "station_name", "latitude", "longitude", "aggregated_value"]
+fieldnames = ["day", "station_id", "station_name", "latitude", "longitude", "total_rainfall"]
 try:
     with open(OUTPUT_CSV, "w", newline="") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)

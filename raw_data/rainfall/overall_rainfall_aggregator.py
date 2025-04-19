@@ -45,4 +45,4 @@ if total_rows_actual != total_rows_expected:
 
 # Save combined result
 combined_df.to_csv('overall_rainfall_data_2016_2020.csv', index=False)
-print("\nSaved combined CSV to 'combined_rainfall_data.csv'")
+print("\nSaved combined CSV to 'combined_rainfall_data_2016_2020.csv'")
