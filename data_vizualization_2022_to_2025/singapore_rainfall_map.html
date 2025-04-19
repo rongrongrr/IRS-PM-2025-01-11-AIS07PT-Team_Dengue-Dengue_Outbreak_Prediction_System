@@ -1,0 +1,2460 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8bfca9e1daaead33576b943a0cede949 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+     bottom: 50px; right: 50px; width: 150px; height: 120px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white;
+     padding: 10px">
+     &nbsp; Rainfall Score <br>
+     &nbsp; <i class="fa fa-circle" style="color:#0000ff"></i> &nbsp; 0.0 - 0.2 <br>
+     &nbsp; <i class="fa fa-circle" style="color:#0080ff"></i> &nbsp; 0.2 - 0.4 <br>
+     &nbsp; <i class="fa fa-circle" style="color:#ffff00"></i> &nbsp; 0.4 - 0.6 <br>
+     &nbsp; <i class="fa fa-circle" style="color:#ff8000"></i> &nbsp; 0.6 - 0.8 <br>
+     &nbsp; <i class="fa fa-circle" style="color:#ff0000"></i> &nbsp; 0.8 - 1.0 <br>
+</div>
+    
+            <div class="folium-map" id="map_8bfca9e1daaead33576b943a0cede949" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8bfca9e1daaead33576b943a0cede949 = L.map(
+                "map_8bfca9e1daaead33576b943a0cede949",
+                {
+                    center: [1.3521, 103.8198],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_96440735c8eda05e3b376e043ee9888e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_96440735c8eda05e3b376e043ee9888e.addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+            var circle_marker_575d3585065a16acd84927dbce43abe0 = L.circleMarker(
+                [1.387, 103.935],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_6b9dec9225be5a1810f60cf8e0ed0ca6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dae9d61c5372a52f86516f54fd5430e0 = $(`<div id="html_dae9d61c5372a52f86516f54fd5430e0" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Pasir Ris Drive 12 (S29)<br>     <b>Avg. Rainfall:</b> 10.03 mm<br>     <b>Rainfall Score:</b> 1.00<br>     <b>Readings:</b> 129     </div>`)[0];
+                popup_6b9dec9225be5a1810f60cf8e0ed0ca6.setContent(html_dae9d61c5372a52f86516f54fd5430e0);
+            
+        
+
+        circle_marker_575d3585065a16acd84927dbce43abe0.bindPopup(popup_6b9dec9225be5a1810f60cf8e0ed0ca6)
+        ;
+
+        
+    
+    
+            var circle_marker_25c1df50143e430f71fdfe30ea871a06 = L.circleMarker(
+                [1.34703, 103.70073],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_4f5150927af0e773b946e28d99d97886 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1a7d930dfdd33e2f52a128f2081612a4 = $(`<div id="html_1a7d930dfdd33e2f52a128f2081612a4" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S228 (S228)<br>     <b>Avg. Rainfall:</b> 9.97 mm<br>     <b>Rainfall Score:</b> 0.99<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_4f5150927af0e773b946e28d99d97886.setContent(html_1a7d930dfdd33e2f52a128f2081612a4);
+            
+        
+
+        circle_marker_25c1df50143e430f71fdfe30ea871a06.bindPopup(popup_4f5150927af0e773b946e28d99d97886)
+        ;
+
+        
+    
+    
+            var circle_marker_fa1e81bc38a29eecb23b68ea1b26b77f = L.circleMarker(
+                [1.323, 103.9217],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_987d1bb14c483d51582bf0ab0e7e9040 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_02e5c67c521240e78c3f16be9f9334d9 = $(`<div id="html_02e5c67c521240e78c3f16be9f9334d9" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Chai Chee Street (S61)<br>     <b>Avg. Rainfall:</b> 9.92 mm<br>     <b>Rainfall Score:</b> 0.99<br>     <b>Readings:</b> 184     </div>`)[0];
+                popup_987d1bb14c483d51582bf0ab0e7e9040.setContent(html_02e5c67c521240e78c3f16be9f9334d9);
+            
+        
+
+        circle_marker_fa1e81bc38a29eecb23b68ea1b26b77f.bindPopup(popup_987d1bb14c483d51582bf0ab0e7e9040)
+        ;
+
+        
+    
+    
+            var circle_marker_4790f00f80637ca3c5f53103b9be1840 = L.circleMarker(
+                [1.42918, 103.75711],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_9c181c95dce84b1c29d3f01c6a0f8a88 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e8632f239d2ec2f2abe55468cdd7735c = $(`<div id="html_e8632f239d2ec2f2abe55468cdd7735c" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Kranji Road (S211)<br>     <b>Avg. Rainfall:</b> 9.41 mm<br>     <b>Rainfall Score:</b> 0.92<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_9c181c95dce84b1c29d3f01c6a0f8a88.setContent(html_e8632f239d2ec2f2abe55468cdd7735c);
+            
+        
+
+        circle_marker_4790f00f80637ca3c5f53103b9be1840.bindPopup(popup_9c181c95dce84b1c29d3f01c6a0f8a88)
+        ;
+
+        
+    
+    
+            var circle_marker_f0a980cc5a9475b44a2c2037d05df7f2 = L.circleMarker(
+                [1.44003, 103.76904],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_6a2cf8ba204d8c2747d0fbf20ae90d11 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e7dfa583610cc3e23adb219602ba315a = $(`<div id="html_e7dfa583610cc3e23adb219602ba315a" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Woodlands Centre (S210)<br>     <b>Avg. Rainfall:</b> 9.36 mm<br>     <b>Rainfall Score:</b> 0.92<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_6a2cf8ba204d8c2747d0fbf20ae90d11.setContent(html_e7dfa583610cc3e23adb219602ba315a);
+            
+        
+
+        circle_marker_f0a980cc5a9475b44a2c2037d05df7f2.bindPopup(popup_6a2cf8ba204d8c2747d0fbf20ae90d11)
+        ;
+
+        
+    
+    
+            var circle_marker_28eb6fb78569a8f9f8b33046f4b9e65a = L.circleMarker(
+                [1.30968, 103.7578],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_e0d59cfe591907dc539b869943ae4c1d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_09dee5f618d264c0197afeb9c9056629 = $(`<div id="html_09dee5f618d264c0197afeb9c9056629" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S202 (S202)<br>     <b>Avg. Rainfall:</b> 9.34 mm<br>     <b>Rainfall Score:</b> 0.91<br>     <b>Readings:</b> 415     </div>`)[0];
+                popup_e0d59cfe591907dc539b869943ae4c1d.setContent(html_09dee5f618d264c0197afeb9c9056629);
+            
+        
+
+        circle_marker_28eb6fb78569a8f9f8b33046f4b9e65a.bindPopup(popup_e0d59cfe591907dc539b869943ae4c1d)
+        ;
+
+        
+    
+    
+            var circle_marker_f7adfa9eff09f9cbec1ab2ae617a738a = L.circleMarker(
+                [1.35167, 103.72195],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_dc629587546a62574806515e043a04b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_defc2b960e4b7a6c2c4b06d2386cbe4b = $(`<div id="html_defc2b960e4b7a6c2c4b06d2386cbe4b" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S229 (S229)<br>     <b>Avg. Rainfall:</b> 9.15 mm<br>     <b>Rainfall Score:</b> 0.89<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_dc629587546a62574806515e043a04b3.setContent(html_defc2b960e4b7a6c2c4b06d2386cbe4b);
+            
+        
+
+        circle_marker_f7adfa9eff09f9cbec1ab2ae617a738a.bindPopup(popup_dc629587546a62574806515e043a04b3)
+        ;
+
+        
+    
+    
+            var circle_marker_891b5de420d3104fb88ab35078c9a516 = L.circleMarker(
+                [1.2841, 103.7886],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_118b4392c0d3743c0251d4075562788f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4e49b0f08d752eaf9bac60b0c3cba2b9 = $(`<div id="html_4e49b0f08d752eaf9bac60b0c3cba2b9" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> South Buona Vista Road (S92)<br>     <b>Avg. Rainfall:</b> 9.13 mm<br>     <b>Rainfall Score:</b> 0.89<br>     <b>Readings:</b> 107     </div>`)[0];
+                popup_118b4392c0d3743c0251d4075562788f.setContent(html_4e49b0f08d752eaf9bac60b0c3cba2b9);
+            
+        
+
+        circle_marker_891b5de420d3104fb88ab35078c9a516.bindPopup(popup_118b4392c0d3743c0251d4075562788f)
+        ;
+
+        
+    
+    
+            var circle_marker_c21ff38d666219e276394a75a9a76b4b = L.circleMarker(
+                [1.29164, 103.7702],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_e36cc2502c7da3e8fbc6560c3695c99c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1cf1847cbfda3a3d0dd964c5763650cb = $(`<div id="html_1cf1847cbfda3a3d0dd964c5763650cb" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S203 (S203)<br>     <b>Avg. Rainfall:</b> 9.12 mm<br>     <b>Rainfall Score:</b> 0.89<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_e36cc2502c7da3e8fbc6560c3695c99c.setContent(html_1cf1847cbfda3a3d0dd964c5763650cb);
+            
+        
+
+        circle_marker_c21ff38d666219e276394a75a9a76b4b.bindPopup(popup_e36cc2502c7da3e8fbc6560c3695c99c)
+        ;
+
+        
+    
+    
+            var circle_marker_54abaa05b684bd4cfb13444a728cd30b = L.circleMarker(
+                [1.43944, 103.80389],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_f214b4e3a70d7dbe29c359bec5f4841c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fa400f74cec4577534814792daf1d794 = $(`<div id="html_fa400f74cec4577534814792daf1d794" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S227 (S227)<br>     <b>Avg. Rainfall:</b> 9.07 mm<br>     <b>Rainfall Score:</b> 0.88<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_f214b4e3a70d7dbe29c359bec5f4841c.setContent(html_fa400f74cec4577534814792daf1d794);
+            
+        
+
+        circle_marker_54abaa05b684bd4cfb13444a728cd30b.bindPopup(popup_f214b4e3a70d7dbe29c359bec5f4841c)
+        ;
+
+        
+    
+    
+            var circle_marker_8f6b11976bedbe4f39f9ded1535d004a = L.circleMarker(
+                [1.32311, 103.76714],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_5b11ea88acf41cd20cfd26f0122f17a6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_56dd9012cacdfe421c235e7ac2468ed5 = $(`<div id="html_56dd9012cacdfe421c235e7ac2468ed5" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S201 (S201)<br>     <b>Avg. Rainfall:</b> 9.00 mm<br>     <b>Rainfall Score:</b> 0.87<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_5b11ea88acf41cd20cfd26f0122f17a6.setContent(html_56dd9012cacdfe421c235e7ac2468ed5);
+            
+        
+
+        circle_marker_8f6b11976bedbe4f39f9ded1535d004a.bindPopup(popup_5b11ea88acf41cd20cfd26f0122f17a6)
+        ;
+
+        
+    
+    
+            var circle_marker_ff115eb995b965c86a9f14cccaefe256 = L.circleMarker(
+                [1.36019, 103.85335],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_1c75afacc508d0acb8ca033dea4d34d6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_27f70cf8924a4cafcf1ac5d7137f55af = $(`<div id="html_27f70cf8924a4cafcf1ac5d7137f55af" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S216 (S216)<br>     <b>Avg. Rainfall:</b> 8.94 mm<br>     <b>Rainfall Score:</b> 0.87<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_1c75afacc508d0acb8ca033dea4d34d6.setContent(html_27f70cf8924a4cafcf1ac5d7137f55af);
+            
+        
+
+        circle_marker_ff115eb995b965c86a9f14cccaefe256.bindPopup(popup_1c75afacc508d0acb8ca033dea4d34d6)
+        ;
+
+        
+    
+    
+            var circle_marker_ccacffd4313495102a735f7ed04a326e = L.circleMarker(
+                [1.43944, 103.80389],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_60642a8b1ee95848359d85d8d805ab0a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2358897e137277e2261c438023750e42 = $(`<div id="html_2358897e137277e2261c438023750e42" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Woodlands Drive 62 (S227)<br>     <b>Avg. Rainfall:</b> 8.84 mm<br>     <b>Rainfall Score:</b> 0.85<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_60642a8b1ee95848359d85d8d805ab0a.setContent(html_2358897e137277e2261c438023750e42);
+            
+        
+
+        circle_marker_ccacffd4313495102a735f7ed04a326e.bindPopup(popup_60642a8b1ee95848359d85d8d805ab0a)
+        ;
+
+        
+    
+    
+            var circle_marker_549680b85ad69713363f868272c0f719 = L.circleMarker(
+                [1.3824, 103.7603],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_d24e5770244099c879fbad6ede8e248a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_35333b704ca04e1bdfbc6ea74216ea9f = $(`<div id="html_35333b704ca04e1bdfbc6ea74216ea9f" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Bukit Panjang Road (S64)<br>     <b>Avg. Rainfall:</b> 8.83 mm<br>     <b>Rainfall Score:</b> 0.85<br>     <b>Readings:</b> 901     </div>`)[0];
+                popup_d24e5770244099c879fbad6ede8e248a.setContent(html_35333b704ca04e1bdfbc6ea74216ea9f);
+            
+        
+
+        circle_marker_549680b85ad69713363f868272c0f719.bindPopup(popup_d24e5770244099c879fbad6ede8e248a)
+        ;
+
+        
+    
+    
+            var circle_marker_107a51364f9c39874cc25b7de2b7279e = L.circleMarker(
+                [1.3524, 103.9007],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_6135a90eca782b13b35eff4e77c98c57 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_49e1817c6455fbac6585eef6c32bcd1e = $(`<div id="html_49e1817c6455fbac6585eef6c32bcd1e" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Paya Lebar (S06)<br>     <b>Avg. Rainfall:</b> 8.83 mm<br>     <b>Rainfall Score:</b> 0.85<br>     <b>Readings:</b> 128     </div>`)[0];
+                popup_6135a90eca782b13b35eff4e77c98c57.setContent(html_49e1817c6455fbac6585eef6c32bcd1e);
+            
+        
+
+        circle_marker_107a51364f9c39874cc25b7de2b7279e.bindPopup(popup_6135a90eca782b13b35eff4e77c98c57)
+        ;
+
+        
+    
+    
+            var circle_marker_7d17bfe11b48ab703c28f490cfb480eb = L.circleMarker(
+                [1.30874, 103.818],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_6c52900404a91d1d468a07a8f79fd7b5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8d9aeb6855b34dfe59a766c9a4f86a15 = $(`<div id="html_8d9aeb6855b34dfe59a766c9a4f86a15" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Holland Road (S120)<br>     <b>Avg. Rainfall:</b> 8.81 mm<br>     <b>Rainfall Score:</b> 0.85<br>     <b>Readings:</b> 827     </div>`)[0];
+                popup_6c52900404a91d1d468a07a8f79fd7b5.setContent(html_8d9aeb6855b34dfe59a766c9a4f86a15);
+            
+        
+
+        circle_marker_7d17bfe11b48ab703c28f490cfb480eb.bindPopup(popup_6c52900404a91d1d468a07a8f79fd7b5)
+        ;
+
+        
+    
+    
+            var circle_marker_34b46e46176f506a586338031091b213 = L.circleMarker(
+                [1.36491, 103.75065],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_6007afd90008a6ad8d79c6ed361a054f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_428c718e64d54060ecbb23eeffa07183 = $(`<div id="html_428c718e64d54060ecbb23eeffa07183" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S218 (S218)<br>     <b>Avg. Rainfall:</b> 8.78 mm<br>     <b>Rainfall Score:</b> 0.85<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_6007afd90008a6ad8d79c6ed361a054f.setContent(html_428c718e64d54060ecbb23eeffa07183);
+            
+        
+
+        circle_marker_34b46e46176f506a586338031091b213.bindPopup(popup_6007afd90008a6ad8d79c6ed361a054f)
+        ;
+
+        
+    
+    
+            var circle_marker_4c989a8106a6a6a2848a8895b525e5be = L.circleMarker(
+                [1.4387, 103.7363],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_fbd0ed348d933800ca5e6a143fac24a8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a3f3949855265e28c8cce28af23cf27a = $(`<div id="html_a3f3949855265e28c8cce28af23cf27a" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Kranji Way (S66)<br>     <b>Avg. Rainfall:</b> 8.70 mm<br>     <b>Rainfall Score:</b> 0.84<br>     <b>Readings:</b> 1145     </div>`)[0];
+                popup_fbd0ed348d933800ca5e6a143fac24a8.setContent(html_a3f3949855265e28c8cce28af23cf27a);
+            
+        
+
+        circle_marker_4c989a8106a6a6a2848a8895b525e5be.bindPopup(popup_fbd0ed348d933800ca5e6a143fac24a8)
+        ;
+
+        
+    
+    
+            var circle_marker_ed14528bcb96564cc963709881959b8f = L.circleMarker(
+                [1.37, 103.805],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_e086197d7b44d0211e57eee8245da9b4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ec7e93f8d0cfc4230f652f7fb2c6a794 = $(`<div id="html_ec7e93f8d0cfc4230f652f7fb2c6a794" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Upper Peirce Reservoir Park (S69)<br>     <b>Avg. Rainfall:</b> 8.62 mm<br>     <b>Rainfall Score:</b> 0.82<br>     <b>Readings:</b> 1144     </div>`)[0];
+                popup_e086197d7b44d0211e57eee8245da9b4.setContent(html_ec7e93f8d0cfc4230f652f7fb2c6a794);
+            
+        
+
+        circle_marker_ed14528bcb96564cc963709881959b8f.bindPopup(popup_e086197d7b44d0211e57eee8245da9b4)
+        ;
+
+        
+    
+    
+            var circle_marker_25bc7286bc6f7d89f052c5c5deac3aa5 = L.circleMarker(
+                [1.30167, 103.76444],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_611217f3f659bae5eb515e5ada90764a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_adab76a4f70b9856e54717ea96eba9ec = $(`<div id="html_adab76a4f70b9856e54717ea96eba9ec" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S230 (S230)<br>     <b>Avg. Rainfall:</b> 8.61 mm<br>     <b>Rainfall Score:</b> 0.82<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_611217f3f659bae5eb515e5ada90764a.setContent(html_adab76a4f70b9856e54717ea96eba9ec);
+            
+        
+
+        circle_marker_25bc7286bc6f7d89f052c5c5deac3aa5.bindPopup(popup_611217f3f659bae5eb515e5ada90764a)
+        ;
+
+        
+    
+    
+            var circle_marker_4c8d74bd8dced9596a387085b6e719a9 = L.circleMarker(
+                [1.32427, 103.8097],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_c6e7bd3b9592d734ba0359b2cc264b72 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d78a7f61c077453c9177c6316d5d5021 = $(`<div id="html_d78a7f61c077453c9177c6316d5d5021" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S213 (S213)<br>     <b>Avg. Rainfall:</b> 8.56 mm<br>     <b>Rainfall Score:</b> 0.82<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_c6e7bd3b9592d734ba0359b2cc264b72.setContent(html_d78a7f61c077453c9177c6316d5d5021);
+            
+        
+
+        circle_marker_4c8d74bd8dced9596a387085b6e719a9.bindPopup(popup_c6e7bd3b9592d734ba0359b2cc264b72)
+        ;
+
+        
+    
+    
+            var circle_marker_9d0010bf153ea67b55971567500f1f13 = L.circleMarker(
+                [1.35041, 103.85526],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_365d87650848980ddc8baeb9d9822fbb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3bd9f823e16d2c6d3fcedee9a51e200c = $(`<div id="html_3bd9f823e16d2c6d3fcedee9a51e200c" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S217 (S217)<br>     <b>Avg. Rainfall:</b> 8.56 mm<br>     <b>Rainfall Score:</b> 0.82<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_365d87650848980ddc8baeb9d9822fbb.setContent(html_3bd9f823e16d2c6d3fcedee9a51e200c);
+            
+        
+
+        circle_marker_9d0010bf153ea67b55971567500f1f13.bindPopup(popup_365d87650848980ddc8baeb9d9822fbb)
+        ;
+
+        
+    
+    
+            var circle_marker_81ce7a2926bc5ef20aae09f472ecbf01 = L.circleMarker(
+                [1.42918, 103.75711],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_f9a17d6e8dc0b7614ef414c5c7c87f89 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_77a144b4b79348c5ff3cb94a63ed9824 = $(`<div id="html_77a144b4b79348c5ff3cb94a63ed9824" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S211 (S211)<br>     <b>Avg. Rainfall:</b> 8.55 mm<br>     <b>Rainfall Score:</b> 0.82<br>     <b>Readings:</b> 917     </div>`)[0];
+                popup_f9a17d6e8dc0b7614ef414c5c7c87f89.setContent(html_77a144b4b79348c5ff3cb94a63ed9824);
+            
+        
+
+        circle_marker_81ce7a2926bc5ef20aae09f472ecbf01.bindPopup(popup_f9a17d6e8dc0b7614ef414c5c7c87f89)
+        ;
+
+        
+    
+    
+            var circle_marker_532fb4225f25fa89602babde85114682 = L.circleMarker(
+                [1.37999, 103.87643],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_36c8141ed46fbad6bec758f174a89f50 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b140f03cd256a3972508c67d908f52a2 = $(`<div id="html_b140f03cd256a3972508c67d908f52a2" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S219 (S219)<br>     <b>Avg. Rainfall:</b> 8.55 mm<br>     <b>Rainfall Score:</b> 0.82<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_36c8141ed46fbad6bec758f174a89f50.setContent(html_b140f03cd256a3972508c67d908f52a2);
+            
+        
+
+        circle_marker_532fb4225f25fa89602babde85114682.bindPopup(popup_36c8141ed46fbad6bec758f174a89f50)
+        ;
+
+        
+    
+    
+            var circle_marker_f9bd9d0d99a09d91eb1a965ada1e9db1 = L.circleMarker(
+                [1.34583, 103.68166],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_9792594b13bef008ec0a954560d6836c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9811125c9cd9157c641c08d4356cdcf6 = $(`<div id="html_9811125c9cd9157c641c08d4356cdcf6" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Nanyang Avenue (S44)<br>     <b>Avg. Rainfall:</b> 8.52 mm<br>     <b>Rainfall Score:</b> 0.81<br>     <b>Readings:</b> 1076     </div>`)[0];
+                popup_9792594b13bef008ec0a954560d6836c.setContent(html_9811125c9cd9157c641c08d4356cdcf6);
+            
+        
+
+        circle_marker_f9bd9d0d99a09d91eb1a965ada1e9db1.bindPopup(popup_9792594b13bef008ec0a954560d6836c)
+        ;
+
+        
+    
+    
+            var circle_marker_3912b456d1209d7608deff0da16c65cf = L.circleMarker(
+                [1.28987, 103.82364],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_bde0e98349df17b63a4d2fbb9060e360 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1764657bae8bf3d2766041064c6c0c16 = $(`<div id="html_1764657bae8bf3d2766041064c6c0c16" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S222 (S222)<br>     <b>Avg. Rainfall:</b> 8.50 mm<br>     <b>Rainfall Score:</b> 0.81<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_bde0e98349df17b63a4d2fbb9060e360.setContent(html_1764657bae8bf3d2766041064c6c0c16);
+            
+        
+
+        circle_marker_3912b456d1209d7608deff0da16c65cf.bindPopup(popup_bde0e98349df17b63a4d2fbb9060e360)
+        ;
+
+        
+    
+    
+            var circle_marker_4add2415acd76572602f443bdd19fb87 = L.circleMarker(
+                [1.3701, 103.8271],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_de95148180af8e98d93b1156c7953433 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dd57fc978a6207f9560c090207375868 = $(`<div id="html_dd57fc978a6207f9560c090207375868" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Upper Thomson Road (S08)<br>     <b>Avg. Rainfall:</b> 8.49 mm<br>     <b>Rainfall Score:</b> 0.81<br>     <b>Readings:</b> 1147     </div>`)[0];
+                popup_de95148180af8e98d93b1156c7953433.setContent(html_dd57fc978a6207f9560c090207375868);
+            
+        
+
+        circle_marker_4add2415acd76572602f443bdd19fb87.bindPopup(popup_de95148180af8e98d93b1156c7953433)
+        ;
+
+        
+    
+    
+            var circle_marker_9d0c00303f5950ac5999f80406b31cb6 = L.circleMarker(
+                [1.2923, 103.7815],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_15bb83e070af519eff075f2c1e52aead = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f8a4122e8293f153cb532bdbcebe4b0c = $(`<div id="html_f8a4122e8293f153cb532bdbcebe4b0c" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Kent Ridge Road (S71)<br>     <b>Avg. Rainfall:</b> 8.49 mm<br>     <b>Rainfall Score:</b> 0.81<br>     <b>Readings:</b> 1148     </div>`)[0];
+                popup_15bb83e070af519eff075f2c1e52aead.setContent(html_f8a4122e8293f153cb532bdbcebe4b0c);
+            
+        
+
+        circle_marker_9d0c00303f5950ac5999f80406b31cb6.bindPopup(popup_15bb83e070af519eff075f2c1e52aead)
+        ;
+
+        
+    
+    
+            var circle_marker_05a296b4864ef93ae6f5df7407d693df = L.circleMarker(
+                [1.32311, 103.76714],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_94a85af93e60e23644a080cac6c4d639 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e784e033981c3602a999ef59c1716167 = $(`<div id="html_e784e033981c3602a999ef59c1716167" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Clementi Park (S201)<br>     <b>Avg. Rainfall:</b> 8.49 mm<br>     <b>Rainfall Score:</b> 0.81<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_94a85af93e60e23644a080cac6c4d639.setContent(html_e784e033981c3602a999ef59c1716167);
+            
+        
+
+        circle_marker_05a296b4864ef93ae6f5df7407d693df.bindPopup(popup_94a85af93e60e23644a080cac6c4d639)
+        ;
+
+        
+    
+    
+            var circle_marker_3729ceba4a90a9b4b748020175b5e587 = L.circleMarker(
+                [1.28987, 103.82364],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_1540cbdafbc509a15b7467f1b91ca34d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6b46a3c4c3cd980d037b4ccc7b35c6f2 = $(`<div id="html_6b46a3c4c3cd980d037b4ccc7b35c6f2" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Henderson Road (S222)<br>     <b>Avg. Rainfall:</b> 8.44 mm<br>     <b>Rainfall Score:</b> 0.80<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_1540cbdafbc509a15b7467f1b91ca34d.setContent(html_6b46a3c4c3cd980d037b4ccc7b35c6f2);
+            
+        
+
+        circle_marker_3729ceba4a90a9b4b748020175b5e587.bindPopup(popup_1540cbdafbc509a15b7467f1b91ca34d)
+        ;
+
+        
+    
+    
+            var circle_marker_011f2e7d4350ee599d2e9329fe5a6276 = L.circleMarker(
+                [1.3329, 103.7556],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_a9a7675ba0ba034c55232bfd0081441f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bfb80fc38b5fb74a070a97ff3301a998 = $(`<div id="html_bfb80fc38b5fb74a070a97ff3301a998" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Old Toh Tuck Road (S35)<br>     <b>Avg. Rainfall:</b> 8.44 mm<br>     <b>Rainfall Score:</b> 0.80<br>     <b>Readings:</b> 1089     </div>`)[0];
+                popup_a9a7675ba0ba034c55232bfd0081441f.setContent(html_bfb80fc38b5fb74a070a97ff3301a998);
+            
+        
+
+        circle_marker_011f2e7d4350ee599d2e9329fe5a6276.bindPopup(popup_a9a7675ba0ba034c55232bfd0081441f)
+        ;
+
+        
+    
+    
+            var circle_marker_f1189cf3fa4c33f088057de069159f4d = L.circleMarker(
+                [1.31985, 103.66162],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_3b6f62a1da67b694c45ccb624134b2c9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d984eb33c51783b73a1f6f5afad484f3 = $(`<div id="html_d984eb33c51783b73a1f6f5afad484f3" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Tuas Road (S89)<br>     <b>Avg. Rainfall:</b> 8.41 mm<br>     <b>Rainfall Score:</b> 0.80<br>     <b>Readings:</b> 1105     </div>`)[0];
+                popup_3b6f62a1da67b694c45ccb624134b2c9.setContent(html_d984eb33c51783b73a1f6f5afad484f3);
+            
+        
+
+        circle_marker_f1189cf3fa4c33f088057de069159f4d.bindPopup(popup_3b6f62a1da67b694c45ccb624134b2c9)
+        ;
+
+        
+    
+    
+            var circle_marker_04ae134ed0fee03e2c1bad0ca40893d7 = L.circleMarker(
+                [1.36491, 103.75065],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_02f1ba955ab99662bd769f3fa38a7287 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7aeef40964df021f9f31f0fa035f44ea = $(`<div id="html_7aeef40964df021f9f31f0fa035f44ea" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Bukit Batok Street 34 (S218)<br>     <b>Avg. Rainfall:</b> 8.36 mm<br>     <b>Rainfall Score:</b> 0.79<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_02f1ba955ab99662bd769f3fa38a7287.setContent(html_7aeef40964df021f9f31f0fa035f44ea);
+            
+        
+
+        circle_marker_04ae134ed0fee03e2c1bad0ca40893d7.bindPopup(popup_02f1ba955ab99662bd769f3fa38a7287)
+        ;
+
+        
+    
+    
+            var circle_marker_69cc6f13df4f6d108f581e846be2fe98 = L.circleMarker(
+                [1.44003, 103.76904],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_0aab57ef8e3d07a2bac5ef3cfd23e15b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cddac3bd252d0435343de56cdf7e31be = $(`<div id="html_cddac3bd252d0435343de56cdf7e31be" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S210 (S210)<br>     <b>Avg. Rainfall:</b> 8.36 mm<br>     <b>Rainfall Score:</b> 0.79<br>     <b>Readings:</b> 909     </div>`)[0];
+                popup_0aab57ef8e3d07a2bac5ef3cfd23e15b.setContent(html_cddac3bd252d0435343de56cdf7e31be);
+            
+        
+
+        circle_marker_69cc6f13df4f6d108f581e846be2fe98.bindPopup(popup_0aab57ef8e3d07a2bac5ef3cfd23e15b)
+        ;
+
+        
+    
+    
+            var circle_marker_01689b2a62b5e917ae78d6d552d7c46a = L.circleMarker(
+                [1.38, 103.73],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_0a106996b7534f6e15947e5625a461ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9b4d8002687bb9834095d5481bcfe35d = $(`<div id="html_9b4d8002687bb9834095d5481bcfe35d" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Choa Chu Kang Avenue 4 (S114)<br>     <b>Avg. Rainfall:</b> 8.31 mm<br>     <b>Rainfall Score:</b> 0.79<br>     <b>Readings:</b> 1044     </div>`)[0];
+                popup_0a106996b7534f6e15947e5625a461ed.setContent(html_9b4d8002687bb9834095d5481bcfe35d);
+            
+        
+
+        circle_marker_01689b2a62b5e917ae78d6d552d7c46a.bindPopup(popup_0a106996b7534f6e15947e5625a461ed)
+        ;
+
+        
+    
+    
+            var circle_marker_be2985f4b0f4c7f39446a4ab92ceaba8 = L.circleMarker(
+                [1.3337, 103.7768],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_941b0b0ab3f818c1d98e3264e11db1a5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_31b82448a66d4d8989517d3d3b871a74 = $(`<div id="html_31b82448a66d4d8989517d3d3b871a74" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Clementi Road (S50)<br>     <b>Avg. Rainfall:</b> 8.30 mm<br>     <b>Rainfall Score:</b> 0.78<br>     <b>Readings:</b> 1153     </div>`)[0];
+                popup_941b0b0ab3f818c1d98e3264e11db1a5.setContent(html_31b82448a66d4d8989517d3d3b871a74);
+            
+        
+
+        circle_marker_be2985f4b0f4c7f39446a4ab92ceaba8.bindPopup(popup_941b0b0ab3f818c1d98e3264e11db1a5)
+        ;
+
+        
+    
+    
+            var circle_marker_3dd86546d4b885ea8b94d5b41a0dbd44 = L.circleMarker(
+                [1.27472, 103.80389],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_39f69112b0be8734cfe82c1255470d11 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_03b3ef773b277be39d0bb1557bc6f551 = $(`<div id="html_03b3ef773b277be39d0bb1557bc6f551" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Malan Road (S226)<br>     <b>Avg. Rainfall:</b> 8.29 mm<br>     <b>Rainfall Score:</b> 0.78<br>     <b>Readings:</b> 239     </div>`)[0];
+                popup_39f69112b0be8734cfe82c1255470d11.setContent(html_03b3ef773b277be39d0bb1557bc6f551);
+            
+        
+
+        circle_marker_3dd86546d4b885ea8b94d5b41a0dbd44.bindPopup(popup_39f69112b0be8734cfe82c1255470d11)
+        ;
+
+        
+    
+    
+            var circle_marker_df384dfc7cc0326f25c7f679244a1b09 = L.circleMarker(
+                [1.35691, 103.89088],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_4890ac501312f74f5903f14759a050e4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5bcfcd79f00d03abbc13af1438a54f26 = $(`<div id="html_5bcfcd79f00d03abbc13af1438a54f26" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S221 (S221)<br>     <b>Avg. Rainfall:</b> 8.26 mm<br>     <b>Rainfall Score:</b> 0.78<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_4890ac501312f74f5903f14759a050e4.setContent(html_5bcfcd79f00d03abbc13af1438a54f26);
+            
+        
+
+        circle_marker_df384dfc7cc0326f25c7f679244a1b09.bindPopup(popup_4890ac501312f74f5903f14759a050e4)
+        ;
+
+        
+    
+    
+            var circle_marker_aa91a0a3ba6bcdea3f30cf513d91485d = L.circleMarker(
+                [1.4044, 103.78962],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_bac22c0f09e41fa3b0f59ab13716c47d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_75734d3aecd2501ac3225e981d8181d6 = $(`<div id="html_75734d3aecd2501ac3225e981d8181d6" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Mandai Lake Road (S40)<br>     <b>Avg. Rainfall:</b> 8.24 mm<br>     <b>Rainfall Score:</b> 0.78<br>     <b>Readings:</b> 1136     </div>`)[0];
+                popup_bac22c0f09e41fa3b0f59ab13716c47d.setContent(html_75734d3aecd2501ac3225e981d8181d6);
+            
+        
+
+        circle_marker_aa91a0a3ba6bcdea3f30cf513d91485d.bindPopup(popup_bac22c0f09e41fa3b0f59ab13716c47d)
+        ;
+
+        
+    
+    
+            var circle_marker_0e4c63db15f3d56273fbd119a6b33bd6 = L.circleMarker(
+                [1.34703, 103.70073],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_72a774af81de70cb23523d6f68482cc5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0383d8f1d9fa54e77734b28aa521095b = $(`<div id="html_0383d8f1d9fa54e77734b28aa521095b" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Jurong West Street 73 (S228)<br>     <b>Avg. Rainfall:</b> 8.23 mm<br>     <b>Rainfall Score:</b> 0.78<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_72a774af81de70cb23523d6f68482cc5.setContent(html_0383d8f1d9fa54e77734b28aa521095b);
+            
+        
+
+        circle_marker_0e4c63db15f3d56273fbd119a6b33bd6.bindPopup(popup_72a774af81de70cb23523d6f68482cc5)
+        ;
+
+        
+    
+    
+            var circle_marker_19193950b666bd7900f7bec5d83a8ac7 = L.circleMarker(
+                [1.37288, 103.72244],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_d0b061557849c1275bf4fd16920c3856 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41e1e9fba7187bf356ab45e191f2ad46 = $(`<div id="html_41e1e9fba7187bf356ab45e191f2ad46" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Old Choa Chu Kang Road (S121)<br>     <b>Avg. Rainfall:</b> 8.23 mm<br>     <b>Rainfall Score:</b> 0.78<br>     <b>Readings:</b> 1127     </div>`)[0];
+                popup_d0b061557849c1275bf4fd16920c3856.setContent(html_41e1e9fba7187bf356ab45e191f2ad46);
+            
+        
+
+        circle_marker_19193950b666bd7900f7bec5d83a8ac7.bindPopup(popup_d0b061557849c1275bf4fd16920c3856)
+        ;
+
+        
+    
+    
+            var circle_marker_ac898a6adb7a718f2ba3578849f86603 = L.circleMarker(
+                [1.3191, 103.8191],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_e9d4b3ab1d46f80f444e2c94a92b0b1d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ec07a751c50765679683623ed515520e = $(`<div id="html_ec07a751c50765679683623ed515520e" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Bukit Timah Road (S90)<br>     <b>Avg. Rainfall:</b> 8.22 mm<br>     <b>Rainfall Score:</b> 0.78<br>     <b>Readings:</b> 1154     </div>`)[0];
+                popup_e9d4b3ab1d46f80f444e2c94a92b0b1d.setContent(html_ec07a751c50765679683623ed515520e);
+            
+        
+
+        circle_marker_ac898a6adb7a718f2ba3578849f86603.bindPopup(popup_e9d4b3ab1d46f80f444e2c94a92b0b1d)
+        ;
+
+        
+    
+    
+            var circle_marker_b93348a6cdc9ce7982d95f434d7dfca3 = L.circleMarker(
+                [1.42111, 103.84472],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_79597ff5cc81626db4582ffabb12c43c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_949425f6424799d564b0c79cb97d9858 = $(`<div id="html_949425f6424799d564b0c79cb97d9858" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S209 (S209)<br>     <b>Avg. Rainfall:</b> 8.14 mm<br>     <b>Rainfall Score:</b> 0.77<br>     <b>Readings:</b> 918     </div>`)[0];
+                popup_79597ff5cc81626db4582ffabb12c43c.setContent(html_949425f6424799d564b0c79cb97d9858);
+            
+        
+
+        circle_marker_b93348a6cdc9ce7982d95f434d7dfca3.bindPopup(popup_79597ff5cc81626db4582ffabb12c43c)
+        ;
+
+        
+    
+    
+            var circle_marker_94bd8d66f0bfca9b6788c4b973f17e4d = L.circleMarker(
+                [1.3764, 103.8492],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_f55c801591adedc5730b752561e17e32 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a3a3c460583b14dd2bc7d34e61620568 = $(`<div id="html_a3a3c460583b14dd2bc7d34e61620568" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Ang Mo Kio Avenue 5 (S109)<br>     <b>Avg. Rainfall:</b> 8.11 mm<br>     <b>Rainfall Score:</b> 0.76<br>     <b>Readings:</b> 1114     </div>`)[0];
+                popup_f55c801591adedc5730b752561e17e32.setContent(html_a3a3c460583b14dd2bc7d34e61620568);
+            
+        
+
+        circle_marker_94bd8d66f0bfca9b6788c4b973f17e4d.bindPopup(popup_f55c801591adedc5730b752561e17e32)
+        ;
+
+        
+    
+    
+            var circle_marker_ab11ee67bc132ba0bf362407275a5917 = L.circleMarker(
+                [1.29164, 103.7702],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_77fbc404bfe1667dfc9b872ad0bb538c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4035b786f9675d8c9c8b2c48a68399c1 = $(`<div id="html_4035b786f9675d8c9c8b2c48a68399c1" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Pasir Panjang (S203)<br>     <b>Avg. Rainfall:</b> 8.11 mm<br>     <b>Rainfall Score:</b> 0.76<br>     <b>Readings:</b> 223     </div>`)[0];
+                popup_77fbc404bfe1667dfc9b872ad0bb538c.setContent(html_4035b786f9675d8c9c8b2c48a68399c1);
+            
+        
+
+        circle_marker_ab11ee67bc132ba0bf362407275a5917.bindPopup(popup_77fbc404bfe1667dfc9b872ad0bb538c)
+        ;
+
+        
+    
+    
+            var circle_marker_1ad559ecfbac13472ce6bcac99cd72bc = L.circleMarker(
+                [1.4172, 103.74855],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_1b431c6030afbfb559fc017e9ea4acaf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_066e4f553d58f0fed18e0842261b8a85 = $(`<div id="html_066e4f553d58f0fed18e0842261b8a85" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Woodlands Road (S100)<br>     <b>Avg. Rainfall:</b> 8.06 mm<br>     <b>Rainfall Score:</b> 0.76<br>     <b>Readings:</b> 485     </div>`)[0];
+                popup_1b431c6030afbfb559fc017e9ea4acaf.setContent(html_066e4f553d58f0fed18e0842261b8a85);
+            
+        
+
+        circle_marker_1ad559ecfbac13472ce6bcac99cd72bc.bindPopup(popup_1b431c6030afbfb559fc017e9ea4acaf)
+        ;
+
+        
+    
+    
+            var circle_marker_3eeb7dd4ea1cfe48150e1f578f95ab2d = L.circleMarker(
+                [1.35167, 103.72195],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_93971f51687fb121be416c7d0fec7f6f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8d803ce7ea0f046081ba2a003939854a = $(`<div id="html_8d803ce7ea0f046081ba2a003939854a" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Jurong West Street 42 (S229)<br>     <b>Avg. Rainfall:</b> 8.04 mm<br>     <b>Rainfall Score:</b> 0.75<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_93971f51687fb121be416c7d0fec7f6f.setContent(html_8d803ce7ea0f046081ba2a003939854a);
+            
+        
+
+        circle_marker_3eeb7dd4ea1cfe48150e1f578f95ab2d.bindPopup(popup_93971f51687fb121be416c7d0fec7f6f)
+        ;
+
+        
+    
+    
+            var circle_marker_6d744bc4671095bbcfb16878845a7ce7 = L.circleMarker(
+                [1.32427, 103.8097],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_53d9594aa5dcfd5b1147bc960531df03 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_202d5a00f4527f4eb0ef5dd68dd4d88a = $(`<div id="html_202d5a00f4527f4eb0ef5dd68dd4d88a" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Coronation Walk (S213)<br>     <b>Avg. Rainfall:</b> 8.03 mm<br>     <b>Rainfall Score:</b> 0.75<br>     <b>Readings:</b> 239     </div>`)[0];
+                popup_53d9594aa5dcfd5b1147bc960531df03.setContent(html_202d5a00f4527f4eb0ef5dd68dd4d88a);
+            
+        
+
+        circle_marker_6d744bc4671095bbcfb16878845a7ce7.bindPopup(popup_53d9594aa5dcfd5b1147bc960531df03)
+        ;
+
+        
+    
+    
+            var circle_marker_41dab872389a593b34c0beb5a765ab8f = L.circleMarker(
+                [1.42111, 103.84472],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_2e05f4bd93c1cd2c37e305b4709e63b5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ef45ac4c303c7e0870d7c78e7376178f = $(`<div id="html_ef45ac4c303c7e0870d7c78e7376178f" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Yishun Ring Road (S209)<br>     <b>Avg. Rainfall:</b> 8.00 mm<br>     <b>Rainfall Score:</b> 0.75<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_2e05f4bd93c1cd2c37e305b4709e63b5.setContent(html_ef45ac4c303c7e0870d7c78e7376178f);
+            
+        
+
+        circle_marker_41dab872389a593b34c0beb5a765ab8f.bindPopup(popup_2e05f4bd93c1cd2c37e305b4709e63b5)
+        ;
+
+        
+    
+    
+            var circle_marker_9853893c64ab777a8659b5e2db04fc2d = L.circleMarker(
+                [1.27472, 103.80389],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_8bb80acc480ca0bcc94952f6f5bbaddc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_38951b439b4c1934215d3b212279e332 = $(`<div id="html_38951b439b4c1934215d3b212279e332" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S226 (S226)<br>     <b>Avg. Rainfall:</b> 7.97 mm<br>     <b>Rainfall Score:</b> 0.74<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_8bb80acc480ca0bcc94952f6f5bbaddc.setContent(html_38951b439b4c1934215d3b212279e332);
+            
+        
+
+        circle_marker_9853893c64ab777a8659b5e2db04fc2d.bindPopup(popup_8bb80acc480ca0bcc94952f6f5bbaddc)
+        ;
+
+        
+    
+    
+            var circle_marker_dae34bc6c9eaba0ee3b4a562c63efe3e = L.circleMarker(
+                [1.44387, 103.78538],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_9814c890aad2615224904c9b60aeec23 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0de4a2285e0cdea9f20d697c3202d651 = $(`<div id="html_0de4a2285e0cdea9f20d697c3202d651" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Woodlands Avenue 9 (S104)<br>     <b>Avg. Rainfall:</b> 7.89 mm<br>     <b>Rainfall Score:</b> 0.73<br>     <b>Readings:</b> 1140     </div>`)[0];
+                popup_9814c890aad2615224904c9b60aeec23.setContent(html_0de4a2285e0cdea9f20d697c3202d651);
+            
+        
+
+        circle_marker_dae34bc6c9eaba0ee3b4a562c63efe3e.bindPopup(popup_9814c890aad2615224904c9b60aeec23)
+        ;
+
+        
+    
+    
+            var circle_marker_9fb934ba48df7cb8b5e5391f442f582f = L.circleMarker(
+                [1.3427, 103.8482],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_0b522bc0abb8b9a81e45616d2fed017b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_25fce9ba24bb16376b4b30a8ccca431e = $(`<div id="html_25fce9ba24bb16376b4b30a8ccca431e" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Toa Payoh North (S88)<br>     <b>Avg. Rainfall:</b> 7.88 mm<br>     <b>Rainfall Score:</b> 0.73<br>     <b>Readings:</b> 1147     </div>`)[0];
+                popup_0b522bc0abb8b9a81e45616d2fed017b.setContent(html_25fce9ba24bb16376b4b30a8ccca431e);
+            
+        
+
+        circle_marker_9fb934ba48df7cb8b5e5391f442f582f.bindPopup(popup_0b522bc0abb8b9a81e45616d2fed017b)
+        ;
+
+        
+    
+    
+            var circle_marker_39a2e29ea3eb4ab48135094cec6d1a17 = L.circleMarker(
+                [1.41284, 103.86922],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_03090d9ed6d9b0cba7a8dee62b8aa811 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3b0a436b833dca7c52340e317547277f = $(`<div id="html_3b0a436b833dca7c52340e317547277f" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Seletar Aerospace View (S900)<br>     <b>Avg. Rainfall:</b> 7.85 mm<br>     <b>Rainfall Score:</b> 0.73<br>     <b>Readings:</b> 1158     </div>`)[0];
+                popup_03090d9ed6d9b0cba7a8dee62b8aa811.setContent(html_3b0a436b833dca7c52340e317547277f);
+            
+        
+
+        circle_marker_39a2e29ea3eb4ab48135094cec6d1a17.bindPopup(popup_03090d9ed6d9b0cba7a8dee62b8aa811)
+        ;
+
+        
+    
+    
+            var circle_marker_6bce6e0a865f873ef249cd42aa8c1b00 = L.circleMarker(
+                [1.3415, 103.8334],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_23383d409776701f288bafd2e5b918f8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_833e948217d71819fc6cf81dcf586b85 = $(`<div id="html_833e948217d71819fc6cf81dcf586b85" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Lornie Road (S07)<br>     <b>Avg. Rainfall:</b> 7.84 mm<br>     <b>Rainfall Score:</b> 0.73<br>     <b>Readings:</b> 666     </div>`)[0];
+                popup_23383d409776701f288bafd2e5b918f8.setContent(html_833e948217d71819fc6cf81dcf586b85);
+            
+        
+
+        circle_marker_6bce6e0a865f873ef249cd42aa8c1b00.bindPopup(popup_23383d409776701f288bafd2e5b918f8)
+        ;
+
+        
+    
+    
+            var circle_marker_ca526fd20172ec1149c1a120c3c03182 = L.circleMarker(
+                [1.29984, 103.80264],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_b51a8ca887ed61b7a45a1005f9c853a0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_886694fa9cb7c711a8866e4390edc5c3 = $(`<div id="html_886694fa9cb7c711a8866e4390edc5c3" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S223 (S223)<br>     <b>Avg. Rainfall:</b> 7.81 mm<br>     <b>Rainfall Score:</b> 0.72<br>     <b>Readings:</b> 916     </div>`)[0];
+                popup_b51a8ca887ed61b7a45a1005f9c853a0.setContent(html_886694fa9cb7c711a8866e4390edc5c3);
+            
+        
+
+        circle_marker_ca526fd20172ec1149c1a120c3c03182.bindPopup(popup_b51a8ca887ed61b7a45a1005f9c853a0)
+        ;
+
+        
+    
+    
+            var circle_marker_98bc76bfdec97dfb40837dffae19b070 = L.circleMarker(
+                [1.38829, 103.9116],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_a85ba98d3f3ca91044ac9dfb2643f7c8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d28dc69260b175f6d3ddd2956bd4c4a9 = $(`<div id="html_d28dc69260b175f6d3ddd2956bd4c4a9" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S205 (S205)<br>     <b>Avg. Rainfall:</b> 7.78 mm<br>     <b>Rainfall Score:</b> 0.72<br>     <b>Readings:</b> 652     </div>`)[0];
+                popup_a85ba98d3f3ca91044ac9dfb2643f7c8.setContent(html_d28dc69260b175f6d3ddd2956bd4c4a9);
+            
+        
+
+        circle_marker_98bc76bfdec97dfb40837dffae19b070.bindPopup(popup_a85ba98d3f3ca91044ac9dfb2643f7c8)
+        ;
+
+        
+    
+    
+            var circle_marker_4d4a78a78e49a3aa0a436534791ee858 = L.circleMarker(
+                [1.43854, 103.70131],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_baf0639968ef61912568f7213a65057c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9a1df8ceaabf106ddc79021593268028 = $(`<div id="html_9a1df8ceaabf106ddc79021593268028" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Lim Chu Kang Road (S112)<br>     <b>Avg. Rainfall:</b> 7.75 mm<br>     <b>Rainfall Score:</b> 0.72<br>     <b>Readings:</b> 1089     </div>`)[0];
+                popup_baf0639968ef61912568f7213a65057c.setContent(html_9a1df8ceaabf106ddc79021593268028);
+            
+        
+
+        circle_marker_4d4a78a78e49a3aa0a436534791ee858.bindPopup(popup_baf0639968ef61912568f7213a65057c)
+        ;
+
+        
+    
+    
+            var circle_marker_06bf985bbcb4c8b1a0a961e4fbc0982b = L.circleMarker(
+                [1.32485, 103.95836],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_e2ecf6cb73e525b86a896695203f8ff0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bce61298e1360421808f01c4111a54d6 = $(`<div id="html_bce61298e1360421808f01c4111a54d6" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Bedok Road (S207)<br>     <b>Avg. Rainfall:</b> 7.71 mm<br>     <b>Rainfall Score:</b> 0.71<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_e2ecf6cb73e525b86a896695203f8ff0.setContent(html_bce61298e1360421808f01c4111a54d6);
+            
+        
+
+        circle_marker_06bf985bbcb4c8b1a0a961e4fbc0982b.bindPopup(popup_e2ecf6cb73e525b86a896695203f8ff0)
+        ;
+
+        
+    
+    
+            var circle_marker_cb3b7304fd0e542b38ac497778744f18 = L.circleMarker(
+                [1.36019, 103.85335],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_9f3d72e8b212157840cc11f3e6715eb3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0af42f03a83d0c06b827e9bae466780d = $(`<div id="html_0af42f03a83d0c06b827e9bae466780d" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Ang Mo Kio Avenue 10 (S216)<br>     <b>Avg. Rainfall:</b> 7.65 mm<br>     <b>Rainfall Score:</b> 0.70<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_9f3d72e8b212157840cc11f3e6715eb3.setContent(html_0af42f03a83d0c06b827e9bae466780d);
+            
+        
+
+        circle_marker_cb3b7304fd0e542b38ac497778744f18.bindPopup(popup_9f3d72e8b212157840cc11f3e6715eb3)
+        ;
+
+        
+    
+    
+            var circle_marker_1ae05d1fa21521ee2c3a81ce73dad3ce = L.circleMarker(
+                [1.29984, 103.80264],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_e9b55e11a62232a984b5362653096649 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ca81bca2a3e5face7482ae56cb82f13d = $(`<div id="html_ca81bca2a3e5face7482ae56cb82f13d" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Margaret Drive (S223)<br>     <b>Avg. Rainfall:</b> 7.54 mm<br>     <b>Rainfall Score:</b> 0.69<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_e9b55e11a62232a984b5362653096649.setContent(html_ca81bca2a3e5face7482ae56cb82f13d);
+            
+        
+
+        circle_marker_1ae05d1fa21521ee2c3a81ce73dad3ce.bindPopup(popup_e9b55e11a62232a984b5362653096649)
+        ;
+
+        
+    
+    
+            var circle_marker_2ea907b7ede456d4f16fede5234c0e88 = L.circleMarker(
+                [1.29377, 103.61843],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_311c76691a8a4b406c19ca30d00cfb5b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f7a8c865b427e3bd80c3de98a4f84c12 = $(`<div id="html_f7a8c865b427e3bd80c3de98a4f84c12" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Tuas South Avenue 3 (S115)<br>     <b>Avg. Rainfall:</b> 7.52 mm<br>     <b>Rainfall Score:</b> 0.69<br>     <b>Readings:</b> 1132     </div>`)[0];
+                popup_311c76691a8a4b406c19ca30d00cfb5b.setContent(html_f7a8c865b427e3bd80c3de98a4f84c12);
+            
+        
+
+        circle_marker_2ea907b7ede456d4f16fede5234c0e88.bindPopup(popup_311c76691a8a4b406c19ca30d00cfb5b)
+        ;
+
+        
+    
+    
+            var circle_marker_a9d97aacc31766b4b06f982ad9062280 = L.circleMarker(
+                [1.3081, 103.71],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_b3166dd575865a753469d6d9bcaff9ef = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6e406c4e36d2cc8e2c250397a9fb46a6 = $(`<div id="html_6e406c4e36d2cc8e2c250397a9fb46a6" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Jurong Pier Road (S33)<br>     <b>Avg. Rainfall:</b> 7.49 mm<br>     <b>Rainfall Score:</b> 0.68<br>     <b>Readings:</b> 1099     </div>`)[0];
+                popup_b3166dd575865a753469d6d9bcaff9ef.setContent(html_6e406c4e36d2cc8e2c250397a9fb46a6);
+            
+        
+
+        circle_marker_a9d97aacc31766b4b06f982ad9062280.bindPopup(popup_b3166dd575865a753469d6d9bcaff9ef)
+        ;
+
+        
+    
+    
+            var circle_marker_bc7fbfe402d953a1cde2c38c0f1fd972 = L.circleMarker(
+                [1.30167, 103.76444],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_399e1c54e0eee11d4586246c87daa690 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3ea166ecdf6da324ebb47bd8ed186a29 = $(`<div id="html_3ea166ecdf6da324ebb47bd8ed186a29" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> West Coast Road (S230)<br>     <b>Avg. Rainfall:</b> 7.48 mm<br>     <b>Rainfall Score:</b> 0.68<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_399e1c54e0eee11d4586246c87daa690.setContent(html_3ea166ecdf6da324ebb47bd8ed186a29);
+            
+        
+
+        circle_marker_bc7fbfe402d953a1cde2c38c0f1fd972.bindPopup(popup_399e1c54e0eee11d4586246c87daa690)
+        ;
+
+        
+    
+    
+            var circle_marker_67feec03b36468487b9a1e23ab970271 = L.circleMarker(
+                [1.35041, 103.85526],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_dcc0b7f4549773af5b0c1e7a3f7e7050 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9792123581641ef891ebd71a11593e0d = $(`<div id="html_9792123581641ef891ebd71a11593e0d" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Bishan Street 13 (S217)<br>     <b>Avg. Rainfall:</b> 7.40 mm<br>     <b>Rainfall Score:</b> 0.67<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_dcc0b7f4549773af5b0c1e7a3f7e7050.setContent(html_9792123581641ef891ebd71a11593e0d);
+            
+        
+
+        circle_marker_67feec03b36468487b9a1e23ab970271.bindPopup(popup_dcc0b7f4549773af5b0c1e7a3f7e7050)
+        ;
+
+        
+    
+    
+            var circle_marker_f3d19625bc6946b05617f61c9bc93b5c = L.circleMarker(
+                [1.3399, 103.8878],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_0942599857472ac220d8e685770725c1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c055e49ce5357aea9f2ddeebb98fcf83 = $(`<div id="html_c055e49ce5357aea9f2ddeebb98fcf83" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Kim Chuan Road (S43)<br>     <b>Avg. Rainfall:</b> 7.37 mm<br>     <b>Rainfall Score:</b> 0.67<br>     <b>Readings:</b> 1159     </div>`)[0];
+                popup_0942599857472ac220d8e685770725c1.setContent(html_c055e49ce5357aea9f2ddeebb98fcf83);
+            
+        
+
+        circle_marker_f3d19625bc6946b05617f61c9bc93b5c.bindPopup(popup_0942599857472ac220d8e685770725c1)
+        ;
+
+        
+    
+    
+            var circle_marker_b0e7f329307d8d5f31121ebe36f2a411 = L.circleMarker(
+                [1.256, 103.679],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_101a3f249572df78d3d2647f7d4f86d5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_65c5565dcf364ea087b836f12ff3bac2 = $(`<div id="html_65c5565dcf364ea087b836f12ff3bac2" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Banyan Road (S117)<br>     <b>Avg. Rainfall:</b> 7.35 mm<br>     <b>Rainfall Score:</b> 0.67<br>     <b>Readings:</b> 755     </div>`)[0];
+                popup_101a3f249572df78d3d2647f7d4f86d5.setContent(html_65c5565dcf364ea087b836f12ff3bac2);
+            
+        
+
+        circle_marker_b0e7f329307d8d5f31121ebe36f2a411.bindPopup(popup_101a3f249572df78d3d2647f7d4f86d5)
+        ;
+
+        
+    
+    
+            var circle_marker_73d0c0a31d5abad7aeb78d4da6ad82d6 = L.circleMarker(
+                [1.2937, 103.8125],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_6197a02b0aaf65f70073fe45fa1f380f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3f4e1b90b9929a00c2bc8960855271f1 = $(`<div id="html_3f4e1b90b9929a00c2bc8960855271f1" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Alexandra Road (S77)<br>     <b>Avg. Rainfall:</b> 7.33 mm<br>     <b>Rainfall Score:</b> 0.66<br>     <b>Readings:</b> 1157     </div>`)[0];
+                popup_6197a02b0aaf65f70073fe45fa1f380f.setContent(html_3f4e1b90b9929a00c2bc8960855271f1);
+            
+        
+
+        circle_marker_73d0c0a31d5abad7aeb78d4da6ad82d6.bindPopup(popup_6197a02b0aaf65f70073fe45fa1f380f)
+        ;
+
+        
+    
+    
+            var circle_marker_bdb0bc2475c9fb74d72990602b80d5d6 = L.circleMarker(
+                [1.40081, 103.88217],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_4392e3966634d84c5c1a382c27a052d8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_503fc7e84c69dc6c2e38ba9249893a9c = $(`<div id="html_503fc7e84c69dc6c2e38ba9249893a9c" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S204 (S204)<br>     <b>Avg. Rainfall:</b> 7.31 mm<br>     <b>Rainfall Score:</b> 0.66<br>     <b>Readings:</b> 654     </div>`)[0];
+                popup_4392e3966634d84c5c1a382c27a052d8.setContent(html_503fc7e84c69dc6c2e38ba9249893a9c);
+            
+        
+
+        circle_marker_bdb0bc2475c9fb74d72990602b80d5d6.bindPopup(popup_4392e3966634d84c5c1a382c27a052d8)
+        ;
+
+        
+    
+    
+            var circle_marker_6dcaf70bf570956476995b97cd5668d6 = L.circleMarker(
+                [1.2994, 103.8461],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_879d5462fa08eea83fcce2ae1e9b1611 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e574abdfdb276b0a6d95f098843b0dd8 = $(`<div id="html_e574abdfdb276b0a6d95f098843b0dd8" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Handy Road (S118)<br>     <b>Avg. Rainfall:</b> 7.30 mm<br>     <b>Rainfall Score:</b> 0.66<br>     <b>Readings:</b> 730     </div>`)[0];
+                popup_879d5462fa08eea83fcce2ae1e9b1611.setContent(html_e574abdfdb276b0a6d95f098843b0dd8);
+            
+        
+
+        circle_marker_6dcaf70bf570956476995b97cd5668d6.bindPopup(popup_879d5462fa08eea83fcce2ae1e9b1611)
+        ;
+
+        
+    
+    
+            var circle_marker_fa09da41fd59a6d4b119698c49cc6878 = L.circleMarker(
+                [1.3437, 103.9444],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_db6c616fe40ddf9be159acc20b0d0422 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cb772f1fb3b17816748b523c39421f3b = $(`<div id="html_cb772f1fb3b17816748b523c39421f3b" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Simei Avenue (S84)<br>     <b>Avg. Rainfall:</b> 7.26 mm<br>     <b>Rainfall Score:</b> 0.66<br>     <b>Readings:</b> 1145     </div>`)[0];
+                popup_db6c616fe40ddf9be159acc20b0d0422.setContent(html_cb772f1fb3b17816748b523c39421f3b);
+            
+        
+
+        circle_marker_fa09da41fd59a6d4b119698c49cc6878.bindPopup(popup_db6c616fe40ddf9be159acc20b0d0422)
+        ;
+
+        
+    
+    
+            var circle_marker_901896a696c66cbd341d54818a1f5848 = L.circleMarker(
+                [1.38666, 103.89797],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_b564328b71c18b1a2346fbcff273f18e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dffbf07c387cb587e2b6a5784c547a7f = $(`<div id="html_dffbf07c387cb587e2b6a5784c547a7f" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S220 (S220)<br>     <b>Avg. Rainfall:</b> 7.14 mm<br>     <b>Rainfall Score:</b> 0.64<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_b564328b71c18b1a2346fbcff273f18e.setContent(html_dffbf07c387cb587e2b6a5784c547a7f);
+            
+        
+
+        circle_marker_901896a696c66cbd341d54818a1f5848.bindPopup(popup_b564328b71c18b1a2346fbcff273f18e)
+        ;
+
+        
+    
+    
+            var circle_marker_d1e09cb12a76db3e12217d86ca1ab380 = L.circleMarker(
+                [1.3214, 103.8577],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_012830ff361c223d81f6ce4d6f03a3a4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bfac3b94951ea804e42fd7e876bcb8ec = $(`<div id="html_bfac3b94951ea804e42fd7e876bcb8ec" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Towner Road (S123)<br>     <b>Avg. Rainfall:</b> 7.13 mm<br>     <b>Rainfall Score:</b> 0.64<br>     <b>Readings:</b> 1089     </div>`)[0];
+                popup_012830ff361c223d81f6ce4d6f03a3a4.setContent(html_bfac3b94951ea804e42fd7e876bcb8ec);
+            
+        
+
+        circle_marker_d1e09cb12a76db3e12217d86ca1ab380.bindPopup(popup_012830ff361c223d81f6ce4d6f03a3a4)
+        ;
+
+        
+    
+    
+            var circle_marker_7fa93e7ae3bdae6f89fe6790cb9e1def = L.circleMarker(
+                [1.31055, 103.8365],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_97dede3ab970bd04b70ae1d6cc8a30d7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fbc804009fd342f451d2d323ec6f373e = $(`<div id="html_fbc804009fd342f451d2d323ec6f373e" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Scotts Road (S111)<br>     <b>Avg. Rainfall:</b> 7.11 mm<br>     <b>Rainfall Score:</b> 0.64<br>     <b>Readings:</b> 1123     </div>`)[0];
+                popup_97dede3ab970bd04b70ae1d6cc8a30d7.setContent(html_fbc804009fd342f451d2d323ec6f373e);
+            
+        
+
+        circle_marker_7fa93e7ae3bdae6f89fe6790cb9e1def.bindPopup(popup_97dede3ab970bd04b70ae1d6cc8a30d7)
+        ;
+
+        
+    
+    
+            var circle_marker_42b1107fe6f5ca2d974433d7b5fae55d = L.circleMarker(
+                [1.281, 103.754],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_315766fe2af50269c443f296e55974ce = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_219cf132cb2c14bb8003343abbc27aa9 = $(`<div id="html_219cf132cb2c14bb8003343abbc27aa9" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> West Coast Highway (S116)<br>     <b>Avg. Rainfall:</b> 7.10 mm<br>     <b>Rainfall Score:</b> 0.64<br>     <b>Readings:</b> 1104     </div>`)[0];
+                popup_315766fe2af50269c443f296e55974ce.setContent(html_219cf132cb2c14bb8003343abbc27aa9);
+            
+        
+
+        circle_marker_42b1107fe6f5ca2d974433d7b5fae55d.bindPopup(popup_315766fe2af50269c443f296e55974ce)
+        ;
+
+        
+    
+    
+            var circle_marker_55f8b05395b7c37d85cd0bddb92cc568 = L.circleMarker(
+                [1.3247, 103.6351],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_a6b7942c13ac27258fa656f7ee11f3dc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5a5587dec86290a5d4989f431aee2e34 = $(`<div id="html_5a5587dec86290a5d4989f431aee2e34" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Tuas West Road (S82)<br>     <b>Avg. Rainfall:</b> 7.09 mm<br>     <b>Rainfall Score:</b> 0.63<br>     <b>Readings:</b> 324     </div>`)[0];
+                popup_a6b7942c13ac27258fa656f7ee11f3dc.setContent(html_5a5587dec86290a5d4989f431aee2e34);
+            
+        
+
+        circle_marker_55f8b05395b7c37d85cd0bddb92cc568.bindPopup(popup_a6b7942c13ac27258fa656f7ee11f3dc)
+        ;
+
+        
+    
+    
+            var circle_marker_cdd12b58c8dab35044729628ca4de437 = L.circleMarker(
+                [1.4029, 103.9092],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_0d461b56af611edf2b3597a116aa59f2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9682a4c8fcced9f9c25240684900a84b = $(`<div id="html_9682a4c8fcced9f9c25240684900a84b" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Punggol Central (S81)<br>     <b>Avg. Rainfall:</b> 7.05 mm<br>     <b>Rainfall Score:</b> 0.63<br>     <b>Readings:</b> 1154     </div>`)[0];
+                popup_0d461b56af611edf2b3597a116aa59f2.setContent(html_9682a4c8fcced9f9c25240684900a84b);
+            
+        
+
+        circle_marker_cdd12b58c8dab35044729628ca4de437.bindPopup(popup_0d461b56af611edf2b3597a116aa59f2)
+        ;
+
+        
+    
+    
+            var circle_marker_0af45fbed448889d530ae59109943380 = L.circleMarker(
+                [1.3004, 103.8372],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_d42439bf903b81ac0f8b00fa163a196a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_aa255315f5eef68da1dda4c2ab0fb2e5 = $(`<div id="html_aa255315f5eef68da1dda4c2ab0fb2e5" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Somerset Road (S79)<br>     <b>Avg. Rainfall:</b> 7.03 mm<br>     <b>Rainfall Score:</b> 0.63<br>     <b>Readings:</b> 1138     </div>`)[0];
+                popup_d42439bf903b81ac0f8b00fa163a196a.setContent(html_aa255315f5eef68da1dda4c2ab0fb2e5);
+            
+        
+
+        circle_marker_0af45fbed448889d530ae59109943380.bindPopup(popup_d42439bf903b81ac0f8b00fa163a196a)
+        ;
+
+        
+    
+    
+            var circle_marker_7d8935b2a817984e08200f0e9d25e883 = L.circleMarker(
+                [1.4168, 103.9673],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_202c11001db58bd47b9096e94b84ad18 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d6ee9feec98f3c122bd495377ee069f5 = $(`<div id="html_d6ee9feec98f3c122bd495377ee069f5" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Pulau Ubin (S106)<br>     <b>Avg. Rainfall:</b> 7.00 mm<br>     <b>Rainfall Score:</b> 0.62<br>     <b>Readings:</b> 676     </div>`)[0];
+                popup_202c11001db58bd47b9096e94b84ad18.setContent(html_d6ee9feec98f3c122bd495377ee069f5);
+            
+        
+
+        circle_marker_7d8935b2a817984e08200f0e9d25e883.bindPopup(popup_202c11001db58bd47b9096e94b84ad18)
+        ;
+
+        
+    
+    
+            var circle_marker_14e4659426f6a9713bf4479632f42937 = L.circleMarker(
+                [1.35691, 103.89088],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_d6b504dc0739afd3cb7b5e862fe182d1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_001fd15763b05179c2e1b603edb30b03 = $(`<div id="html_001fd15763b05179c2e1b603edb30b03" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Hougang Avenue 1 (S221)<br>     <b>Avg. Rainfall:</b> 6.98 mm<br>     <b>Rainfall Score:</b> 0.62<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_d6b504dc0739afd3cb7b5e862fe182d1.setContent(html_001fd15763b05179c2e1b603edb30b03);
+            
+        
+
+        circle_marker_14e4659426f6a9713bf4479632f42937.bindPopup(popup_d6b504dc0739afd3cb7b5e862fe182d1)
+        ;
+
+        
+    
+    
+            var circle_marker_3e62b1d49716874a9381c880bd7083dc = L.circleMarker(
+                [1.3662, 103.9528],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_5c4299f27edf295777f35b8723fac96e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_765d4a2ce6622d68f3c204863f83e4da = $(`<div id="html_765d4a2ce6622d68f3c204863f83e4da" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Pasir Ris Street 51 (S94)<br>     <b>Avg. Rainfall:</b> 6.89 mm<br>     <b>Rainfall Score:</b> 0.61<br>     <b>Readings:</b> 1130     </div>`)[0];
+                popup_5c4299f27edf295777f35b8723fac96e.setContent(html_765d4a2ce6622d68f3c204863f83e4da);
+            
+        
+
+        circle_marker_3e62b1d49716874a9381c880bd7083dc.bindPopup(popup_5c4299f27edf295777f35b8723fac96e)
+        ;
+
+        
+    
+    
+            var circle_marker_39612e7aafd2739ace5faf27dee7271c = L.circleMarker(
+                [1.32485, 103.95836],
+                {"bubblingMouseEvents": true, "color": "#ff8000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff8000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_a9943c7d3b486c81f6f24bd5c6ff70e9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4c8fd5b7cc3b6b980b9c08d8dab184f3 = $(`<div id="html_4c8fd5b7cc3b6b980b9c08d8dab184f3" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S207 (S207)<br>     <b>Avg. Rainfall:</b> 6.81 mm<br>     <b>Rainfall Score:</b> 0.60<br>     <b>Readings:</b> 920     </div>`)[0];
+                popup_a9943c7d3b486c81f6f24bd5c6ff70e9.setContent(html_4c8fd5b7cc3b6b980b9c08d8dab184f3);
+            
+        
+
+        circle_marker_39612e7aafd2739ace5faf27dee7271c.bindPopup(popup_a9943c7d3b486c81f6f24bd5c6ff70e9)
+        ;
+
+        
+    
+    
+            var circle_marker_fa04e50ed0f0df8cca1b5631f6e66bc5 = L.circleMarker(
+                [1.37999, 103.87643],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_bd6158b7a2ccb1509c11928187f8776d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_75d246a080f8e95f7af58beb6eb143f4 = $(`<div id="html_75d246a080f8e95f7af58beb6eb143f4" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Yio Chu Kang Road (S219)<br>     <b>Avg. Rainfall:</b> 6.78 mm<br>     <b>Rainfall Score:</b> 0.60<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_bd6158b7a2ccb1509c11928187f8776d.setContent(html_75d246a080f8e95f7af58beb6eb143f4);
+            
+        
+
+        circle_marker_fa04e50ed0f0df8cca1b5631f6e66bc5.bindPopup(popup_bd6158b7a2ccb1509c11928187f8776d)
+        ;
+
+        
+    
+    
+            var circle_marker_ed63ebbeb2b13459dd16ac3e48369082 = L.circleMarker(
+                [1.30105, 103.8666],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_1d87948470108656e1f61b7886edfc75 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c105b6c32249efc2261df75012d7a902 = $(`<div id="html_c105b6c32249efc2261df75012d7a902" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Nicoll Highway (S119)<br>     <b>Avg. Rainfall:</b> 6.77 mm<br>     <b>Rainfall Score:</b> 0.59<br>     <b>Readings:</b> 1155     </div>`)[0];
+                popup_1d87948470108656e1f61b7886edfc75.setContent(html_c105b6c32249efc2261df75012d7a902);
+            
+        
+
+        circle_marker_ed63ebbeb2b13459dd16ac3e48369082.bindPopup(popup_1d87948470108656e1f61b7886edfc75)
+        ;
+
+        
+    
+    
+            var circle_marker_3f553fb194e25e53c0018248324b1ef6 = L.circleMarker(
+                [1.3135, 103.9625],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_87469dd58e1cf63f95a260f2d0d898bb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_23868a2dd666492e8c53905e7838516d = $(`<div id="html_23868a2dd666492e8c53905e7838516d" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> East Coast Parkway (S107)<br>     <b>Avg. Rainfall:</b> 6.64 mm<br>     <b>Rainfall Score:</b> 0.58<br>     <b>Readings:</b> 1156     </div>`)[0];
+                popup_87469dd58e1cf63f95a260f2d0d898bb.setContent(html_23868a2dd666492e8c53905e7838516d);
+            
+        
+
+        circle_marker_3f553fb194e25e53c0018248324b1ef6.bindPopup(popup_87469dd58e1cf63f95a260f2d0d898bb)
+        ;
+
+        
+    
+    
+            var circle_marker_89aa2f10c46bc79d85bfa2f6dd6eabf7 = L.circleMarker(
+                [1.31835, 103.93574],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_203fd76cb6c68e664721b4fdb0cb60fb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6089869fd47b70ed3857d6f592aa393b = $(`<div id="html_6089869fd47b70ed3857d6f592aa393b" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S212 (S212)<br>     <b>Avg. Rainfall:</b> 6.60 mm<br>     <b>Rainfall Score:</b> 0.57<br>     <b>Readings:</b> 920     </div>`)[0];
+                popup_203fd76cb6c68e664721b4fdb0cb60fb.setContent(html_6089869fd47b70ed3857d6f592aa393b);
+            
+        
+
+        circle_marker_89aa2f10c46bc79d85bfa2f6dd6eabf7.bindPopup(popup_203fd76cb6c68e664721b4fdb0cb60fb)
+        ;
+
+        
+    
+    
+            var circle_marker_6d554dfe8cc958befa24a1533eb62865 = L.circleMarker(
+                [1.32785, 103.88899],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_dad65eea084f6f64ac71003403e3ed02 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_796a9acd1647b63e23f36ff39e2b76ba = $(`<div id="html_796a9acd1647b63e23f36ff39e2b76ba" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Geylang East Central (S215)<br>     <b>Avg. Rainfall:</b> 6.58 mm<br>     <b>Rainfall Score:</b> 0.57<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_dad65eea084f6f64ac71003403e3ed02.setContent(html_796a9acd1647b63e23f36ff39e2b76ba);
+            
+        
+
+        circle_marker_6d554dfe8cc958befa24a1533eb62865.bindPopup(popup_dad65eea084f6f64ac71003403e3ed02)
+        ;
+
+        
+    
+    
+            var circle_marker_97a482ebac8ab711407392f217f03765 = L.circleMarker(
+                [1.25, 103.8279],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_7baabb331f3d15a47cc4e3e809141065 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dd93db8077d08f405a48cb4c7998c6a9 = $(`<div id="html_dd93db8077d08f405a48cb4c7998c6a9" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Sentosa (S60)<br>     <b>Avg. Rainfall:</b> 6.54 mm<br>     <b>Rainfall Score:</b> 0.57<br>     <b>Readings:</b> 871     </div>`)[0];
+                popup_7baabb331f3d15a47cc4e3e809141065.setContent(html_dd93db8077d08f405a48cb4c7998c6a9);
+            
+        
+
+        circle_marker_97a482ebac8ab711407392f217f03765.bindPopup(popup_7baabb331f3d15a47cc4e3e809141065)
+        ;
+
+        
+    
+    
+            var circle_marker_106134a512185361042c2c100dce18d3 = L.circleMarker(
+                [1.30703, 103.89067],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_bc9280888673d36db746117d0913dc39 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b09101ed9e0aa4cd1a0afd585180016c = $(`<div id="html_b09101ed9e0aa4cd1a0afd585180016c" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Poole Road (S78)<br>     <b>Avg. Rainfall:</b> 6.45 mm<br>     <b>Rainfall Score:</b> 0.56<br>     <b>Readings:</b> 1132     </div>`)[0];
+                popup_bc9280888673d36db746117d0913dc39.setContent(html_b09101ed9e0aa4cd1a0afd585180016c);
+            
+        
+
+        circle_marker_106134a512185361042c2c100dce18d3.bindPopup(popup_bc9280888673d36db746117d0913dc39)
+        ;
+
+        
+    
+    
+            var circle_marker_798c9ff91f0d3c23b99928597bfb474a = L.circleMarker(
+                [1.3678, 103.9826],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_7525290cdbe312291039196e502e9995 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ef7d9bbb737c44cbfd1173b5abd7fdcf = $(`<div id="html_ef7d9bbb737c44cbfd1173b5abd7fdcf" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Upper Changi Road North (S24)<br>     <b>Avg. Rainfall:</b> 6.41 mm<br>     <b>Rainfall Score:</b> 0.55<br>     <b>Readings:</b> 1137     </div>`)[0];
+                popup_7525290cdbe312291039196e502e9995.setContent(html_ef7d9bbb737c44cbfd1173b5abd7fdcf);
+            
+        
+
+        circle_marker_798c9ff91f0d3c23b99928597bfb474a.bindPopup(popup_7525290cdbe312291039196e502e9995)
+        ;
+
+        
+    
+    
+            var circle_marker_68573e12a57363f24211f42a5303ac61 = L.circleMarker(
+                [1.32785, 103.88899],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_f86615b5604c16feae2459c33d89c0ad = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_78d5ec99184dda2c88e400cc6dadc72f = $(`<div id="html_78d5ec99184dda2c88e400cc6dadc72f" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> GEYLANG EAST CENTRAL (S215)<br>     <b>Avg. Rainfall:</b> 6.12 mm<br>     <b>Rainfall Score:</b> 0.51<br>     <b>Readings:</b> 893     </div>`)[0];
+                popup_f86615b5604c16feae2459c33d89c0ad.setContent(html_78d5ec99184dda2c88e400cc6dadc72f);
+            
+        
+
+        circle_marker_68573e12a57363f24211f42a5303ac61.bindPopup(popup_f86615b5604c16feae2459c33d89c0ad)
+        ;
+
+        
+    
+    
+            var circle_marker_54fa21142ec2f19c63072b02bc7a7604 = L.circleMarker(
+                [1.2799, 103.8703],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_f3fb6655318130947521dd46dff9ad17 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c57779a4fb36b2f8cd534996ffc9edd0 = $(`<div id="html_c57779a4fb36b2f8cd534996ffc9edd0" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Marina Gardens Drive (S108)<br>     <b>Avg. Rainfall:</b> 5.98 mm<br>     <b>Rainfall Score:</b> 0.50<br>     <b>Readings:</b> 651     </div>`)[0];
+                popup_f3fb6655318130947521dd46dff9ad17.setContent(html_c57779a4fb36b2f8cd534996ffc9edd0);
+            
+        
+
+        circle_marker_54fa21142ec2f19c63072b02bc7a7604.bindPopup(popup_f3fb6655318130947521dd46dff9ad17)
+        ;
+
+        
+    
+    
+            var circle_marker_8e18b37a6aa06cc460f6b3a7bf81b35a = L.circleMarker(
+                [1.30648, 103.9104],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_e2952eed10ac3813add8971291998ed8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3eb795fe9fc56603cee0be536776ea8c = $(`<div id="html_3eb795fe9fc56603cee0be536776ea8c" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Marine Parade Road (S113)<br>     <b>Avg. Rainfall:</b> 5.96 mm<br>     <b>Rainfall Score:</b> 0.49<br>     <b>Readings:</b> 1149     </div>`)[0];
+                popup_e2952eed10ac3813add8971291998ed8.setContent(html_3eb795fe9fc56603cee0be536776ea8c);
+            
+        
+
+        circle_marker_8e18b37a6aa06cc460f6b3a7bf81b35a.bindPopup(popup_e2952eed10ac3813add8971291998ed8)
+        ;
+
+        
+    
+    
+            var circle_marker_5a6239f076ff52d0a544a1de92260bba = L.circleMarker(
+                [1.34392, 103.98409],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_188ae96a671f2a244dc614baf760f9d2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d3eabf7a43db3d9a87dc893abc6e1fa8 = $(`<div id="html_d3eabf7a43db3d9a87dc893abc6e1fa8" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S224 (S224)<br>     <b>Avg. Rainfall:</b> 5.90 mm<br>     <b>Rainfall Score:</b> 0.49<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_188ae96a671f2a244dc614baf760f9d2.setContent(html_d3eabf7a43db3d9a87dc893abc6e1fa8);
+            
+        
+
+        circle_marker_5a6239f076ff52d0a544a1de92260bba.bindPopup(popup_188ae96a671f2a244dc614baf760f9d2)
+        ;
+
+        
+    
+    
+            var circle_marker_932db71778648f219c3abfbf6ef486b3 = L.circleMarker(
+                [1.29911, 103.88289],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_fe500f3c92d78d6c7c1b089b99244894 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7b7ea55be4125f319bb2c045e796dd50 = $(`<div id="html_7b7ea55be4125f319bb2c045e796dd50" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S214 (S214)<br>     <b>Avg. Rainfall:</b> 5.81 mm<br>     <b>Rainfall Score:</b> 0.48<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_fe500f3c92d78d6c7c1b089b99244894.setContent(html_7b7ea55be4125f319bb2c045e796dd50);
+            
+        
+
+        circle_marker_932db71778648f219c3abfbf6ef486b3.bindPopup(popup_fe500f3c92d78d6c7c1b089b99244894)
+        ;
+
+        
+    
+    
+            var circle_marker_63c9bdcff0cd05a66e7b69570be42b8d = L.circleMarker(
+                [1.38666, 103.89797],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_fc947a9faaa5076e219b68736ebf136b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_62bfbc83a50129ee363523dd4830ff05 = $(`<div id="html_62bfbc83a50129ee363523dd4830ff05" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Compassvale Lane (S220)<br>     <b>Avg. Rainfall:</b> 5.74 mm<br>     <b>Rainfall Score:</b> 0.47<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_fc947a9faaa5076e219b68736ebf136b.setContent(html_62bfbc83a50129ee363523dd4830ff05);
+            
+        
+
+        circle_marker_63c9bdcff0cd05a66e7b69570be42b8d.bindPopup(popup_fc947a9faaa5076e219b68736ebf136b)
+        ;
+
+        
+    
+    
+            var circle_marker_f3297bb53bec735f8941e8e0e7fef0a9 = L.circleMarker(
+                [1.189, 103.768],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_e800904274c82998a281c343aee82cf1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_89dcdbaf098c7c32e9ef6288a468ab34 = $(`<div id="html_89dcdbaf098c7c32e9ef6288a468ab34" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Semakau Landfill (S102)<br>     <b>Avg. Rainfall:</b> 5.67 mm<br>     <b>Rainfall Score:</b> 0.46<br>     <b>Readings:</b> 144     </div>`)[0];
+                popup_e800904274c82998a281c343aee82cf1.setContent(html_89dcdbaf098c7c32e9ef6288a468ab34);
+            
+        
+
+        circle_marker_f3297bb53bec735f8941e8e0e7fef0a9.bindPopup(popup_e800904274c82998a281c343aee82cf1)
+        ;
+
+        
+    
+    
+            var circle_marker_74effb29b2b638b5295a81b3dffc5849 = L.circleMarker(
+                [1.29911, 103.88289],
+                {"bubblingMouseEvents": true, "color": "#ffff00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_8af440cb7105c84ebe62e8156c8797a5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2d6737112a9d4c799c85fb2f04c4d04e = $(`<div id="html_2d6737112a9d4c799c85fb2f04c4d04e" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Tanjong Rhu (S214)<br>     <b>Avg. Rainfall:</b> 5.63 mm<br>     <b>Rainfall Score:</b> 0.45<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_8af440cb7105c84ebe62e8156c8797a5.setContent(html_2d6737112a9d4c799c85fb2f04c4d04e);
+            
+        
+
+        circle_marker_74effb29b2b638b5295a81b3dffc5849.bindPopup(popup_8af440cb7105c84ebe62e8156c8797a5)
+        ;
+
+        
+    
+    
+            var circle_marker_d2d1bc3395fa7b0c0bea45ee735c1fff = L.circleMarker(
+                [1.3136, 104.00317],
+                {"bubblingMouseEvents": true, "color": "#0080ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_978491c70b28fe6e2898df93689388d0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1bc197f74cea117ff9574db1450d6c2f = $(`<div id="html_1bc197f74cea117ff9574db1450d6c2f" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Changi East Close (S208)<br>     <b>Avg. Rainfall:</b> 5.12 mm<br>     <b>Rainfall Score:</b> 0.39<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_978491c70b28fe6e2898df93689388d0.setContent(html_1bc197f74cea117ff9574db1450d6c2f);
+            
+        
+
+        circle_marker_d2d1bc3395fa7b0c0bea45ee735c1fff.bindPopup(popup_978491c70b28fe6e2898df93689388d0)
+        ;
+
+        
+    
+    
+            var circle_marker_f48389ce08c4a9ec9e0aa0f45d885310 = L.circleMarker(
+                [1.3136, 104.00317],
+                {"bubblingMouseEvents": true, "color": "#0080ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_ff406a2589eba69dd5acece0d0c77f49 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cbc003610c2260f1186eeb17348163e7 = $(`<div id="html_cbc003610c2260f1186eeb17348163e7" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> S208 (S208)<br>     <b>Avg. Rainfall:</b> 4.35 mm<br>     <b>Rainfall Score:</b> 0.29<br>     <b>Readings:</b> 921     </div>`)[0];
+                popup_ff406a2589eba69dd5acece0d0c77f49.setContent(html_cbc003610c2260f1186eeb17348163e7);
+            
+        
+
+        circle_marker_f48389ce08c4a9ec9e0aa0f45d885310.bindPopup(popup_ff406a2589eba69dd5acece0d0c77f49)
+        ;
+
+        
+    
+    
+            var circle_marker_209780ad27e28748e60d12056c2f2b66 = L.circleMarker(
+                [1.34392, 103.98409],
+                {"bubblingMouseEvents": true, "color": "#0080ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_241ed67d0e94798b5050d6dc33ad2024 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a81a089380b9c11f13c1e1a31a221f60 = $(`<div id="html_a81a089380b9c11f13c1e1a31a221f60" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Airport Boulevard (S224)<br>     <b>Avg. Rainfall:</b> 3.74 mm<br>     <b>Rainfall Score:</b> 0.22<br>     <b>Readings:</b> 240     </div>`)[0];
+                popup_241ed67d0e94798b5050d6dc33ad2024.setContent(html_a81a089380b9c11f13c1e1a31a221f60);
+            
+        
+
+        circle_marker_209780ad27e28748e60d12056c2f2b66.bindPopup(popup_241ed67d0e94798b5050d6dc33ad2024)
+        ;
+
+        
+    
+    
+            var circle_marker_54c5bc9992ffc9dc81c1d5ba8a4c2986 = L.circleMarker(
+                [1.3382, 103.8657],
+                {"bubblingMouseEvents": true, "color": "#0000ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_5285a03a08ee1851e27c34cf9d1ba68a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_875d45c3650c571f904d0dda169ffb6d = $(`<div id="html_875d45c3650c571f904d0dda169ffb6d" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Upper Serangoon Road (S36)<br>     <b>Avg. Rainfall:</b> 2.01 mm<br>     <b>Rainfall Score:</b> 0.00<br>     <b>Readings:</b> 354     </div>`)[0];
+                popup_5285a03a08ee1851e27c34cf9d1ba68a.setContent(html_875d45c3650c571f904d0dda169ffb6d);
+            
+        
+
+        circle_marker_54c5bc9992ffc9dc81c1d5ba8a4c2986.bindPopup(popup_5285a03a08ee1851e27c34cf9d1ba68a)
+        ;
+
+        
+    
+    
+            var circle_marker_91ba90ac89ce7f84aaa93c7c1d3798c8 = L.circleMarker(
+                [1.31835, 103.93574],
+                {"bubblingMouseEvents": true, "color": "#0000ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+    
+        var popup_c8e3b1bdd22b6880086ba51dbb5efdcb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0d8ce9a89c7e2f964af5ee19ecb9ad38 = $(`<div id="html_0d8ce9a89c7e2f964af5ee19ecb9ad38" style="width: 100.0%; height: 100.0%;">     <b>Station:</b> Tampines Avenue 9 (S212)<br>     <b>Avg. Rainfall:</b> 1.99 mm<br>     <b>Rainfall Score:</b> 0.00<br>     <b>Readings:</b> 18     </div>`)[0];
+                popup_c8e3b1bdd22b6880086ba51dbb5efdcb.setContent(html_0d8ce9a89c7e2f964af5ee19ecb9ad38);
+            
+        
+
+        circle_marker_91ba90ac89ce7f84aaa93c7c1d3798c8.bindPopup(popup_c8e3b1bdd22b6880086ba51dbb5efdcb)
+        ;
+
+        
+    
+    
+            var heat_map_36855b3de9c149eff1991c76780d60f6 = L.heatLayer(
+                [[1.387, 103.935, 1.0], [1.34703, 103.70073, 0.9926778424895432], [1.323, 103.9217, 0.9864428501554422], [1.42918, 103.75711, 0.9229859350794336], [1.44003, 103.76904, 0.916664494373874], [1.30968, 103.7578, 0.9147498696863412], [1.35167, 103.72195, 0.89041614784926], [1.2841, 103.7886, 0.8883498280067457], [1.29164, 103.7702, 0.8869985006016256], [1.43944, 103.80389, 0.8810178286576614], [1.32311, 103.76714, 0.8717091115345273], [1.36019, 103.85335, 0.8652113161824967], [1.43944, 103.80389, 0.8522951111778986], [1.3824, 103.7603, 0.8513417435098253], [1.3524, 103.9007, 0.8507248715710487], [1.30874, 103.818, 0.8492855458530092], [1.36491, 103.75065, 0.8452591491096794], [1.4387, 103.7363, 0.8353803577838735], [1.37, 103.805, 0.8249509714030634], [1.30167, 103.76444, 0.8233471164580484], [1.32427, 103.8097, 0.8177003772983079], [1.35041, 103.85526, 0.8175841977498203], [1.42918, 103.75711, 0.816359398546853], [1.37999, 103.87643, 0.8162379026252377], [1.34583, 103.68166, 0.8126155770063], [1.28987, 103.82364, 0.8102370956126681], [1.3701, 103.8271, 0.8088040363078085], [1.2923, 103.7815, 0.8086642646214035], [1.32311, 103.76714, 0.8082285884092134], [1.28987, 103.82364, 0.8030870332237937], [1.3329, 103.7556, 0.8027486325415449], [1.31985, 103.66162, 0.7992294481280255], [1.36491, 103.75065, 0.7932798604881516], [1.44003, 103.76904, 0.7926168852278666], [1.38, 103.73, 0.7858549237420948], [1.3337, 103.7768, 0.7848768774228164], [1.27472, 103.80389, 0.7842222968940726], [1.35691, 103.89088, 0.7801406823950776], [1.4044, 103.78962, 0.777150552675765], [1.34703, 103.70073, 0.7765270662018364], [1.37288, 103.72244, 0.7761698829129159], [1.3191, 103.8191, 0.7750984367044113], [1.42111, 103.84472, 0.7650945452978349], [1.3764, 103.8492, 0.7613777729902641], [1.29164, 103.7702, 0.7610493316236412], [1.4172, 103.74855, 0.7558899433665479], [1.35167, 103.72195, 0.7531345406587483], [1.32427, 103.8097, 0.7514261003090832], [1.42111, 103.84472, 0.7475772191536142], [1.27472, 103.80389, 0.7440496546610251], [1.44387, 103.78538, 0.7341566390488802], [1.3427, 103.8482, 0.7330472452893981], [1.41284, 103.86922, 0.7294492338977393], [1.3415, 103.8334, 0.728308227611118], [1.29984, 103.80264, 0.7244900424990249], [1.38829, 103.9116, 0.7199892477552235], [1.43854, 103.70131, 0.7172217293425358], [1.32485, 103.95836, 0.7112872855131388], [1.36019, 103.85335, 0.7046573884069192], [1.29984, 103.80264, 0.6900979933139176], [1.29377, 103.61843, 0.6882494252151043], [1.3081, 103.71, 0.6842850729290015], [1.30167, 103.76444, 0.6827744853265505], [1.35041, 103.85526, 0.6727018734708428], [1.3399, 103.8878, 0.66915657038417], [1.256, 103.679, 0.667501096201139], [1.2937, 103.8125, 0.663987857142922], [1.40081, 103.88217, 0.6620850573597806], [1.2994, 103.8461, 0.6609304301270229], [1.3437, 103.9444, 0.6562411806416735], [1.38666, 103.89797, 0.6413317646143022], [1.3214, 103.8577, 0.6395780317842878], [1.31055, 103.8365, 0.6371182414558891], [1.281, 103.754, 0.6353696877900253], [1.3247, 103.6351, 0.6348354202220281], [1.4029, 103.9092, 0.6297221075122307], [1.3004, 103.8372, 0.627164250671838], [1.4168, 103.9673, 0.623873815575114], [1.35691, 103.89088, 0.6205077855618819], [1.3662, 103.9528, 0.6097940049452872], [1.32485, 103.95836, 0.6000973760728696], [1.37999, 103.87643, 0.5964594616279646], [1.30105, 103.8666, 0.5943412514834685], [1.3135, 103.9625, 0.5783945349880115], [1.31835, 103.93574, 0.5734855980368746], [1.32785, 103.88899, 0.5716019172232948], [1.25, 103.8279, 0.5658455503259281], [1.30703, 103.89067, 0.5556109174097272], [1.3678, 103.9826, 0.550503684930671], [1.32785, 103.88899, 0.5137279717428479], [1.2799, 103.8703, 0.49698753847032], [1.30648, 103.9104, 0.4939623011467743], [1.34392, 103.98409, 0.4871711613096195], [1.29911, 103.88289, 0.475186442910314], [1.38666, 103.89797, 0.4661551523821427], [1.189, 103.768, 0.4579247753537191], [1.29911, 103.88289, 0.4531312585497309], [1.3136, 104.00317, 0.3890853758792995], [1.3136, 104.00317, 0.2939567815718662], [1.34392, 103.98409, 0.2176943277707217], [1.3382, 103.8657, 0.002577375780568], [1.31835, 103.93574, 0.0]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 15,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_36855b3de9c149eff1991c76780d60f6.addTo(map_8bfca9e1daaead33576b943a0cede949);
+        
+</script>
+</html>
