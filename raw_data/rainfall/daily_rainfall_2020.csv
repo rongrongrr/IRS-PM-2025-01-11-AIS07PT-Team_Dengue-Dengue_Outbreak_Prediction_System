@@ -1,4 +1,4 @@
-day,station_id,station_name,latitude,longitude,aggregated_value
+day,station_id,station_name,latitude,longitude,total_rainfall
 2020-01-01,S105,Admiralty Road West,1.45817,103.79525,0.0
 2020-01-01,S77,Alexandra Road,1.2937,103.8125,0.0
 2020-01-01,S109,Ang Mo Kio Avenue 5,1.3764,103.8492,0.0
