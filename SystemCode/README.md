@@ -101,3 +101,6 @@ If you encounter issues with the installation:
 from fastapi.staticfiles import StaticFiles
 
 app.mount("/static", StaticFiles(directory="static"), name="static") 
+
+
+add more by BZ
