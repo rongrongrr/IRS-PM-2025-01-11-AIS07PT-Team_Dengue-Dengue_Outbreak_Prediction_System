@@ -4,8 +4,8 @@ This web application allows users to predict dengue risk based on postal codes i
 
 ## Project Structure
 
-- `backend/`: Python FastAPI backend
-- `frontend/`: Next.js frontend
+<!-- - `backend/`: Python FastAPI backend
+- `frontend/`: Next.js frontend -->
 
 ## Prerequisites
 
@@ -15,6 +15,7 @@ This web application allows users to predict dengue risk based on postal codes i
 
 ## Quick Installation
 
+1. Unzip /SystemCode/backend/combined_data.pkl.zip to the same folder
 For a quick setup, you can use the provided installation script:
 
 ```bash
@@ -100,3 +101,6 @@ If you encounter issues with the installation:
 from fastapi.staticfiles import StaticFiles
 
 app.mount("/static", StaticFiles(directory="static"), name="static") 
+
+
+add more by BZ
