@@ -25,6 +25,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from fastapi.staticfiles import StaticFiles
+
+# Mount the static directory
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Load data and model
 def load_data():
