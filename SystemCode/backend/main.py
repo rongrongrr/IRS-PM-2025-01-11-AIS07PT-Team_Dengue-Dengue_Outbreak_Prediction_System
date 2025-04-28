@@ -33,7 +33,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # Load data and model
 def load_data():
     try:
-        with open("combined_data.pkl", "rb") as f:
+        with open("processed_dengue_data_combined_all.pkl", "rb") as f:
             data = pickle.load(f)
         with open("dengue_RFR_model.pkl", "rb") as f:
             model = pickle.load(f)
@@ -162,31 +162,31 @@ def normalize_column_names(
 async def predict_risk(request: PostalCodeRequest):
     try:
         postal_code = int(request.postal_code)
-        postal_matches = data["postal_landuse_mapping"][
-            data["postal_landuse_mapping"]["postal_code"] == postal_code
-        ]
+        # postal_matches = data["postal_landuse_mapping"][
+        #     data["postal_landuse_mapping"]["postal_code"] == postal_code
+        # ]
 
-        if len(postal_matches) == 0:
-            raise HTTPException(
-                status_code=404, detail=f"Postal code {postal_code} was not valid"
-            )
+        # if len(postal_matches) == 0:
+        #     raise HTTPException(
+        #         status_code=404, detail=f"Postal code {postal_code} was not valid"
+        #     )
 
-        postal_match = postal_matches.iloc[0]
-        logger.info(f"Found postal match: {postal_match.to_dict()}")
+        # postal_match = postal_matches.iloc[0]
+        # logger.info(f"Found postal match: {postal_match.to_dict()}")
 
         # Get postal code location
-        try:
-            postal_lat = postal_match["postal_lat"]
-            postal_lon = postal_match["postal_lon"]
-            landuse_name = postal_match["landuse_name"]
-        except KeyError as e:
-            logger.error(f"Missing required column in postal_landuse_mapping: {e}")
-            raise HTTPException(
-                status_code=500, detail=f"Data structure error: missing column {e}"
-            )
+        # try:
+        #     postal_lat = postal_match["postal_lat"]
+        #     postal_lon = postal_match["postal_lon"]
+        #     landuse_name = postal_match["landuse_name"]
+        # except KeyError as e:
+        #     logger.error(f"Missing required column in postal_landuse_mapping: {e}")
+        #     raise HTTPException(
+        #         status_code=500, detail=f"Data structure error: missing column {e}"
+        #     )
 
-        logger.debug(f"Postal code location: {postal_lat}, {postal_lon}")
-        logger.debug(f"Land use name: {landuse_name}")
+        # logger.debug(f"Postal code location: {postal_lat}, {postal_lon}")
+        # logger.debug(f"Land use name: {landuse_name}")
 
         # Find land use area
         land_use = data["land_use_data"]
