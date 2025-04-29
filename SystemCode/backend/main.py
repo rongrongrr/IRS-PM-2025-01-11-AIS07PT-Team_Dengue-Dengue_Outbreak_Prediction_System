@@ -55,8 +55,6 @@ def load_data():
 
 try:
     all_data, data, model = load_data()
-    logger.info(f"Available keys in data: {list(all_data.keys())}")
-    logger.info(f"Available keys in data: {list(data.keys())}")
 
 except Exception as e:
     logger.error(f"Failed to load data: {str(e)}")
