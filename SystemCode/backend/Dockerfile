@@ -16,7 +16,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 3. copy source *including* the .zip and entrypoint
 COPY . .
 COPY docker-entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+# Convert CRLF → LF *inside* the image, then make it executable
+RUN apt-get update && apt-get install -y --no-install-recommends dos2unix \
+    && dos2unix /usr/local/bin/docker-entrypoint.sh \
+    && chmod +x /usr/local/bin/docker-entrypoint.sh \
+    && rm -rf /var/lib/apt/lists/*
 
 # 4. expose relevant port
 EXPOSE 8000
