@@ -13,22 +13,25 @@
 ---
 
 ## SECTION 1 : PROJECT TITLE
+
 ## Dengue Outbreak Predicction System
+
 ---
 
 ## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
+
 According to the MOH and NEA, more than 13,600 dengue cases were reported in Singapore in 2024, a 36% year-on-year increase from 2023. We believe that with a more accurate and reliable early warning system, both public health professionals and the at-risk public will be able to take effective action to reverse this concerning trend.
----
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
 
-| Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
-| :------------ |:---------------:| :-----| :-----|
-| Chan Jing Rong | A1234567A | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.| jingrong_chan@u.nus.edu |
-| Weiqiao Li | A1234567B | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.| e______@u.nus.edu |
-| Brian Zheng | A1234567C | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.| e______@u.nus.edu|
-| Velu | A1234567D | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.| e______@u.nus.edu|
-| Johann Oh Hock Seng| A1234567E | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.| johannoh@u.nus.edu |
+| Official Full Name  | Student ID (MTech Applicable) | Work Items (Who Did What)                                                                                                   | Email (Optional)        |
+| :------------------ | :---------------------------: | :-------------------------------------------------------------------------------------------------------------------------- | :---------------------- |
+| Chan Jing Rong      |           A1234567A           | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. | jingrong_chan@u.nus.edu |
+| Weiqiao Li          |           A1234567B           | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. | e______@u.nus.edu       |
+| Brian Zheng         |           A1234567C           | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. | e______@u.nus.edu       |
+| Velu                |           A1234567D           | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. | e______@u.nus.edu       |
+| Johann Oh Hock Seng |           A1234567E           | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. | johannoh@u.nus.edu      |
 
 ---
 
@@ -36,23 +39,25 @@ According to the MOH and NEA, more than 13,600 dengue cases were reported in Sin
 
 [![Dengue Outbreak Prediction System](http://img.youtube.com/vi/RXo47Tewbt4/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ "Dengue Outbreak Prediction System")
 
-Note: It is not mandatory for every project member to appear in video presentation; Presentation by one project member is acceptable. 
+Note: It is not mandatory for every project member to appear in video presentation; Presentation by one project member is acceptable.
 More reference video presentations [here](https://telescopeuser.wordpress.com/2018/03/31/master-of-technology-solution-know-how-video-index-2/ "video presentations")
 
 ---
 
 ## SECTION 5 : USER GUIDE
 
-`Refer to appendix <Installation & User Guide> in project report at Github Folder: ProjectReport`
+`Refer to READEME in the Github Folder: SystemCode`
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis knostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ---
+
 ## SECTION 6 : PROJECT REPORT / PAPER
 
 `Refer to project report at Github Folder: ProjectReport`
 
 **Recommended Sections for Project Report / Paper:**
+
 - Executive Summary / Paper Abstract
 - Sponsor Company Introduction (if applicable)
 - Business Problem Background
@@ -70,11 +75,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 - Appendix of report: References (if applicable)
 
 ---
+
 ## SECTION 7 : MISCELLANEOUS
 
 `Refer to Github Folder: Miscellaneous`
 
 ### aedes_breeding_areas.xlsx
+
 * Source data from NEA
 
 ---
