@@ -1,11 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { fetchPrediction } from "../utils/api"; // Import the reusable function
 
 export default function ClusterPredictionView() {
-  const [postalCode, setPostalCode] = useState("120000");
-  const [searchedPostalCode, setSearchedPostalCode] = useState("120000");
+  const [postalCode, setPostalCode] = useState("");
+  const [searchedPostalCode, setSearchedPostalCode] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [result, setResult] = useState(null); // Add result state for prediction data
@@ -61,14 +60,45 @@ export default function ClusterPredictionView() {
           )}
 
           {result && (
-            <div className="mt-4 p-4 bg-blue-50 rounded-md">
-              <h3 className="font-medium text-blue-800">Prediction Results</h3>
-              <p className="text-sm text-blue-700">
-                Risk Level: {result.risk_level}
-              </p>
-              <p className="text-sm text-blue-700">
-                Confidence: {result.prediction_value?.toFixed(2)}%
-              </p>
+            <div>
+              {result.street_address && (
+                <div className="mt-4 p-4 bg-gray-50 rounded-md">
+                  <h3 className="font-medium text-gray-800">
+                    Location Information
+                  </h3>
+                  <p className="text-sm text-gray-700">
+                    Street Address: {result.street_address}
+                  </p>
+                  <br></br>
+                  <p className="text-sm text-gray-700">
+                    Land Use Category:{" "}
+                    {result.location_info.landuse_type
+                      .toLowerCase()
+                      .replace(/\b\w/g, (char) => char.toUpperCase()) + " Area"}
+                  </p>
+                </div>
+              )}
+              <div className="mt-4 p-4 bg-blue-50 rounded-md">
+                <h3 className="font-medium text-blue-800">
+                  Prediction Results
+                </h3>
+                <p className="text-sm text-blue-700">
+                  Risk Level:{" "}
+                  <span
+                    style={{
+                      color:
+                        result.risk_level === "High"
+                          ? "red"
+                          : result.risk_level === "Medium"
+                          ? "orange"
+                          : "green",
+                      fontWeight: "bold", // Makes the text bold
+                    }}
+                  >
+                    {result.risk_level}
+                  </span>
+                </p>
+              </div>
             </div>
           )}
         </div>
@@ -77,8 +107,6 @@ export default function ClusterPredictionView() {
         <div className="flex-grow bg-white p-4 shadow-md rounded">
           {result?.map_file ? (
             <>
-              {console.log("Map File:", result.map_file)}{" "}
-              {/* Log the map_file */}
               <iframe
                 src={`http://localhost:8000/${result.map_file}`} // Ensure result.map_file contains "static/risk_map_560234.html"
                 title="Risk Map"
