@@ -1,5 +1,9 @@
-import { AlertCircle, BarChart3, Calendar, Map } from "lucide-react";
 import { useEffect, useState } from "react";
+import {
+  fetchLatestStatistics,
+  fetchIncidenceRateData,
+  fetchLatestClusters,
+} from "../utils/api"; // Import the API functions
 
 import ClusterAnalysisView from "../components/ClusterAnalysisView";
 import Header from "../components/Header";
@@ -8,91 +12,38 @@ import SummaryCards from "../components/SummaryCards";
 import TrendsView from "../components/TrendsView";
 import ClusterPredictionView from "../components/ClusterPredictionView";
 
-// Sample dengue data - replace with actual data
-const dengueData = [
-  {
-    id: 1,
-    district: "Central Region",
-    activeCases: 28,
-    newCases: 7,
-    incidenceRate: 4.2,
-    clusterSize: "Medium",
-    alert: "Warning",
-  },
-  {
-    id: 2,
-    district: "Eastern Area",
-    activeCases: 45,
-    newCases: 12,
-    incidenceRate: 6.7,
-    clusterSize: "Large",
-    alert: "Critical",
-  },
-  {
-    id: 3,
-    district: "Northern District",
-    activeCases: 16,
-    newCases: 3,
-    incidenceRate: 2.1,
-    clusterSize: "Small",
-    alert: "Moderate",
-  },
-  {
-    id: 4,
-    district: "Western Zone",
-    activeCases: 32,
-    newCases: 9,
-    incidenceRate: 5.3,
-    clusterSize: "Medium",
-    alert: "Warning",
-  },
-  {
-    id: 5,
-    district: "Southern Territory",
-    activeCases: 8,
-    newCases: 2,
-    incidenceRate: 1.5,
-    clusterSize: "Small",
-    alert: "Low",
-  },
-];
-
-// Time series data for tracking
-const timeSeriesData = [
-  { month: "Jan", cases: 12, incidenceRate: 1.8 },
-  { month: "Feb", cases: 19, incidenceRate: 2.9 },
-  { month: "Mar", cases: 27, incidenceRate: 4.1 },
-  { month: "Apr", cases: 42, incidenceRate: 6.3 },
-  { month: "May", cases: 52, incidenceRate: 7.8 },
-  { month: "Jun", cases: 39, incidenceRate: 5.9 },
-  { month: "Jul", cases: 26, incidenceRate: 3.9 },
+// Fallback data in case API fails
+const fallbackTimeSeriesData = [
+  { month: "Jan", year: "2025", cases: 570, incidenceRate: 0.1 },
+  { month: "Feb", year: "2025", cases: 430, incidenceRate: 0.08 },
+  { month: "Mar", year: "2025", cases: 380, incidenceRate: 0.07 },
+  { month: "Apr", year: "2025", cases: 420, incidenceRate: 0.08 },
+  { month: "May", year: "2025", cases: 490, incidenceRate: 0.09 },
 ];
 
 // Alert status color mapping
 const alertColors = {
-  Critical: "text-red-600 bg-red-100",
-  Warning: "text-amber-600 bg-amber-100",
-  Moderate: "text-yellow-600 bg-yellow-100",
+  Warning: "text-red-600 bg-red-100",
+  Moderate: "text-amber-600 bg-amber-100",
   Low: "text-green-600 bg-green-100",
 };
 
 export default function DengueDashboard() {
   const [activeDistrict, setActiveDistrict] = useState(null);
   const [activeView, setActiveView] = useState("cluster-prediction");
-  const [timeFilter, setTimeFilter] = useState("6m");
   const [summaryCardsInfo, setSummaryCardsInfo] = useState({
-    totalActiveCases: 123,
-    newCases: -25,
-    averageIncidenceRate: 5.94,
+    totalActiveCases: 0,
+    averageIncidenceRate: 0,
     activeClusters: {
-      total: 10,
-      critical: 1,
-      warning: 2,
+      total: 0,
     },
-    weeklyNewCases: 33,
-    weeklyChange: -12,
+    highestCaseCluster: {
+      cluster_number: null,
+      number_of_cases: 0,
+      street_address: "",
+    },
   });
-  const [dataTimeStamp, setDataTimeStamp] = useState([
+  const [dataTimeStamp, setDataTimeStamp] = useState(
     new Date()
       .toLocaleString("en-GB", {
         year: "numeric",
@@ -103,14 +54,35 @@ export default function DengueDashboard() {
         second: "2-digit",
       })
       .replace(",", "")
-      .replace(/\//g, "-"),
-  ]);
-  // Fetch data for total active cases
+      .replace(/\//g, "-")
+  );
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  // State for trends view
+  const [timeSeriesData, setTimeSeriesData] = useState(null);
+  const [trendsLoading, setTrendsLoading] = useState(false);
+  const [trendsError, setTrendsError] = useState(null);
+
+  // Fetch data for summary cards
   useEffect(() => {
-    fetch("/api/dengue-data")
-      .then((response) => response.json())
-      .then((data) => {
-        setSummaryCardsInfo(data.summaryCardsInfo);
+    fetchLatestStatistics(setLoading, setError, (data) => {
+      // Only update state if data is not null and has the expected structure
+      if (data) {
+        setSummaryCardsInfo({
+          totalActiveCases: data.total_cases || 0,
+          averageIncidenceRate: data.average_incidence_rate || 0,
+          activeClusters: {
+            total: data.active_clusters || 0,
+          },
+          highestCaseCluster: data.highest_case_cluster || {
+            cluster_number: null,
+            number_of_cases: 0,
+            street_address: "",
+          },
+        });
+
+        // Update timestamp
         setDataTimeStamp(
           new Date()
             .toLocaleString("en-GB", {
@@ -124,11 +96,73 @@ export default function DengueDashboard() {
             .replace(",", "")
             .replace(/\//g, "-")
         );
-      });
+      } else {
+        console.error("Received null or invalid data from API");
+      }
+    });
   }, []);
+
+  const [dengueData, setDengueData] = useState([]);
+  const [clustersLoading, setClustersLoading] = useState(false);
+  const [clustersError, setClustersError] = useState(null);
+
+  useEffect(() => {
+    if (activeView === "clusters" && dengueData.length === 0) {
+      setClustersLoading(true);
+      fetchLatestClusters(setClustersLoading, setClustersError, (data) => {
+        if (data && Array.isArray(data.clusters)) {
+          const formattedData = data.clusters.map((cluster) => ({
+            id: cluster["Cluster Number"],
+            district: cluster["Street Address"] || "Unknown",
+            activeCases: cluster["Number Of Cases"] || 0,
+            newCases: cluster["Recent Cases In Cluster"] || 0,
+            totalCases: cluster["Total Cases In Cluster"] || 0,
+            alert: determineAlertLevel(cluster["Number Of Cases"]),
+            latitude: cluster["Latitude"],
+            longitude: cluster["Longitude"],
+          }));
+          setDengueData(formattedData);
+        } else {
+          console.error("Invalid clusters data format:", data);
+          setClustersError("Failed to parse cluster data");
+        }
+      });
+    }
+  }, [activeView]);
+
+  // Helper function to determine alert level based on numnber of active cases
+  const determineAlertLevel = (activeCases) => {
+    if (activeCases >= 10) return "Warning";
+    if (activeCases < 10 && activeCases > 0) return "Moderate";
+    return "Low";
+  };
+
+  // Fetch incidence rate data when trends view is selected
+  useEffect(() => {
+    if (activeView === "trends") {
+      // Fetch incidence rate data
+      fetchIncidenceRateData(setTrendsLoading, setTrendsError, (data) => {
+        if (data && data.length > 0) {
+          setTimeSeriesData(data);
+        } else {
+          setTimeSeriesData(fallbackTimeSeriesData);
+        }
+      });
+    }
+  }, [activeView]);
 
   const handleRowClick = (district) => {
     setActiveDistrict(district === activeDistrict ? null : district);
+  };
+
+  // Modified setActiveView function to handle view changes
+  const handleViewChange = (view) => {
+    setActiveView(view);
+
+    // Clear any previous errors
+    if (view === "trends") {
+      setTrendsError(null);
+    }
   };
 
   return (
@@ -141,9 +175,7 @@ export default function DengueDashboard() {
       <div className="flex flex-col md:flex-row flex-1 px-4 pb-4 gap-4">
         <Sidebar
           activeView={activeView}
-          setActiveView={setActiveView}
-          timeFilter={timeFilter}
-          setTimeFilter={setTimeFilter}
+          setActiveView={handleViewChange}
           activeDistrict={activeDistrict}
           setActiveDistrict={setActiveDistrict}
           alertColors={alertColors}
@@ -156,12 +188,18 @@ export default function DengueDashboard() {
           ) : activeView === "clusters" ? (
             <ClusterAnalysisView
               dengueData={dengueData}
+              loading={clustersLoading}
+              error={clustersError}
               activeDistrict={activeDistrict}
               handleRowClick={handleRowClick}
               alertColors={alertColors}
             />
           ) : (
-            <TrendsView timeSeriesData={timeSeriesData} />
+            <TrendsView
+              timeSeriesData={timeSeriesData || fallbackTimeSeriesData}
+              loading={trendsLoading}
+              error={trendsError}
+            />
           )}
         </div>
       </div>

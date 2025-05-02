@@ -1,10 +1,13 @@
-import { Filter, Info, Map as MapIcon } from "lucide-react";
+import { Info, Map as MapIcon } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { toProperCase } from "../utils/helpers"; // Import the helper function
 
 export default function ClusterAnalysisView({
   dengueData,
+  loading,
+  error,
   activeDistrict,
   handleRowClick,
   alertColors,
@@ -12,7 +15,6 @@ export default function ClusterAnalysisView({
   const mapRef = useRef(null);
   const mapContainerRef = useRef(null);
   const [legend, setLegend] = useState(false);
-  const [showFilterModal, setShowFilterModal] = useState(false);
 
   // Initialize the map when the component mounts
   useEffect(() => {
@@ -43,8 +45,8 @@ export default function ClusterAnalysisView({
   const extractColorFromTailwindClass = (className) => {
     // Default fallback colors in case we can't parse the class
     const fallbackColors = {
-      High: "#EF4444", // red-500
-      Medium: "#F59E0B", // amber-500
+      Warning: "#EF4444", // red-500
+      Moderate: "#F59E0B", // amber-500
       Low: "#10B981", // green-500
       default: "#3B82F6", // blue-500
     };
@@ -53,7 +55,7 @@ export default function ClusterAnalysisView({
     // based on how your alertColors are structured
     if (className.includes("bg-red")) return "#EF4444";
     if (className.includes("bg-amber")) return "#F59E0B";
-    if (className.includes("bg-yellow")) return "#F59E0B";
+    if (className.includes("bg-yellow")) return "#EAB308";
     if (className.includes("bg-green")) return "#10B981";
     if (className.includes("bg-blue")) return "#3B82F6";
 
@@ -71,12 +73,12 @@ export default function ClusterAnalysisView({
         }
       });
 
-      // Create GeoJSON features from dengueData
+      // Create GeoJSON features from dengueData using actual coordinates from API
       const features = dengueData.map((district) => {
-        // In a real app, you would have accurate polygon or point geometries for each district
-        // This is a simplified example using random points near Singapore
-        const lat = 1.3521 + (Math.random() - 0.5) * 0.1;
-        const lng = 103.8198 + (Math.random() - 0.5) * 0.1;
+        // Use the actual latitude and longitude from the API data
+        // Fall back to Singapore center if coordinates not available
+        const lat = district.latitude || 1.3521;
+        const lng = district.longitude || 103.8198;
 
         return {
           type: "Feature",
@@ -85,7 +87,7 @@ export default function ClusterAnalysisView({
             district: district.district,
             activeCases: district.activeCases,
             newCases: district.newCases,
-            incidenceRate: district.incidenceRate,
+            totalCases: district.totalCases,
             alert: district.alert,
             alertColorClass: alertColors[district.alert],
           },
@@ -125,14 +127,22 @@ export default function ClusterAnalysisView({
         },
         onEachFeature: (feature, layer) => {
           // Add popup with district information
+          const alertColorClass = feature.properties.alertColorClass; // Get the Tailwind class
+          const alertColor = extractColorFromTailwindClass(alertColorClass); // Extract the actual color
+
           layer.bindPopup(`
-            <div class="font-medium">${feature.properties.district}</div>
+            <div class="font-medium">Street Address: ${toProperCase(
+              feature.properties.district
+            )}</div>
             <div>Active Cases: ${feature.properties.activeCases}</div>
             <div>New Cases: ${feature.properties.newCases}</div>
-            <div>Incidence Rate: ${feature.properties.incidenceRate.toFixed(
-              1
-            )}</div>
-            <div>Alert Level: ${feature.properties.alert}</div>
+            <div>Total Cases: ${feature.properties.totalCases}</div>
+            <div>
+              Alert Level: 
+              <span style="color: ${alertColor}; font-weight: bold;">
+                ${feature.properties.alert}
+              </span>
+            </div>
           `);
 
           // Highlight district when clicked
@@ -173,7 +183,6 @@ export default function ClusterAnalysisView({
   }, [activeDistrict]);
 
   const toggleLegend = () => {
-    console.log("Toggling legend");
     setLegend((prev) => !prev);
   };
 
@@ -186,15 +195,8 @@ export default function ClusterAnalysisView({
   return (
     <div className="p-4">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-semibold">Dengue Cluster Analysis</h2>
+        <h2 className="text-xl font-semibold">Dengue Cluster Visualization</h2>
         <div className="flex items-center">
-          <button
-            className="flex items-center text-sm text-gray-600 hover:text-blue-700"
-            onClick={() => setShowFilterModal(true)}
-          >
-            <Filter size={16} className="mr-1" />
-            Filter
-          </button>
           <button
             className="flex items-center ml-4 text-sm text-gray-600 hover:text-blue-700"
             onClick={toggleLegend}
@@ -205,42 +207,28 @@ export default function ClusterAnalysisView({
         </div>
       </div>
 
+      {/* Loading indicator */}
+      {loading && (
+        <div className="flex justify-center items-center py-4">
+          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
+          <span className="ml-2">Loading cluster data...</span>
+        </div>
+      )}
+
+      {/* Error message */}
+      {error && (
+        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded mb-4">
+          <p className="font-medium">Error loading cluster data</p>
+          <p className="text-sm">{error}</p>
+        </div>
+      )}
+
       {/* Interactive Map */}
       <div className="relative">
         <div
           ref={mapContainerRef}
           className="h-64 rounded mb-4 border border-gray-200"
         ></div>
-        {/* Filter */}
-        {showFilterModal && (
-          <div
-            style={{
-              zIndex: 999, // Ensure it's above the map
-            }}
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-          >
-            <div className="bg-white p-4 rounded shadow-lg max-w-sm w-full">
-              <h3 className="text-lg font-semibold mb-4">Filter Options</h3>
-              <div className="space-y-2">
-                <label className="block">
-                  <span className="text-sm text-gray-700">Alert Level</span>
-                  <select className="block w-full mt-1 border-gray-300 rounded">
-                    <option value="all">All</option>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                  </select>
-                </label>
-                <button
-                  className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
-                  onClick={() => setShowFilterModal(false)}
-                >
-                  Apply Filter
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
         {/* Floating Legend */}
         {legend && (
           <div
@@ -269,7 +257,7 @@ export default function ClusterAnalysisView({
           <thead className="bg-gray-50">
             <tr>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                District
+                Cluster Street Address
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Active Cases
@@ -278,7 +266,7 @@ export default function ClusterAnalysisView({
                 New Cases
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Incidence Rate
+                Total Cases
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Status
@@ -286,35 +274,47 @@ export default function ClusterAnalysisView({
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {dengueData.map((row) => (
-              <tr
-                key={row.id}
-                onClick={() => handleRowClick(row)}
-                className={`${
-                  activeDistrict?.id === row.id
-                    ? "bg-blue-50"
-                    : "hover:bg-gray-50"
-                } cursor-pointer`}
-              >
-                <td className="px-6 py-4 whitespace-nowrap">{row.district}</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {row.activeCases}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">{row.newCases}</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {row.incidenceRate.toFixed(1)}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span
-                    className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                      alertColors[row.alert]
-                    }`}
-                  >
-                    {row.alert}
-                  </span>
+            {dengueData.length > 0 ? (
+              dengueData.map((row) => (
+                <tr
+                  key={row.id}
+                  onClick={() => handleRowClick(row)}
+                  className={`${
+                    activeDistrict?.id === row.id
+                      ? "bg-blue-50"
+                      : "hover:bg-gray-50"
+                  } cursor-pointer`}
+                >
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {toProperCase(row.district)}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {row.activeCases}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {row.newCases}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {row.totalCases}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span
+                      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                        alertColors[row.alert]
+                      }`}
+                    >
+                      {row.alert}
+                    </span>
+                  </td>
+                </tr>
+              ))
+            ) : !loading ? (
+              <tr>
+                <td colSpan="5" className="px-6 py-4 text-center text-gray-500">
+                  No cluster data available
                 </td>
               </tr>
-            ))}
+            ) : null}
           </tbody>
         </table>
       </div>

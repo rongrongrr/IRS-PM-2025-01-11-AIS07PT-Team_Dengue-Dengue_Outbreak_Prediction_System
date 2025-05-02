@@ -18,9 +18,6 @@ export default function Header({ dataTimeStamp }) {
           Dengue Outbreak Prediction System
         </h1>
         <div className="flex items-center gap-2">
-          <span className="text-sm bg-blue-500 px-3 py-1 rounded">
-            Last updated: {dataTimeStamp}
-          </span>
           <button
             onClick={() => setShowModal(true)}
             className="bg-blue-600 rounded-full w-6 h-6 flex items-center justify-center text-white font-semibold hover:bg-blue-500 transition-colors"
