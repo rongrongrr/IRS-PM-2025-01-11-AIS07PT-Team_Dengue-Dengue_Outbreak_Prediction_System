@@ -47,93 +47,6 @@ export default function TrendsView({ timeSeriesData, loading, error }) {
     );
   }
 
-  // Calculate trend analysis
-  const calculateTrend = () => {
-    // Ensure we have data points
-    if (timeSeriesData.length < 2)
-      return "Insufficient data for trend analysis.";
-
-    // Find peak month and value
-    let peakCases = { month: "", value: 0 };
-    let peakIncidence = { month: "", value: 0 };
-
-    timeSeriesData.forEach((data) => {
-      if (data.cases > peakCases.value) {
-        peakCases = { month: data.month, value: data.cases };
-      }
-      if (data.incidenceRate > peakIncidence.value) {
-        peakIncidence = { month: data.month, value: data.incidenceRate };
-      }
-    });
-
-    // Determine trend direction by looking at the whole dataset slope
-    let casesTrend, rateTrend;
-
-    // Simple calculation for trend direction (considering all data points)
-    const firstHalf = timeSeriesData.slice(
-      0,
-      Math.ceil(timeSeriesData.length / 2)
-    );
-    const secondHalf = timeSeriesData.slice(
-      Math.ceil(timeSeriesData.length / 2)
-    );
-
-    const firstHalfAvgCases =
-      firstHalf.reduce((sum, item) => sum + item.cases, 0) / firstHalf.length;
-    const secondHalfAvgCases =
-      secondHalf.reduce((sum, item) => sum + item.cases, 0) / secondHalf.length;
-
-    const firstHalfAvgRate =
-      firstHalf.reduce((sum, item) => sum + item.incidenceRate, 0) /
-      firstHalf.length;
-    const secondHalfAvgRate =
-      secondHalf.reduce((sum, item) => sum + item.incidenceRate, 0) /
-      secondHalf.length;
-
-    casesTrend =
-      secondHalfAvgCases > firstHalfAvgCases
-        ? "increasing"
-        : secondHalfAvgCases < firstHalfAvgCases
-        ? "decreasing"
-        : "stable";
-
-    rateTrend =
-      secondHalfAvgRate > firstHalfAvgRate
-        ? "increasing"
-        : secondHalfAvgRate < firstHalfAvgRate
-        ? "decreasing"
-        : "stable";
-
-    // Get the latest month's data for current status
-    const latestData = timeSeriesData[timeSeriesData.length - 1];
-    const incidenceRateFormatted = latestData.incidenceRate.toFixed(2);
-
-    // Calculate the total cases for the year
-    const totalCases = timeSeriesData.reduce(
-      (sum, item) => sum + item.cases,
-      0
-    );
-
-    return `For the year, dengue cases have shown an overall ${casesTrend} trend with a peak of ${peakCases.value.toLocaleString()} cases in ${
-      peakCases.month
-    }. 
-    The incidence rate ${
-      rateTrend === casesTrend
-        ? "follows a similar pattern"
-        : "shows a different pattern"
-    }, 
-    peaking at ${peakIncidence.value.toFixed(2)} per 1,000 population in ${
-      peakIncidence.month
-    }.
-    A total of ${totalCases.toLocaleString()} cases have been recorded so far this year.
-    The most recent data (${
-      latestData.month
-    }) shows ${latestData.cases.toLocaleString()} cases with an incidence rate of ${incidenceRateFormatted}.
-    This ${casesTrend} pattern may be affected by seasonal factors or public health interventions.`;
-  };
-
-  const trendAnalysis = calculateTrend();
-
   return (
     <div className="p-4">
       <div className="flex justify-between items-center mb-4">
@@ -216,11 +129,6 @@ export default function TrendsView({ timeSeriesData, loading, error }) {
             )}
           </LineChart>
         </ResponsiveContainer>
-      </div>
-
-      <div className="mt-6 bg-gray-50 p-4 rounded">
-        <h3 className="font-medium mb-2">Trend Analysis</h3>
-        <p className="text-sm text-gray-700">{trendAnalysis}</p>
       </div>
     </div>
   );
