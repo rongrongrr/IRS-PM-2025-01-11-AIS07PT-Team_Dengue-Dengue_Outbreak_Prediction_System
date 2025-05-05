@@ -1,36 +1,28 @@
-﻿### [ Practice Module ] Project Submission Template: Github Repository & Zip File
+﻿## SECTION 1 : PROJECT TITLE
 
-**[ Naming Convention ]** CourseCode-StartDate-BatchCode-TeamName-ProjectName.zip
-
-- **[ MTech Thru-Train Group Project Naming Example ]** IRS-PM-2025-01-11-AIS07PT-Team_Dengue-Dengue_Outbreak_Prediction_System.zip
-
-[Online editor for this README.md markdown file](https://pandao.github.io/editor.md/en.html "pandao")
-
----
-
-### <<<<<<<<<<<<<<<<<<<< Start of Template >>>>>>>>>>>>>>>>>>>>
-
----
-
-## SECTION 1 : PROJECT TITLE
-
-## Dengue Outbreak Predicction System
+## Dengue Outbreak Prediction System
 
 ---
 
 ## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
 
-## According to the MOH and NEA, more than 13,600 dengue cases were reported in Singapore in 2024, a 36% year-on-year increase from 2023. We believe that with a more accurate and reliable early warning system, both public health professionals and the at-risk public will be able to take effective action to reverse this concerning trend.
+Under Singapore’s tropical conditions and dense urban landscape, dengue fever continues to be a significant health concern, demanding targeted prevention strategies and data-driven predictive models. This project aims to develop a machine learning-based prediction system that can identify potential outbreak locations by analyzing key epidemiological, environmental, and weather-related factors.
+
+By leveraging Intelligent Reasoning techniques and algorithms learned from course modules, the team will construct a predictive model that identifies meaningful relationships between these factors. The insights generated from this project aim to support dengue prevention efforts by strengthening prediction capabilities.
+
+This initiative is particularly relevant to Singapore, where the constant influx of dengue cases necessitates proactive and data-driven solutions. By leveraging local government data sources, such as the National Environment Agency and data.gov.sg, this system aims to provide valuable insights that can support ongoing efforts to predict and mitigate outbreaks more effectively.
+
+The primary goal of the project is to develop a model capable of delivering accurate predictions based on selected factors. Additionally, the project serves as an opportunity for us to apply Intelligent Reasoning concepts to a real-world problem, deepening our understanding of data-driven decision-making in epidemiological research.
 
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
 
-| Official Full Name  | Student ID (MTech Applicable) | Work Items (Who Did What)                                                                                                   | Email (Optional)        |
-| :------------------ | :---------------------------: | :-------------------------------------------------------------------------------------------------------------------------- | :---------------------- |
-| Chan Jing Rong      |           A1234567A           | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. | jingrong_chan@u.nus.edu |
-| Weiqiao Li          |           A1234567B           | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. | e______@u.nus.edu       |
-| Brian Zheng         |           A1234567C           | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. | e______@u.nus.edu       |
-| Velu                |           A1234567D           | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. | e______@u.nus.edu       |
-| Johann Oh Hock Seng |           A1234567E           | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. | johannoh@u.nus.edu      |
+| Official Full Name  | Student ID | Work Items                                                                             | Email                   |
+| :------------------ | :--------: | :------------------------------------------------------------------------------------- | :---------------------- |
+| Chan Jing Rong      | A0185806W  | Frontend Development, Backend Development, API Integration, Research, Reports, Testing | jingrong_chan@u.nus.edu |
+| Weiqiao Li          | A0314458B  | System Design, Backend Development, Research, Reports, Testing                         | e1503300@u.nus.edu      |
+| Brian Zheng         | A0132097H  | Model Training, Model Prediction, System Design, Research, Reports, Testing            | brian.zheng@u.nus.edu   |
+| Velu                | A0314464H  | Data Gathering, Data Preparation, Project Containerisation, Research, Reports, Testing | velu@u.nus.edu          |
+| Johann Oh Hock Seng | A0314457A  | Survey of Existing Approaches, Attempted Prediction Models, Research, Reports, Testing | johannoh@u.nus.edu      |
 
 ---
 
@@ -38,40 +30,35 @@
 
 [![Dengue Outbreak Prediction System](http://img.youtube.com/vi/RXo47Tewbt4/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ "Dengue Outbreak Prediction System")
 
-Note: It is not mandatory for every project member to appear in video presentation; Presentation by one project member is acceptable.
-More reference video presentations [here](https://telescopeuser.wordpress.com/2018/03/31/master-of-technology-solution-know-how-video-index-2/ "video presentations")
-
 ---
 
 ## SECTION 5 : USER GUIDE
 
-`Refer to READEME in the Github Folder: SystemCode`
+### Dengue-Prediction Demo – Docker Edition 🐳
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis knostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+#### Prerequisites
+
+- Docker Desktop **24+** (or Docker Engine + Docker Compose plugin)
+- cd into the SystemCode directory
+
+#### Run this command in the terminal once Docker has been setup & initialized
+
+```bash
+docker compose up --build
+```
+
+- Assuming your docker build went well you should see a message like this:
+  ![Docker Build Success](SystemCode/image/README/1745951017406.png)
+
+#### Once your build completes go to your browser (preferably chrome) and open http://localhost:3000/
+
+- That's it! That link should open up the dengue prediction dashboard for you play with!
 
 ---
 
 ## SECTION 6 : PROJECT REPORT / PAPER
 
 `Refer to project report at Github Folder: ProjectReport`
-
-**Recommended Sections for Project Report / Paper:**
-
-- Executive Summary / Paper Abstract
-- Sponsor Company Introduction (if applicable)
-- Business Problem Background
-- Market Research
-- Project Objectives & Success Measurements
-- Project Solution (To detail domain modelling & system design.)
-- Project Implementation (To detail system development & testing approach.)
-- Project Performance & Validation (To prove project objectives are met.)
-- Project Conclusions: Findings & Recommendation
-- Appendix of report: Project Proposal
-- Appendix of report: Mapped System Functionalities against knowledge, techniques and skills of modular courses: MR, RS, CGS
-- Appendix of report: Installation and User Guide
-- Appendix of report: 1-2 pages individual project report per project member, including: Individual reflection of project journey: (1) personal contribution to group project (2) what learnt is most useful for you (3) how you can apply the knowledge and skills in other situations or your workplaces
-- Appendix of report: List of Abbreviations (if applicable)
-- Appendix of report: References (if applicable)
 
 ---
 
@@ -82,17 +69,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ### aedes_breeding_areas.xlsx
 
 - Source data from NEA
-
----
-
-### <<<<<<<<<<<<<<<<<<<< End of Template >>>>>>>>>>>>>>>>>>>>
-
----
-
-**This [Machine Reasoning (MR)](https://www.iss.nus.edu.sg/executive-education/course/detail/machine-reasoning "Machine Reasoning") course is part of the Graduate Certificate in [Intelligent Reasoning Systems (IRS)](https://www.iss.nus.edu.sg/graduate-programmes/programme/detail/master-of-technology-in-artificial-intelligence-systems "Intelligent Reasoning Systems") series offered by [NUS-ISS](https://www.iss.nus.edu.sg "Institute of Systems Science, National University of Singapore").**
-
-**Lecturer: [Gary Leung](https://www.iss.nus.edu.sg/about-us/staff/detail/419/Gary%20LEUNG "Gary Leung")**
-
-[![alt text](https://www.iss.nus.edu.sg/images/default-source/default-album/gary-leunge8a6e4de42136fdb9c52ff000079db5a.tmb-.png "Let's check Gary's profile page")](https://www.iss.nus.edu.sg/about-us/staff/detail/419/Gary%20LEUNG)
-
-**cc.leung@nus.edu.sg**

@@ -142,8 +142,13 @@ async def predict_risk(request: PostalCodeRequest):
 
         address_postal_code_mapping_data = all_data['address_postal_code_mapping'][
             all_data['address_postal_code_mapping']['postal_code'] == int(postal_code)
-        ].iloc[0]
-        street_address = address_postal_code_mapping_data.get('Street Address', '').title()
+        ]
+
+        if address_postal_code_mapping_data.empty:
+            street_address = "Unknown"
+        else:
+            address_postal_code_mapping_data = address_postal_code_mapping_data.iloc[0]
+            street_address = address_postal_code_mapping_data.get('Street Address', '').title()
 
         # Get corresponding record from data using landuse type
         landuse_columns = data.columns.intersection([landuse_type])
@@ -183,8 +188,8 @@ async def predict_risk(request: PostalCodeRequest):
         # Create a custom popup with adjustable width and colored risk level
         popup_content = (
             f"Postal Code: {postal_code}<br>"
-            f"Street Address: {street_address}<br>"
-            f"Land Use Category: {postal_info['landuse_type'].title()}<br>"
+            + (f"Street Address: {street_address}<br>" if street_address != "Unknown" else "")
+            + f"Land Use Category: {postal_info['landuse_type'].title()}<br>"
             f"Risk Level: <span style='color:{risk_color};'>{risk_level}</span>"
         )
         popup = folium.Popup(popup_content, max_width=300, show=True)  # Adjust max_width as needed

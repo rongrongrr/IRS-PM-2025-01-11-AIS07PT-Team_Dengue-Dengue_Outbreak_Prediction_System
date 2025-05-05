@@ -61,23 +61,25 @@ export default function ClusterPredictionView() {
 
           {result && (
             <div>
-              {result.street_address && (
-                <div className="mt-4 p-4 bg-gray-50 rounded-md">
-                  <h3 className="font-medium text-gray-800">
-                    Location Information
-                  </h3>
-                  <p className="text-sm text-gray-700">
-                    Street Address: {result.street_address}
-                  </p>
-                  <br></br>
-                  <p className="text-sm text-gray-700">
-                    Land Use Category:{" "}
-                    {result.location_info.landuse_type
-                      .toLowerCase()
-                      .replace(/\b\w/g, (char) => char.toUpperCase()) + " Area"}
-                  </p>
-                </div>
-              )}
+              <div className="mt-4 p-4 bg-gray-50 rounded-md">
+                <h3 className="font-medium text-gray-800">
+                  Location Information
+                </h3>
+                {result.street_address &&
+                  result.street_address.trim() !== "" &&
+                  result.street_address !== "Unknown" && (
+                    <p className="text-sm text-gray-700">
+                      Street Address: {result.street_address}
+                    </p>
+                  )}
+                <br></br>
+                <p className="text-sm text-gray-700">
+                  Land Use Category:{" "}
+                  {result.location_info.landuse_type
+                    .toLowerCase()
+                    .replace(/\b\w/g, (char) => char.toUpperCase()) + " Area"}
+                </p>
+              </div>
               <div className="mt-4 p-4 bg-blue-50 rounded-md">
                 <h3 className="font-medium text-blue-800">
                   Prediction Results
@@ -92,7 +94,7 @@ export default function ClusterPredictionView() {
                           : result.risk_level === "Medium"
                           ? "orange"
                           : "green",
-                      fontWeight: "bold", // Makes the text bold
+                      fontWeight: "bold",
                     }}
                   >
                     {result.risk_level}
