@@ -28,7 +28,9 @@ The primary goal of the project is to develop a model capable of delivering accu
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
-[![Dengue Outbreak Prediction System](http://img.youtube.com/vi/RXo47Tewbt4/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ "Dengue Outbreak Prediction System")
+### System Design Video
+
+[System Design Video](Miscellaneous/System_design_video.mp4 "System Design Video")
 
 ---
 
@@ -65,7 +67,3 @@ docker compose up --build
 ## SECTION 7 : MISCELLANEOUS
 
 `Refer to Github Folder: Miscellaneous`
-
-### aedes_breeding_areas.xlsx
-
-- Source data from NEA
