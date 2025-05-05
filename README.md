@@ -20,7 +20,7 @@ The primary goal of the project is to develop a model capable of delivering accu
 | :------------------ | :--------: | :------------------------------------------------------------------------------------- | :---------------------- |
 | Chan Jing Rong      | A0185806W  | Frontend Development, Backend Development, API Integration, Research, Reports, Testing | jingrong_chan@u.nus.edu |
 | Weiqiao Li          | A0314458B  | System Design, Backend Development, Research, Reports, Testing                         | e1503300@u.nus.edu      |
-| Brian Zheng         | A0132097H  | Model Training, Model Prediction, System Design, Research, Reports, Testing            | brian.zheng@u.nus.edu   |
+| Brian Zheng         | A0132097H  | Model Training, Model Prediction, Data Processing, Research, Reports, Testing          | brian.zheng@u.nus.edu   |
 | Velu                | A0314464H  | Data Gathering, Data Preparation, Project Containerisation, Research, Reports, Testing | velu@u.nus.edu          |
 | Johann Oh Hock Seng | A0314457A  | Survey of Existing Approaches, Attempted Prediction Models, Research, Reports, Testing | johannoh@u.nus.edu      |
 
