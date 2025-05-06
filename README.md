@@ -65,9 +65,3 @@ docker compose up --build
 ## SECTION 6 : PROJECT REPORT / PAPER
 
 `Refer to project report at Github Folder: ProjectReport`
-
----
-
-## SECTION 7 : MISCELLANEOUS
-
-`Refer to Github Folder: Miscellaneous`
