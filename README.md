@@ -30,8 +30,11 @@ The primary goal of the project is to develop a model capable of delivering accu
 
 ### System Design Video
 
-[System Design Video](Miscellaneous/System_design_video.mov "System Design Video")
+[System Design Video](Video/System_design_video.mov "System Design Video")
 
+### Use Case Video
+
+[Use Case Video](Video/Business_case_video.mov "Use Case Video")
 ---
 
 ## SECTION 5 : USER GUIDE
