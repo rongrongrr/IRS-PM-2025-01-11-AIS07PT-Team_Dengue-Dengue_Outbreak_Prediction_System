@@ -35,6 +35,7 @@ The primary goal of the project is to develop a model capable of delivering accu
 ### Use Case Video
 
 [Use Case Video](Video/Business_case_video.mov "Use Case Video")
+
 ---
 
 ## SECTION 5 : USER GUIDE
